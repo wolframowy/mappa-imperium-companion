@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary-dark: hsl(37, 32%, 75%);
+  --color-primary: hsl(37, 32%, 85%);
+  --color-primary-light: hsl(37, 32%, 95%);
+}
+
+@layer base {
+  .dark {
+    --color-primary-dark: hsl(37, 32%, 10%);
+    --color-primary: hsl(37, 32%, 20%);
+    --color-primary-light: hsl(37, 32%, 30%);
+    color-scheme: dark;
+  }
+}
+
+html,
+body {
+  @apply bg-primary-dark;
+}
