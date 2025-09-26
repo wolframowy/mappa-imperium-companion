@@ -7,9 +7,5 @@ export default function Home({
   params,
   matches,
 }: Route.ComponentProps) {
-  return (
-    <div>
-      <Welcome />
-    </div>
-  );
+  return <Welcome />;
 }

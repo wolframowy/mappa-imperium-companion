@@ -1,7 +1,6 @@
 import {
   isRouteErrorResponse,
   Links,
-  Meta,
   NavLink,
   Outlet,
   Scripts,
@@ -10,6 +9,8 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import { useEffect, useState } from "react";
+import { NavBar } from "./components/navbar";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -27,8 +28,31 @@ export const links: Route.LinksFunction = () => [
 // Layout is above App so it can render things above ErrorBoundary and HydrateFallback
 // put things here that you  always want to show up like a nav bar
 export function Layout({ children }: { children: React.ReactNode }) {
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && localStorage?.theme) {
+      setTheme(localStorage.theme);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      document.body.classList.remove("dark", "light");
+      document.body.classList.add(theme);
+    }
+  }, [theme]);
+
+  function toggleLightDark() {
+    const nextTheme = theme === "dark" ? "light" : "dark";
+    setTheme(nextTheme);
+    if (typeof window !== "undefined" && localStorage) {
+      localStorage.theme = nextTheme;
+    }
+  }
+
   return (
-    <html lang="en" className="">
+    <html lang="en">
       <head>
         <title>Mappa Imperium Companion</title>
         <meta charSet="utf-8" />
@@ -36,16 +60,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <div className="flex">
-          <div className="bg-primary flex flex-col p-6 gap-4 h-screen">
-            <NavLink to="/" end>
-              Home
-            </NavLink>
-            <NavLink to="/options" end>
-              Options
-            </NavLink>
-          </div>
-          <div className="h-screen">{children}</div>
+        <div className="flex w-screen">
+          <NavBar onThemeChange={toggleLightDark} />
+          <div className="h-screen flex-grow min-w-sm">{children}</div>
         </div>
         <ScrollRestoration />
         <Scripts />
@@ -56,6 +73,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   return <Outlet />;
+}
+
+export function HydrateFallback() {
+  return (
+    <div className="pt-16 p-4 container mx-auto">
+      <h1>Loading...</h1>
+    </div>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {

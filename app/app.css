@@ -3,21 +3,28 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-primary-dark: hsl(37, 32%, 75%);
+  --color-primary-dark: hsl(37, 32%, 90%);
   --color-primary: hsl(37, 32%, 85%);
-  --color-primary-light: hsl(37, 32%, 95%);
+  --color-primary-light: hsl(37, 32%, 75%);
+  --color-text-primary: hsl(37, 32%, 5%);
 }
 
 @layer base {
   .dark {
-    --color-primary-dark: hsl(37, 32%, 10%);
-    --color-primary: hsl(37, 32%, 20%);
-    --color-primary-light: hsl(37, 32%, 30%);
+    --color-primary-dark: hsl(37, 32%, 5%);
+    --color-primary: hsl(37, 32%, 7%);
+    --color-primary-light: hsl(37, 32%, 10%);
+    --color-text-primary: hsl(37, 32%, 90%);
     color-scheme: dark;
+    @apply dark:text-text-primary;
   }
 }
 
 html,
 body {
   @apply bg-primary-dark;
+
+  a.active {
+    @apply font-bold bg-primary-light;
+  }
 }
