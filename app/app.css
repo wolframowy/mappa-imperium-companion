@@ -7,6 +7,8 @@
   --color-primary: hsl(37, 32%, 85%);
   --color-primary-light: hsl(37, 32%, 75%);
   --color-text-primary: hsl(37, 32%, 5%);
+  --color-title-accent: #57180d;
+  --color-border-accent: #c7ac69;
 }
 
 @layer base {
@@ -27,4 +29,17 @@ body {
   a.active {
     @apply font-bold bg-primary-light;
   }
+}
+
+h1, h2 {
+  color: var(--color-title-accent);
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 20px
 }
