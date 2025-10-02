@@ -9,7 +9,7 @@
   },
   "SoloPlay": {
     "Title": "Solo Play",
-    "Text": "[BOLD]Use the game as a world generation tool[/BOLD]. To play solo, divide the paper into the number of major empires you wish to have, then play commences taking turns as usual."
+    "Text": "<b>Use the game as a world generation tool</b>. To play solo, divide the paper into the number of major empires you wish to have, then play commences taking turns as usual."
   },
   "Multiplayer": {
     "Title": "Multiplayer",
