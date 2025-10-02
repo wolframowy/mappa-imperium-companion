@@ -7,8 +7,8 @@
   --color-primary: hsl(37, 32%, 85%);
   --color-primary-light: hsl(37, 32%, 75%);
   --color-text-primary: hsl(37, 32%, 5%);
-  --color-title-accent: #57180d;
-  --color-border-accent: #c7ac69;
+  --color-accent-red: #57180d;
+  --color-accent-yellow: #c7ac69;
 }
 
 @layer base {
@@ -32,14 +32,13 @@ body {
 }
 
 h1, h2 {
-  color: var(--color-title-accent);
-  font-weight: bold;
+  @apply font-bold text-accent-red
 }
 
 h1 {
-  font-size: 30px;
+  @apply text-3xl
 }
 
 h2 {
-  font-size: 20px
+  @apply text-2xl
 }
