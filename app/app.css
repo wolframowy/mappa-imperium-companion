@@ -7,6 +7,8 @@
   --color-primary: hsl(37, 32%, 85%);
   --color-primary-light: hsl(37, 32%, 75%);
   --color-text-primary: hsl(37, 32%, 5%);
+  --color-accent-red: #57180d;
+  --color-accent-yellow: #c7ac69;
 }
 
 @layer base {
@@ -27,4 +29,16 @@ body {
   a.active {
     @apply font-bold bg-primary-light;
   }
+}
+
+h1, h2 {
+  @apply font-bold text-accent-red
+}
+
+h1 {
+  @apply text-3xl
+}
+
+h2 {
+  @apply text-2xl
 }

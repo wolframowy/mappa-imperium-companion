@@ -52,6 +52,6 @@ export function NavBar({ onThemeChange }: NavBarProps) {
 
 const NavbarRoutes = [
   { to: "/", text: "Home" },
-  { to: "/home-2", text: "Home 2" },
+  { to: "/intro", text: "Intro" },
   { to: "/home-3", text: "Home 3" },
 ];
