@@ -54,6 +54,7 @@ const NavbarRoutes = [
   { to: "/", text: "Home" },
   { to: "/intro", text: "Intro" },
   { to: "/playOverview", text: "Play Overview"},
-  { to: "era-1", text: "Era I"},
-  { to: "/home-3", text: "Home 3" },
+  { to: "/era-1", text: "Era I"},
+  { to: "/era-2", text: "Era II"},
+  { to: "/era-3", text: "Era III"}
 ];

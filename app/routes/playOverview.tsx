@@ -1,17 +1,42 @@
 import {Paragraph} from "~/components/paragraph";
 import json from "app/assets/text/2-PlayOverview.json"
+import Section from "~/components/section";
 
 export default function playOverview() {
   return (
     <div className="flex @md:flex-col flex-wrap px-5 py-6 gap-4 w-full h-full overflow-y-auto">
-      <Paragraph title={json.Intro.Title} textHtml={json.Intro.Text} noUnderline main/>
-      <Paragraph title={json.Era1.Title} textHtml={json.Era1.Text} />
-      <Paragraph title={json.Era2.Title} textHtml={json.Era2.Text} />
-      <Paragraph title={json.Era3.Title} textHtml={json.Era3.Text} />
-      <Paragraph title={json.Era4.Title} textHtml={json.Era4.Text} />
-      <Paragraph title={json.Era5.Title} textHtml={json.Era5.Text} />
-      <Paragraph title={json.Era6.Title} textHtml={json.Era6.Text} />
-      <Paragraph title={json.GameLength.Title} textHtml={json.GameLength.Text} />
+      {/*Play Overview*/}
+      <Section title={json.Intro.Title} noUnderline main>
+        <Paragraph textHtml={json.Intro.Text}/>
+      </Section>
+      {/*Era 1*/}
+      <Section title={json.Era1.Title}>
+        <Paragraph textHtml={json.Era1.Text}/>
+      </Section>
+      {/*Era 2*/}
+      <Section title={json.Era2.Title}>
+        <Paragraph textHtml={json.Era2.Text}/>
+      </Section>
+      {/*Era 3*/}
+      <Section title={json.Era3.Title}>
+        <Paragraph textHtml={json.Era3.Text}/>
+      </Section>
+      {/*Era 4*/}
+      <Section title={json.Era4.Title}>
+        <Paragraph textHtml={json.Era4.Text}/>
+      </Section>
+      {/*Era 5*/}
+      <Section title={json.Era5.Title}>
+        <Paragraph textHtml={json.Era5.Text}/>
+      </Section>
+      {/*Era 6*/}
+      <Section title={json.Era6.Title}>
+        <Paragraph textHtml={json.Era6.Text}/>
+      </Section>
+      {/*Game Length*/}
+      <Section title={json.GameLength.Title}>
+        <Paragraph textHtml={json.GameLength.Text}/>
+      </Section>
     </div>
   )
 }
