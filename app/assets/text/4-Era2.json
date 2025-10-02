@@ -1,0 +1,33 @@
+{
+  "Intro": {
+    "Title": "Era II: Age of Myth",
+    "Text": "What gods and goddesses rule over this world? In this section, each player will take turns rolling to determine number, domain, and symbols for each deity in their home region.\nThese are the gods of each player's prime faction. Whether they are worshipped, feared, or ignored are up to you and they may help to spark imagination of the development and story or your world. While each player will roll up the deities of their own home region, they can be shared by everyone throughout the course of the game if needed.\nEither in the margins of your map or on a separate sheet of paper, write down your results."
+  },
+  "2.1": {
+    "Title": "Number of deities",
+    "Text": "Roll 1 die to determine number of deities per home region"
+  },
+  "2.2": {
+    "Title": "Domain",
+    "Text": "Roll 1 die to determine domain for each deity. Do this until all gods have a domain associated with them."
+  },
+  "2.3": {
+    "Title": "Symbol",
+    "Text": "Roll 1 die to determine a symbol for each deity."
+  },
+  "2.4": {
+    "Title": "Name",
+    "Text": "Create a name for each deity, then place all 3 (name, domain, symbol) together in either the margins of the map or on a separate sheet of paper."
+  },
+  "Random": {
+    "Title": "Random Name List",
+    "Text": "if you need help coming up with a name, roll 2 or 3 times on the table and combine the results"
+  },
+  "2.5": {
+    "Title": "Sacred Sites",
+    "Text": "Each player will take turns creating and naming sacred locations and items in each Home Region.\nRoll on the table below a number of times equal to the number of deities in your Home Region, then draw in the results. Label each site for the deity they represent."
+  },
+  "Examples": {
+    "Text": ["The Glowing Tree of Foreragor - <i>Foreragor the god of light</i>", "Algared's pool - <i>Algared, goddess of fishing</i>", "Sunless Spire of Shiromith - <i>Shiromith, god of darkness</i>"]
+  }
+}

@@ -53,5 +53,7 @@ export function NavBar({ onThemeChange }: NavBarProps) {
 const NavbarRoutes = [
   { to: "/", text: "Home" },
   { to: "/intro", text: "Intro" },
+  { to: "/playOverview", text: "Play Overview"},
+  { to: "era-1", text: "Era I"},
   { to: "/home-3", text: "Home 3" },
 ];
