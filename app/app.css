@@ -20,7 +20,7 @@
     --color-primary: oklch(20% 0.03 80);
     --color-primary-light: oklch(33% 0.03 80);
     --color-primary-highlight: oklch(40% 0.03 80);
-    --color-text-primary: oklch(98% 0.03 80);
+    --color-text-primary: oklch(95% 0.03 80);
     --color-text-primary-muted: oklch(90% 0.03 80);
     --color-accent-red: oklch(45% 0.11 31);
     --color-accent-yellow: oklch(60% 0.08 88);
