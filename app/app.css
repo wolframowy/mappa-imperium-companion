@@ -8,15 +8,17 @@
   --color-primary-light: hsl(37, 32%, 75%);
   --color-text-primary: hsl(37, 32%, 5%);
   --color-accent-red: #57180d;
-  --color-accent-yellow: #c7ac69;
+  --color-accent-yellow: #8e8264;
 }
 
 @layer base {
   .dark {
     --color-primary-dark: hsl(37, 32%, 5%);
     --color-primary: hsl(37, 32%, 7%);
-    --color-primary-light: hsl(37, 32%, 10%);
+    --color-primary-light: hsl(37, 32%, 15%);
     --color-text-primary: hsl(37, 32%, 90%);
+    --color-accent-red: #8d3424;
+    --color-accent-yellow: #c7ac69;
     color-scheme: dark;
     @apply dark:text-text-primary;
   }
@@ -31,14 +33,15 @@ body {
   }
 }
 
-h1, h2 {
-  @apply font-bold text-accent-red
+h1,
+h2 {
+  @apply font-bold text-accent-red;
 }
 
 h1 {
-  @apply text-3xl
+  @apply text-3xl;
 }
 
 h2 {
-  @apply text-2xl
+  @apply text-2xl;
 }

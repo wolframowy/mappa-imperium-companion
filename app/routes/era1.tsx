@@ -1,13 +1,13 @@
-import {Paragraph} from "~/components/paragraph";
+import { Paragraph } from "~/components/paragraph";
 import json from "app/assets/text/3-Era1.json";
 import Section from "~/components/section";
 
 export default function Era1() {
   return (
-    <div className="flex @md:flex-col flex-wrap px-5 py-6 gap-4 w-full h-full overflow-y-auto">
+    <div className="px-5 py-6 w-full h-full overflow-y-auto">
       {/*Era 1*/}
       <Section title={json.Intro.Title} noUnderline main>
-        <Paragraph textHtml={json.Intro.Text}/>
+        <Paragraph textHtml={json.Intro.Text} />
       </Section>
       {/*Create the lands*/}
       <Section title={json["1.1"].Title}>
@@ -26,5 +26,5 @@ export default function Era1() {
         <Paragraph textHtml={json["1.4"].Text} />
       </Section>
     </div>
-  )
+  );
 }

@@ -1,15 +1,15 @@
-import {Paragraph} from "~/components/paragraph";
-import json from "~/assets/text/1-Basics.json"
+import { Paragraph } from "~/components/paragraph";
+import json from "~/assets/text/1-Basics.json";
 import Section from "~/components/section";
 import Sidenote from "~/components/sidenote";
 
 export default function Intro() {
   return (
-    <div className="flex @md:flex-col flex-wrap px-5 py-6 gap-4 w-full h-full overflow-y-auto">
+    <div className="px-5 py-6 w-full h-full overflow-y-auto">
       {/*Basics*/}
       <Section title={json.Intro.Title} noUnderline main>
-        <Paragraph textHtml={json.Intro.Text}/>
-        <Sidenote textHtml={json.Sidenote} sidenoteType={'green'}/>
+        <Paragraph textHtml={json.Intro.Text} />
+        <Sidenote textHtml={json.Sidenote} sidenoteType={"accent"} />
       </Section>
       {/*Setup*/}
       <Section title={json.Setup.Title}>
