@@ -4,12 +4,12 @@ import Section from "~/components/section";
 
 export default function playOverview() {
   return (
-    <div className="px-5 py-6 w-full h-full overflow-y-auto">
+    <div className="flex flex-col gap-5 px-5 py-6 w-full h-full overflow-y-auto">
       {/*Play Overview*/}
       <Section title={json.Intro.Title} noUnderline main>
         <Paragraph textHtml={json.Intro.Text} />
       </Section>
-      <div className="grid lg:grid-rows-3 lg:grid-flow-col gap-4">
+      <div className="grid lg:grid-rows-3 lg:grid-flow-col lg:auto-cols-fr gap-4">
         {/*Era 1*/}
         <Section title={json.Era1.Title}>
           <Paragraph textHtml={json.Era1.Text} />

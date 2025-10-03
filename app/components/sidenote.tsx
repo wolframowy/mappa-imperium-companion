@@ -8,7 +8,7 @@ export default function Sidenote({ textHtml, sidenoteType }: SidenoteProps) {
   const classNames = getSidenoteClassName(sidenoteType);
   return (
     <div
-      className={`p-2 my-2 w-fit shadow-md rounded-sm ${classNames}`}
+      className={`p-2 my-2 w-fit shadow-lg inset-shadow-xs rounded-sm ${classNames}`}
       dangerouslySetInnerHTML={renderedHTML}
     />
   );
@@ -17,9 +17,9 @@ export default function Sidenote({ textHtml, sidenoteType }: SidenoteProps) {
 function getSidenoteClassName(sidenoteType: "light" | "accent"): string {
   switch (sidenoteType) {
     case "light":
-      return "bg-primary-light border-l-2 border-r-2 border-text-primary";
+      return "bg-primary-light inset-shadow-primary-highlight border-l-2 border-r-2 border-text-primary";
     case "accent":
-      return "bg-accent-yellow text-primary-dark border-t-2 border-b-2 border-text-primary";
+      return "bg-accent-yellow text-primary border-t-2 border-b-2 border-text-primary inset-shadow-accent-yellow-highlight";
     default:
       return "";
   }

@@ -6,14 +6,14 @@ import Sidenote from "~/components/sidenote";
 
 export default function Era3() {
   return (
-    <div className="px-5 py-6 w-full h-full overflow-y-auto">
+    <div className="flex flex-col gap-5 px-5 py-6 w-full h-full overflow-y-auto">
       {/*Era 3*/}
       <Section title={json.Intro.Title} noUnderline main>
         <Paragraph textHtml={json.Intro.Text} />
-      </Section>
-      {/*Prime faction*/}
-      <Section title={json["3.1"].Title}>
-        <Paragraph textHtml={json["3.1"].Text} />
+        {/*Prime faction*/}
+        <Section title={json["3.1"].Title}>
+          <Paragraph textHtml={json["3.1"].Text} />
+        </Section>
       </Section>
       {/*Faction development*/}
       <Section title={json["3.2"].Title} main noUnderline>
