@@ -10,10 +10,10 @@ export default function Era3() {
       {/*Era 3*/}
       <Section title={json.Intro.Title} noUnderline main>
         <Paragraph textHtml={json.Intro.Text} />
-        {/*Prime faction*/}
-        <Section title={json["3.1"].Title}>
-          <Paragraph textHtml={json["3.1"].Text} />
-        </Section>
+      </Section>
+      {/*Prime faction*/}
+      <Section title={json["3.1"].Title}>
+        <Paragraph textHtml={json["3.1"].Text} />
       </Section>
       {/*Faction development*/}
       <Section title={json["3.2"].Title} main noUnderline>
