@@ -19,25 +19,25 @@ export default function Era3() {
       <Section title={json["3.2"].Title} main noUnderline>
         <Paragraph textHtml={json["3.2"].Text} />
         {/*Symbol*/}
-        <Section title={json["3.2"].Symbol.Title}>
+        <Section title={json["3.2"].Symbol.Title} noShadow>
           <Paragraph textHtml={json["3.2"].Symbol.Text} />
         </Section>
         {/*Color*/}
-        <Section title={json["3.2"].Color.Title}>
+        <Section title={json["3.2"].Color.Title} noShadow>
           <Paragraph textHtml={json["3.2"].Color.Text} />
         </Section>
         {/*Theme*/}
-        <Section title={json["3.2"].Theme.Title}>
+        <Section title={json["3.2"].Theme.Title} noShadow>
           <Paragraph textHtml={json["3.2"].Theme.Text} />
           <Examples exampleTexts={json["3.2"].Theme.ExamplesList} noDisc />
         </Section>
         {/*Naming*/}
-        <Section title={json["3.2"].Naming.Title}>
+        <Section title={json["3.2"].Naming.Title} noShadow>
           <Paragraph textHtml={json["3.2"].Naming.Text} />
           <Examples exampleTexts={json["3.2"].Naming.ExamplesList} />
         </Section>
         {/*Leadership*/}
-        <Section title={json["3.2"].Leadership.Title}>
+        <Section title={json["3.2"].Leadership.Title} noShadow>
           <Paragraph textHtml={json["3.2"].Leadership.Text} />
           <Examples exampleTexts={json["3.2"].Leadership.ExamplesList} />
         </Section>

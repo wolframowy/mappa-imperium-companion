@@ -5,17 +5,19 @@ export interface SectionProps {
   noUnderline?: boolean;
   title: string;
   children: React.ReactElement | Array<React.ReactElement>;
+  noShadow?: boolean;
 }
 
 export default function Section({
   children,
   main,
   noUnderline,
+  noShadow,
   title,
 }: SectionProps) {
   return (
     <div
-      className={`py-2 px-3 bg-primary rounded-lg ${main && "inset-shadow-sm inset-shadow-primary-light shadow-md"}`}
+      className={`py-2 px-3 bg-primary rounded-lg ${!noShadow && "inset-shadow-sm inset-shadow-primary-light shadow-md"}`}
     >
       {main ? (
         <h1
