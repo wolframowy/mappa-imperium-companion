@@ -3,20 +3,28 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-primary-dark: hsl(37, 32%, 90%);
-  --color-primary: hsl(37, 32%, 85%);
-  --color-primary-light: hsl(37, 32%, 75%);
-  --color-text-primary: hsl(37, 32%, 5%);
-  --color-accent-red: #57180d;
-  --color-accent-yellow: #c7ac69;
+  --color-primary-dark: oklch(85% 0.03 80);
+  --color-primary: oklch(90% 0.03 80);
+  --color-primary-light: oklch(95% 0.03 80);
+  --color-primary-highlight: oklch(99% 0.03 80);
+  --color-text-primary: oklch(5% 0.03 80);
+  --color-text-primary-muted: oklch(15% 0.03 80);
+  --color-accent-red: oklch(35% 0.11 31);
+  --color-accent-yellow: oklch(60% 0.08 88);
+  --color-accent-yellow-highlight: oklch(70% 0.08 88);
 }
 
 @layer base {
   .dark {
-    --color-primary-dark: hsl(37, 32%, 5%);
-    --color-primary: hsl(37, 32%, 7%);
-    --color-primary-light: hsl(37, 32%, 10%);
-    --color-text-primary: hsl(37, 32%, 90%);
+    --color-primary-dark: oklch(10% 0.03 80);
+    --color-primary: oklch(20% 0.03 80);
+    --color-primary-light: oklch(33% 0.03 80);
+    --color-primary-highlight: oklch(40% 0.03 80);
+    --color-text-primary: oklch(95% 0.03 80);
+    --color-text-primary-muted: oklch(90% 0.03 80);
+    --color-accent-red: oklch(45% 0.11 31);
+    --color-accent-yellow: oklch(60% 0.08 88);
+    --color-accent-yellow-highlight: oklch(70% 0.08 88);
     color-scheme: dark;
     @apply dark:text-text-primary;
   }
@@ -26,19 +34,26 @@ html,
 body {
   @apply bg-primary-dark;
 
-  a.active {
-    @apply font-bold bg-primary-light;
+  a {
+    &.active {
+      @apply font-bold bg-primary-light inset-shadow-xs inset-shadow-primary-highlight shadow-sm;
+    }
+
+    &:hover {
+      @apply bg-primary-light inset-shadow-xs inset-shadow-primary-highlight shadow-sm;
+    }
   }
 }
 
-h1, h2 {
-  @apply font-bold text-accent-red
+h1,
+h2 {
+  @apply font-bold text-accent-red;
 }
 
 h1 {
-  @apply text-3xl
+  @apply text-3xl;
 }
 
 h2 {
-  @apply text-2xl
+  @apply text-2xl;
 }

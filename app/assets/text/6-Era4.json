@@ -1,0 +1,20 @@
+{
+  "Intro": {
+    "Title": "Era IV: Age of Discovery",
+    "Text": "The Empires are ready to explore and expand. Scouts and settlers are now being sent to explore and colonize the world."
+  },
+  "4.1": {
+    "Title": "4.1 Exploration Begins",
+    "Text": "Each player will take turns rolling on the table below to explore their nearby shores. All results can be placed anywhere within each player's Home Region.\n <ul style=list-style:inside><li><b>Roll 6 times on this table using 3 six sided dice.</b></li></ul>"
+  },
+  "4.2": {
+    "Title": "4.2 Colonization",
+    "Text": "The factions have stumbled their way out into the world and begun forming sprawling nations. In this section you will discover some of the important figures, vital to the development of your empire, and begin to name the local landmarks to honor these pioneers.\n<ul style=list-style:inside><li>Each player will roll on the table below 3 times, then creating names for the local heroes you will name 3 places in you home region.</li></ul>",
+    "Sidenote": "Example: Player A rolls 11 for Explorer, they choose to name a distant forest after that famous explorer. They create a name for them, Magela, then label one of the forest geographys in their Home Region \"Magela Woods\""
+  },
+  "4.3": {
+    "Title": "4.3 Prosperity",
+    "Text": "Every empire has a distinct good, service, or profession than distinguishes it from its neighbors. Whether it's sword making, fishing, wizardry, etc. this will help distinguish and give each empire its own flavor.<ul style=list-style:inside><li>Each player will take turns developing their empire further by creating a good, service, or profession their empire excels at.</li></ul>",
+    "BottomText": "<ul style=list-style:inside><li>Either write the results on a seperate sheet of paper or in an open space near the faction</li></ul>"
+  }
+}

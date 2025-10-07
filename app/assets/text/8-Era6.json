@@ -1,0 +1,22 @@
+{
+  "Intro": {
+    "Title": "Era VI: Age of Collapse",
+    "Text": "With every rising empire there is a falling one. Open land is quickly diminishing and with that, wars, famine, & rebellion become a common occurrence."
+  },
+  "6.1": {
+    "Title": "6.1 Final Era",
+    "Text": "Take 5 turns in this era using the table below for 50 years of story. All results can be placed anywhere on the map."
+  },
+  "6.2": {
+    "Title": "6.2 Iconic Landmarks",
+    "Text": "Each player will take a moment to name one location on the map that was an important part of their Prime factions story. This may be a nearby forest where disaster struck, grassland where a decisive battle was fought, or mountain that ended up being an important religious site.\nName these iconic locations as you see fit, whether by a heroes name, diety, nearby monster, etc. These may be placed anywhere on the map."
+  },
+  "6.3": {
+    "Title": "6.3 Omens",
+    "Text": "How does your story end? As this world age comes to a close, what omen will bring this world into a new era?\n <ul style=list-style:inside><li>All players will select one player to roll on the table below. This should be either the player that created the most interesting story or who all decide ended with the most powerful faction.</li></ul>"
+  },
+  "6.4": {
+    "Title": "6.4 Finalizing",
+    "Text": "The map is almost complete, finish off by naming any important features that haven’t been named yet (geography, war sites, lair locations, etc) Then, draw in some accents for final touches (compass rose, ships in open water, sea monsters etc)"
+  }
+}

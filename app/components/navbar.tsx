@@ -9,7 +9,7 @@ interface NavBarProps {
 
 export function NavBar({ onThemeChange }: NavBarProps) {
   return (
-    <div className="bg-primary flex flex-col flex-shrink-0 w-[150px] justify-between py-6 gap-4 h-screen">
+    <div className="bg-primary flex flex-col flex-shrink-0 w-[160px] justify-between py-6 gap-4 h-screen">
       <div className="flex flex-col">
         {NavbarRoutes.map((route) => (
           <NavLink
@@ -53,5 +53,12 @@ export function NavBar({ onThemeChange }: NavBarProps) {
 const NavbarRoutes = [
   { to: "/", text: "Home" },
   { to: "/intro", text: "Intro" },
-  { to: "/home-3", text: "Home 3" },
+  { to: "/play-overview", text: "Play Overview" },
+  { to: "/era-1", text: "Era I" },
+  { to: "/era-2", text: "Era II" },
+  { to: "/era-3", text: "Era III" },
+  { to: "/era-4", text: "Era IV" },
+  { to: "/era-5", text: "Era V" },
+  { to: "/era-6", text: "Era VI" },
+  { to: "/special-rules", text: "Special Rules"}
 ];
