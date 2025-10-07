@@ -1,5 +1,5 @@
-import { Paragraph } from "~/components/paragraph";
 import json from "app/assets/text/3-Era1.json";
+import { Paragraph } from "~/components/paragraph";
 import Section from "~/components/section";
 
 export default function Era1() {
