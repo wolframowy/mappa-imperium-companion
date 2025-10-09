@@ -16,13 +16,13 @@
 
 @layer base {
   .dark {
-    --color-primary-dark: oklch(10% 0.03 80);
-    --color-primary: oklch(20% 0.03 80);
-    --color-primary-light: oklch(33% 0.03 80);
-    --color-primary-highlight: oklch(40% 0.03 80);
+    --color-primary-dark: oklch(10% 0.016 71);
+    --color-primary: oklch(20% 0.016 71);
+    --color-primary-light: oklch(33% 0.016 71);
+    --color-primary-highlight: oklch(40% 0.016 71);
     --color-text-primary: oklch(95% 0.03 80);
     --color-text-primary-muted: oklch(90% 0.03 80);
-    --color-accent-red: oklch(45% 0.11 31);
+    --color-accent-red: oklch(48.359% 0.11385 31.427);
     --color-accent-yellow: oklch(60% 0.08 88);
     --color-accent-yellow-highlight: oklch(70% 0.08 88);
     color-scheme: dark;

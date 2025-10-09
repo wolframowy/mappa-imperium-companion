@@ -19,7 +19,7 @@ function getSidenoteClassName(sidenoteType: "light" | "accent"): string {
     case "light":
       return "bg-primary-light inset-shadow-primary-highlight border-l-2 border-r-2 border-text-primary";
     case "accent":
-      return "bg-accent-yellow text-primary border-t-2 border-b-2 border-text-primary inset-shadow-accent-yellow-highlight";
+      return "bg-accent-yellow text-primary border-l-2 border-r-2 border-text-primary inset-shadow-accent-yellow-highlight";
     default:
       return "";
   }
