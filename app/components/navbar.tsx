@@ -3,6 +3,7 @@ import { NavLink } from "react-router";
 import sunIcon from "app/assets/icons/sun.svg";
 import moonIcon from "app/assets/icons/moon.svg";
 import { useState } from "react";
+import Tooltip from "./tooltip";
 
 interface NavBarProps {
   onThemeChange: () => void;
@@ -33,13 +34,17 @@ export function NavBar({ onThemeChange }: NavBarProps) {
           <NavLink
             key={route.to}
             to={route.to}
-            className="relative px-5 py-3 grow-0 whitespace-nowrap overflow-x-hidden"
+            className="relative px-5 py-3 grow-0 whitespace-nowrap"
             end
           >
             {isExpanded ? (
-              route.text
+              <span className="overflow-x-hidden">{route.text}</span>
             ) : (
-              <div className="text-center w-7">{route.shortText}</div>
+              <div className="text-center w-7">
+                <Tooltip tooltip={route.text} direction="right">
+                  {route.shortText}
+                </Tooltip>
+              </div>
             )}
           </NavLink>
         ))}
