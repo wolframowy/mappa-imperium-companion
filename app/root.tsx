@@ -62,7 +62,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <div className="flex w-screen">
           <NavBar onThemeChange={toggleLightDark} />
-          <div className="h-screen flex-grow min-w-sm">{children}</div>
+          <div className="h-screen flex-grow min-w-sm ml-[var(--navbar-width-collapsed)]">
+            {children}
+          </div>
         </div>
         <ScrollRestoration />
         <Scripts />

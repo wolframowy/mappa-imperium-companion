@@ -28,6 +28,11 @@
     color-scheme: dark;
     @apply dark:text-text-primary;
   }
+
+  :root {
+    --navbar-width-collapsed: 70px;
+    --navbar-width-expanded: 220px;
+  }
 }
 
 html,
