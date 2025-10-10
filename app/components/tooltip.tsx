@@ -25,10 +25,11 @@ export default function Tooltip({
       {children}
       <span
         id={tooltipId}
-        className={`absolute invisible opacity-0 py-1 px-2 z-10 text-center w-max bg-primary-dark text-text-primary-muted rounded-md transition-opacity duration-300
-        group-hover:visible group-hover:opacity-100 group-focus:visible group-focus:opacity-100
-        ${directionClasses}
-        `}
+        className={`absolute invisible opacity-0 py-1 px-2 z-10 text-center w-max bg-primary-light text-text-primary-muted rounded-md transition-opacity duration-300
+          shadow-md inset-shadow-sm inset-shadow-primary-highlight
+          group-hover:visible group-hover:opacity-100 group-focus:visible group-focus:opacity-100
+          ${directionClasses}
+          `}
       >
         {tooltip}
       </span>

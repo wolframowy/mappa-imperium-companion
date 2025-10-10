@@ -4,7 +4,7 @@ export interface SectionProps {
   main?: boolean;
   noUnderline?: boolean;
   title: string;
-  children: React.ReactElement | Array<React.ReactElement>;
+  children?: React.ReactElement | Array<React.ReactElement>;
   noShadow?: boolean;
 }
 
@@ -17,7 +17,7 @@ export default function Section({
 }: SectionProps) {
   return (
     <div
-      className={`py-4 px-3 bg-primary rounded-lg ${!noShadow && "inset-shadow-sm inset-shadow-primary-light shadow-md"}`}
+      className={`py-4 px-1 sm:px-3 bg-primary rounded-lg ${!noShadow && "inset-shadow-sm inset-shadow-primary-light shadow-md"}`}
     >
       {main ? (
         <h1
@@ -32,7 +32,7 @@ export default function Section({
           {title}
         </h2>
       )}
-      <div className="flex flex-col gap-2">{children}</div>
+      {children ?? <div className="flex flex-col gap-2">{children}</div>}
     </div>
   );
 }

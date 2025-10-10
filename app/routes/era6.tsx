@@ -1,32 +1,32 @@
-import json from "app/assets/text/8-Era6.json"
+import json from "app/assets/text/8-Era6.json";
 import Section from "~/components/section";
 import { Paragraph } from "~/components/paragraph";
 
 export default function Era6() {
   return (
-    <div className="flex flex-col gap-5 px-5 py-6 w-full h-full overflow-y-auto">
+    <div className="flex flex-col gap-5 w-full h-full">
       {/* Era 6 */}
       <Section title={json.Intro.Title} main noUnderline>
-        <Paragraph textHtml={json.Intro.Text}/>
+        <Paragraph textHtml={json.Intro.Text} />
       </Section>
       {/* Final Era */}
       <Section title={json["6.1"].Title}>
-        <Paragraph textHtml={json["6.1"].Text}/>
+        <Paragraph textHtml={json["6.1"].Text} />
         <div>Tabela</div>
       </Section>
       {/* Iconic Landmarks */}
       <Section title={json["6.2"].Title}>
-        <Paragraph textHtml={json["6.2"].Text}/>
+        <Paragraph textHtml={json["6.2"].Text} />
       </Section>
       {/* Omens */}
       <Section title={json["6.3"].Title}>
-        <Paragraph textHtml={json["6.3"].Text}/>
+        <Paragraph textHtml={json["6.3"].Text} />
         <div>Tabela</div>
       </Section>
       {/*Finalizing */}
       <Section title={json["6.4"].Title}>
-        <Paragraph textHtml={json["6.4"].Text}/>
+        <Paragraph textHtml={json["6.4"].Text} />
       </Section>
     </div>
-  )
+  );
 }

@@ -38,7 +38,7 @@ export function NavBar({ onThemeChange }: NavBarProps) {
             end
           >
             {isExpanded ? (
-              <span className="overflow-x-hidden">{route.text}</span>
+              <div className="overflow-x-hidden">{route.text}</div>
             ) : (
               <div className="text-center w-7">
                 <Tooltip tooltip={route.text} direction="right">
