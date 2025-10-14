@@ -4,7 +4,7 @@ import Section from "~/components/section";
 
 export default function Era1() {
   return (
-    <div className="flex flex-col gap-5 px-5 py-6 w-full h-full overflow-y-auto">
+    <div className="flex flex-col gap-5 w-full h-full">
       {/*Era 1*/}
       <Section title={json.Intro.Title} noUnderline main>
         <Paragraph textHtml={json.Intro.Text} />

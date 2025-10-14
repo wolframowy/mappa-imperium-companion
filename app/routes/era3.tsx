@@ -6,7 +6,7 @@ import Sidenote from "~/components/sidenote";
 
 export default function Era3() {
   return (
-    <div className="flex flex-col gap-5 px-5 py-6 w-full h-full overflow-y-auto">
+    <div className="flex flex-col gap-5 w-full h-full">
       {/*Era 3*/}
       <Section title={json.Intro.Title} noUnderline main>
         <Paragraph textHtml={json.Intro.Text} />

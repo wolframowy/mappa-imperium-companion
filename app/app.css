@@ -8,7 +8,7 @@
   --color-primary-light: oklch(95% 0.03 80);
   --color-primary-highlight: oklch(99% 0.03 80);
   --color-text-primary: oklch(5% 0.03 80);
-  --color-text-primary-muted: oklch(15% 0.03 80);
+  --color-text-primary-muted: oklch(40% 0.03 80);
   --color-accent-red: oklch(35% 0.11 31);
   --color-accent-yellow: oklch(60% 0.08 88);
   --color-accent-yellow-highlight: oklch(70% 0.08 88);
@@ -21,18 +21,25 @@
     --color-primary-light: oklch(33% 0.016 71);
     --color-primary-highlight: oklch(40% 0.016 71);
     --color-text-primary: oklch(95% 0.03 80);
-    --color-text-primary-muted: oklch(90% 0.03 80);
+    --color-text-primary-muted: oklch(80% 0.03 80);
     --color-accent-red: oklch(48.359% 0.11385 31.427);
     --color-accent-yellow: oklch(60% 0.08 88);
     --color-accent-yellow-highlight: oklch(70% 0.08 88);
     color-scheme: dark;
     @apply dark:text-text-primary;
   }
+
+  :root {
+    --navbar-width-collapsed: 70px;
+    --navbar-width-expanded: 220px;
+  }
 }
 
-html,
-body {
-  @apply bg-primary-dark;
+@layer components {
+  html,
+  body {
+    @apply bg-primary-dark;
+  }
 
   a {
     &.active {
@@ -43,17 +50,21 @@ body {
       @apply bg-primary-light inset-shadow-xs inset-shadow-primary-highlight shadow-sm;
     }
   }
-}
 
-h1,
-h2 {
-  @apply font-bold text-accent-red;
-}
+  h1,
+  h2 {
+    @apply font-bold text-accent-red;
+  }
 
-h1 {
-  @apply text-3xl;
-}
+  h1 {
+    @apply text-3xl;
+  }
 
-h2 {
-  @apply text-2xl;
+  h2 {
+    @apply text-2xl;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
 }
