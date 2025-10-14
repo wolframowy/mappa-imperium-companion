@@ -2,10 +2,11 @@ import { Paragraph } from "~/components/paragraph";
 import json from "~/assets/text/1-Basics.json";
 import Section from "~/components/section";
 import Sidenote from "~/components/sidenote";
+import Page from "~/components/page";
 
 export default function Intro() {
   return (
-    <div className="flex flex-col gap-5 w-full h-full">
+    <Page>
       {/*Basics*/}
       <Section title={json.Intro.Title} noUnderline main>
         <Paragraph textHtml={json.Intro.Text} />
@@ -27,6 +28,6 @@ export default function Intro() {
       <Section title={json.Drawing.Title}>
         <Paragraph textHtml={json.Drawing.Text} />
       </Section>
-    </div>
+    </Page>
   );
 }

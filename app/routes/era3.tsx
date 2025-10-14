@@ -3,10 +3,11 @@ import Section from "~/components/section";
 import { Paragraph } from "~/components/paragraph";
 import Examples from "~/components/examples";
 import Sidenote from "~/components/sidenote";
+import Page from "~/components/page";
 
 export default function Era3() {
   return (
-    <div className="flex flex-col gap-5 w-full h-full">
+    <Page>
       {/*Era 3*/}
       <Section title={json.Intro.Title} noUnderline main>
         <Paragraph textHtml={json.Intro.Text} />
@@ -66,6 +67,6 @@ export default function Era3() {
           <div>tabela</div>
         </Section>
       </Section>
-    </div>
+    </Page>
   );
 }

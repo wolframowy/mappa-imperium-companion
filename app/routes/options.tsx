@@ -1,5 +1,6 @@
+import Page from "~/components/page";
 import type { Route } from "./+types/options";
 
 export default function Options() {
-  return <div>Options Page</div>;
+  return <Page>Options Page</Page>;
 }

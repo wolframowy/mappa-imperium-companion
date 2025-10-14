@@ -2,10 +2,11 @@ import json from "app/assets/text/6-Era4.json";
 import Section from "~/components/section";
 import { Paragraph } from "~/components/paragraph";
 import Sidenote from "~/components/sidenote";
+import Page from "~/components/page";
 
 export default function Era4() {
   return (
-    <div className="flex flex-col gap-5 w-full h-full">
+    <Page>
       {/* Era 4 */}
       <Section title={json.Intro.Title} main noUnderline>
         <Paragraph textHtml={json.Intro.Text} />
@@ -27,6 +28,6 @@ export default function Era4() {
         <div>Tabela</div>
         <Paragraph textHtml={json["4.3"].BottomText} />
       </Section>
-    </div>
+    </Page>
   );
 }

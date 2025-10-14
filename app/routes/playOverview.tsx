@@ -1,10 +1,11 @@
 import { Paragraph } from "~/components/paragraph";
 import json from "app/assets/text/2-PlayOverview.json";
 import Section from "~/components/section";
+import Page from "~/components/page";
 
 export default function playOverview() {
   return (
-    <div className="flex flex-col gap-5 w-full h-full">
+    <Page>
       {/*Play Overview*/}
       <Section title={json.Intro.Title} noUnderline main>
         <Paragraph textHtml={json.Intro.Text} />
@@ -39,6 +40,6 @@ export default function playOverview() {
       <Section title={json.GameLength.Title}>
         <Paragraph textHtml={json.GameLength.Text} />
       </Section>
-    </div>
+    </Page>
   );
 }

@@ -1,10 +1,11 @@
 import json from "app/assets/text/7-Era5.json";
 import Section from "~/components/section";
 import { Paragraph } from "~/components/paragraph";
+import Page from "~/components/page";
 
 export default function Era5() {
   return (
-    <div className="flex flex-col gap-5 w-full h-full">
+    <Page>
       {/* Era 5 */}
       <Section title={json.Intro.Title} main noUnderline>
         <Paragraph textHtml={json.Intro.Text} />
@@ -60,6 +61,6 @@ export default function Era5() {
           <div>Tabela</div>
         </Section>
       </Section>
-    </div>
+    </Page>
   );
 }
