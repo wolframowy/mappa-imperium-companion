@@ -1,10 +1,11 @@
 import json from "app/assets/text/8-Era6.json";
 import Section from "~/components/section";
 import { Paragraph } from "~/components/paragraph";
+import Page from "~/components/page";
 
 export default function Era6() {
   return (
-    <div className="flex flex-col gap-5 w-full h-full">
+    <Page>
       {/* Era 6 */}
       <Section title={json.Intro.Title} main noUnderline>
         <Paragraph textHtml={json.Intro.Text} />
@@ -27,6 +28,6 @@ export default function Era6() {
       <Section title={json["6.4"].Title}>
         <Paragraph textHtml={json["6.4"].Text} />
       </Section>
-    </div>
+    </Page>
   );
 }

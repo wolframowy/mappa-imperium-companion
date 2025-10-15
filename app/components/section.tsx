@@ -1,10 +1,10 @@
-import React from "react";
+import React, { type ReactNode } from "react";
 
 export interface SectionProps {
   main?: boolean;
   noUnderline?: boolean;
   title: string;
-  children?: React.ReactElement | Array<React.ReactElement>;
+  children?: ReactNode;
   noShadow?: boolean;
 }
 

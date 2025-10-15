@@ -1,10 +1,11 @@
 import json from "app/assets/text/9-SpecialRules.json";
 import Section from "~/components/section";
 import { Paragraph } from "~/components/paragraph";
+import Page from "~/components/page";
 
 export default function SpecialRules() {
   return (
-    <div className="flex flex-col gap-5 w-full h-full">
+    <Page>
       {/* Special Rules */}
       <Section title={json.Intro.Title} main noUnderline></Section>
       {/* War */}
@@ -16,6 +17,6 @@ export default function SpecialRules() {
       <Section title={json.FallenEmpires.Title}>
         <Paragraph textHtml={json.FallenEmpires.Text} />
       </Section>
-    </div>
+    </Page>
   );
 }

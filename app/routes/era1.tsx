@@ -1,10 +1,11 @@
 import json from "app/assets/text/3-Era1.json";
+import Page from "~/components/page";
 import { Paragraph } from "~/components/paragraph";
 import Section from "~/components/section";
 
 export default function Era1() {
   return (
-    <div className="flex flex-col gap-5 w-full h-full">
+    <Page>
       {/*Era 1*/}
       <Section title={json.Intro.Title} noUnderline main>
         <Paragraph textHtml={json.Intro.Text} />
@@ -25,6 +26,6 @@ export default function Era1() {
       <Section title={json["1.4"].Title}>
         <Paragraph textHtml={json["1.4"].Text} />
       </Section>
-    </div>
+    </Page>
   );
 }
