@@ -21,7 +21,7 @@ export default function Tooltip({
   }[direction];
 
   return (
-    <span className="group relative" aria-describedby={tooltipId}>
+    <div className="group relative" aria-describedby={tooltipId}>
       {children}
       <span
         id={tooltipId}
@@ -33,6 +33,6 @@ export default function Tooltip({
       >
         {tooltip}
       </span>
-    </span>
+    </div>
   );
 }

@@ -62,7 +62,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <div className="flex w-screen">
           <NavBar onThemeChange={toggleLightDark} />
-          <div className="h-screen flex-grow min-w-xs px-1 sm:px-5 py-6 ml-[var(--navbar-width-collapsed)] overflow-y-auto">
+          <div className="h-screen flex-grow min-w-xs px-3 sm:px-5 py-6 sm:ml-[var(--navbar-width-collapsed)] overflow-y-auto">
             {children}
           </div>
         </div>

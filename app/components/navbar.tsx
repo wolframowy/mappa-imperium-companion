@@ -2,7 +2,7 @@ import { NavLink } from "react-router";
 
 import sunIcon from "app/assets/icons/sun.svg";
 import moonIcon from "app/assets/icons/moon.svg";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Tooltip from "./tooltip";
 
 interface NavBarProps {
@@ -10,48 +10,44 @@ interface NavBarProps {
 }
 
 export function NavBar({ onThemeChange }: NavBarProps) {
+  const navBarRef = useRef<HTMLDivElement>(null);
   const [isExpanded, setIsExpanded] = useState(false);
+
+  useEffect(() => {
+    function clickOutside(event: MouseEvent) {
+      if (
+        isExpanded &&
+        navBarRef.current &&
+        !navBarRef.current.contains(event.target as Node)
+      ) {
+        setIsExpanded(false);
+      }
+    }
+    document.addEventListener("click", clickOutside);
+    return () => {
+      document.removeEventListener("click", clickOutside);
+    };
+  }, [navBarRef, isExpanded]);
 
   const handleExpandClick = () => {
     setIsExpanded(!isExpanded);
   };
 
   return (
-    <div
-      className={`fixed bg-primary flex flex-col flex-shrink-0 justify-between gap-4 h-screen border-r-2 border-primary-dark transition-all duration-300 ${isExpanded ? "w-[var(--navbar-width-expanded)]" : "w-[var(--navbar-width-collapsed)]"}`}
-    >
-      <div className="flex flex-col">
+    <>
+      {/* Mobile Navigation Bar */}
+      <div className="fixed sm:hidden top-3.5 left-3.5 z-10 flex rounded-md bg-primary/60">
         <button
           onClick={handleExpandClick}
           aria-label={
             isExpanded ? "Collapse navigation bar" : "Expand navigation bar"
           }
-          className="px-5 py-1 self-end w-[var(--navbar-width-collapsed)] hover:bg-primary-light hover:inset-shadow-xs hover:inset-shadow-primary-highlight shadow-sm"
+          className="px-3 py-2 rounded-md hover:bg-primary-light hover:inset-shadow-xs hover:inset-shadow-primary-highlight hover:shadow-sm"
         >
           {isExpanded ? "<<" : ">>"}
         </button>
-        {NavbarRoutes.map((route) => (
-          <NavLink
-            key={route.to}
-            to={route.to}
-            className="relative px-5 py-3 grow-0 whitespace-nowrap"
-            end
-          >
-            {isExpanded ? (
-              <div className="overflow-x-hidden">{route.text}</div>
-            ) : (
-              <div className="text-center w-7">
-                <Tooltip tooltip={route.text} direction="right">
-                  {route.shortText}
-                </Tooltip>
-              </div>
-            )}
-          </NavLink>
-        ))}
-      </div>
-      <div className="flex flex-col items-center gap-4">
         <button
-          className="group size-8 flex justify-center items-center"
+          className="group px-3 py-2 flex justify-center items-center rounded-md hover:bg-primary-light hover:inset-shadow-xs hover:inset-shadow-primary-highlight hover:shadow-sm"
           onClick={onThemeChange}
         >
           <img
@@ -65,15 +61,71 @@ export function NavBar({ onThemeChange }: NavBarProps) {
             className="hidden w-6 h-6 dark:block group-hover:brightness-125"
           />
         </button>
-        <NavLink
-          to="/options"
-          className="py-4 self-stretch text-center hover:bg-primary-light"
-          end
-        >
-          Options
-        </NavLink>
       </div>
-    </div>
+      {/* Navigation Bar */}
+      <div
+        ref={navBarRef}
+        className={`
+          fixed overflow-hidden -translate-x-full
+          sm:w-[var(--navbar-width-collapsed)] sm:overflow-visible sm:translate-x-0
+          z-20 bg-primary flex flex-col flex-shrink-0 justify-between gap-4 h-screen border-r-2 border-primary-dark transition-all duration-300
+          ${isExpanded && "w-[var(--navbar-width-expanded)] sm:w-[var(--navbar-width-expanded)] translate-x-0"}`}
+      >
+        <div className="flex flex-col">
+          <button
+            onClick={handleExpandClick}
+            aria-label={
+              isExpanded ? "Collapse navigation bar" : "Expand navigation bar"
+            }
+            className="px-5 py-1 self-end w-[var(--navbar-width-collapsed)] hover:bg-primary-light hover:inset-shadow-xs hover:inset-shadow-primary-highlight hover:shadow-sm"
+          >
+            {isExpanded ? "<<" : ">>"}
+          </button>
+          {NavbarRoutes.map((route) => (
+            <NavLink
+              key={route.to}
+              to={route.to}
+              className="relative px-5 py-3 grow-0 whitespace-nowrap"
+              end
+            >
+              {isExpanded ? (
+                <div className="overflow-x-hidden">{route.text}</div>
+              ) : (
+                <div className="text-center w-7">
+                  <Tooltip tooltip={route.text} direction="right">
+                    {route.shortText}
+                  </Tooltip>
+                </div>
+              )}
+            </NavLink>
+          ))}
+        </div>
+        <div className="flex flex-col items-center gap-4">
+          <button
+            className="group size-8 flex justify-center items-center"
+            onClick={onThemeChange}
+          >
+            <img
+              src={moonIcon}
+              alt="Light/Dark Mode Toggle"
+              className="block w-6 h-6 dark:hidden group-hover:brightness-200"
+            />
+            <img
+              src={sunIcon}
+              alt="Light/Dark Mode Toggle"
+              className="hidden w-6 h-6 dark:block group-hover:brightness-125"
+            />
+          </button>
+          <NavLink
+            to="/options"
+            className="py-4 self-stretch text-center hover:bg-primary-light"
+            end
+          >
+            Options
+          </NavLink>
+        </div>
+      </div>
+    </>
   );
 }
 
