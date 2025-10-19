@@ -14,7 +14,7 @@ export function NavBar({ onThemeChange }: NavBarProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
-    function clickOutside(event: MouseEvent) {
+    const clickOutside = (event: MouseEvent) => {
       if (
         isExpanded &&
         navBarRef.current &&
@@ -22,7 +22,7 @@ export function NavBar({ onThemeChange }: NavBarProps) {
       ) {
         setIsExpanded(false);
       }
-    }
+    };
     document.addEventListener("click", clickOutside);
     return () => {
       document.removeEventListener("click", clickOutside);
@@ -67,7 +67,7 @@ export function NavBar({ onThemeChange }: NavBarProps) {
         ref={navBarRef}
         className={`
           fixed overflow-hidden -translate-x-full
-          sm:w-[var(--navbar-width-collapsed)] sm:overflow-visible sm:translate-x-0
+          w-[var(--navbar-width-collapsed)] sm:overflow-visible sm:translate-x-0
           z-20 bg-primary flex flex-col flex-shrink-0 justify-between gap-4 h-screen border-r-2 border-primary-dark transition-all duration-300
           ${isExpanded && "w-[var(--navbar-width-expanded)] sm:w-[var(--navbar-width-expanded)] translate-x-0"}`}
       >
