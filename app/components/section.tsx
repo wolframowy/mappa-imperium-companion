@@ -32,7 +32,9 @@ export default function Section({
           {title}
         </h2>
       )}
-      {children ?? <div className="flex flex-col gap-2">{children}</div>}
+      {children ? (
+        <div className="flex flex-col items-start gap-3">{children}</div>
+      ) : null}
     </div>
   );
 }

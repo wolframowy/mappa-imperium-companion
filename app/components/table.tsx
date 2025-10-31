@@ -1,6 +1,6 @@
 export interface TableData {
-  "Header": string[];
-  "Rows": string[][];
+  Header: string[];
+  Rows: string[][];
 }
 
 export interface TableProps {
@@ -8,59 +8,63 @@ export interface TableProps {
   columnsNumber?: number;
 }
 
-export default function Table({tableData, columnsNumber}: TableProps) {
+export default function Table({ tableData, columnsNumber }: TableProps) {
   if (columnsNumber) {
     const tables = splitArrayToNChunks(tableData, columnsNumber);
     return (
-      <div className="flex justify-around w-3/4">
+      <div className="flex justify-around gap-5">
         {tables.map((table, index) => (
-          <div key={index} className="w-4/5 mr-5">
-            {renderTable(table, columnsNumber)}
-          </div>
+          <div key={index}>{renderTable(table)}</div>
         ))}
       </div>
-    )
+    );
   } else {
     return renderTable(tableData);
   }
 }
 
-function renderTable(tableData: TableData, twoColumns?: number) {
+function renderTable(tableData: TableData) {
   return (
-    <div className="relative overflow-x-auto inset-shadow-sm inset-shadow-primary-highlight shadow-md">
-      <table className={`w-full ${!twoColumns && "lg:w-1/2"} h-full text-left`}>
-        <thead>
+    <div className="relative overflow-x-auto inset-shadow-sm inset-shadow-primary-highlight shadow-md rounded-md">
+      <table className={`w-full text-left`}>
+        <thead className="bg-primary-light">
           <tr>
             {tableData["Header"].map((item, index) => (
-              <th key={index} scope="col" className="first:pl-2">
+              <th key={index} scope="col" className="px-4 py-2">
                 {item}
               </th>
             ))}
           </tr>
         </thead>
         <tbody>
-        {tableData["Rows"].map((row, index) => {
-          return (
-            <tr key={index} className="odd:bg-primary-dark even:bg-primary-light">
-              {row.map((data, index) => (
-                <td key={index} className="first:pl-4 h-auto py-2">
-                  {data}
-                </td>
-              ))}
-            </tr>
-          )
-        })}
+          {tableData["Rows"].map((row, index) => {
+            return (
+              <tr key={index} className="odd:bg-primary even:bg-primary-light">
+                {row.map((data, index) => (
+                  <td
+                    key={index}
+                    className="first:text-center px-4 h-auto py-2"
+                  >
+                    {data}
+                  </td>
+                ))}
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
-  )
+  );
 }
 
-function splitArrayToNChunks(tableData: TableData, number: number) {
+function splitArrayToNChunks(tableData: TableData, colNumber: number) {
+  const chunk = Math.ceil(tableData.Rows.length / colNumber);
   let result = [];
-  const arrayCopy = [...tableData.Rows];
-  for (let i = number; i > 0; i--) {
-    result.push({"Header": tableData.Header, "Rows": arrayCopy.splice(0, Math.ceil(arrayCopy.length / i))})
+  for (let i = 0; i < colNumber; i++) {
+    result.push({
+      Header: tableData.Header,
+      Rows: tableData.Rows.slice(i * chunk, (i + 1) * chunk),
+    });
   }
   return result;
 }
