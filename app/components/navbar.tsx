@@ -91,7 +91,7 @@ export function NavBar({ onThemeChange }: NavBarProps) {
               {isExpanded ? (
                 <div className="overflow-x-hidden">{route.text}</div>
               ) : (
-                <div className="text-center w-7">
+                <div className="text-center">
                   <Tooltip tooltip={route.text} direction="right">
                     {route.shortText}
                   </Tooltip>
@@ -131,7 +131,7 @@ export function NavBar({ onThemeChange }: NavBarProps) {
 
 const NavbarRoutes = [
   { to: "/", text: "Home", shortText: "H" },
-  { to: "/intro", text: "Intro", shortText: "IN" },
+  { to: "/intro", text: "Intro", shortText: "Intro" },
   { to: "/play-overview", text: "Play Overview", shortText: "PO" },
   { to: "/era-1", text: "Era I: Age of Creation", shortText: "I" },
   { to: "/era-2", text: "Era II: Age of Myth", shortText: "II" },

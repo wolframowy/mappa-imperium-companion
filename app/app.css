@@ -26,7 +26,6 @@
     --color-accent-yellow: oklch(60% 0.08 88);
     --color-accent-yellow-highlight: oklch(70% 0.08 88);
     color-scheme: dark;
-    @apply dark:text-text-primary;
   }
 
   :root {
@@ -38,7 +37,7 @@
 @layer components {
   html,
   body {
-    @apply bg-primary-dark;
+    @apply bg-primary-dark text-text-primary;
   }
 
   a {
