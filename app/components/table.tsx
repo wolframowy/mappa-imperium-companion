@@ -25,7 +25,7 @@ export default function Table({ tableData, columnsNumber }: TableProps) {
 
 function renderTable(tableData: TableData) {
   return (
-    <div className="relative overflow-x-auto inset-shadow-sm inset-shadow-primary-highlight shadow-md rounded-md">
+    <div className="overflow-x-auto inset-shadow-sm inset-shadow-primary-highlight shadow-md rounded-md">
       <table className={`w-full text-left`}>
         <thead className="bg-primary-light">
           <tr>
