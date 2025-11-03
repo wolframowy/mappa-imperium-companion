@@ -25,9 +25,9 @@ export default function Table({ tableData, columnsNumber }: TableProps) {
 
 function renderTable(tableData: TableData) {
   return (
-    <div className="overflow-x-auto inset-shadow-sm inset-shadow-primary-highlight shadow-md rounded-md">
+    <div className="overflow-x-auto inset-shadow-sm inset-shadow-primary-highlight shadow-md dark:shadow-xl/40 rounded-md">
       <table className={`w-full text-left`}>
-        <thead className="bg-primary-light">
+        <thead className="bg-primary-highlight dark:text-shadow-md">
           <tr>
             {tableData["Header"].map((item, index) => (
               <th key={index} scope="col" className="px-4 py-2">
