@@ -13,7 +13,7 @@ export default function SpecialRules() {
         {/* War */}
         <Section title={json.War.Title} noShadow>
           <Paragraph textHtml={json.War.Text} />
-          <div>Tabela</div>
+          <Table tableData={tableData["War Table"]} />
         </Section>
         {/* Fallen Empires*/}
         <Section title={json.FallenEmpires.Title} noShadow>
