@@ -1,0 +1,1438 @@
+{
+  "Number of Dice Rolls per Era": {
+    "Header": [
+      "",
+      "Short",
+      "Standard",
+      "Long",
+      "Epic"
+    ],
+    "Rows": [
+      [
+        "Era 4",
+        "3",
+        "6",
+        "8",
+        "11"
+      ],
+      [
+        "Era 5",
+        "4",
+        "6",
+        "8",
+        "12"
+      ],
+      [
+        "Era 6",
+        "3",
+        "5",
+        "6",
+        "10"
+      ]
+    ]
+  },
+  "1.1 Create the lands": {
+    "Header": [
+      "1d6",
+      "Landmass"
+    ],
+    "Rows": [
+      [
+        "1",
+        "1 Large Continent"
+      ],
+      [
+        "2",
+        "1 Large + 1 Small isle"
+      ],
+      [
+        "3",
+        "1 Large + 2 Small isles"
+      ],
+      [
+        "4",
+        "2 Medium islands"
+      ],
+      [
+        "5",
+        "3 Medium islands"
+      ],
+      [
+        "6",
+        "Archipelago with at least 4 islands"
+      ]
+    ]
+  },
+  "1.2 Geography": {
+    "Header": [
+      "2d6",
+      "Geography"
+    ],
+    "Rows": [
+      [
+        "2",
+        "Savanna"
+      ],
+      [
+        "3",
+        "Wetlands"
+      ],
+      [
+        "4",
+        "Hills"
+      ],
+      [
+        "5",
+        "Lake"
+      ],
+      [
+        "6",
+        "River"
+      ],
+      [
+        "7",
+        "Forest"
+      ],
+      [
+        "8",
+        "Mountains"
+      ],
+      [
+        "9",
+        "Desert"
+      ],
+      [
+        "10",
+        "Jungle"
+      ],
+      [
+        "11",
+        "Canyon"
+      ],
+      [
+        "12",
+        "Volcano"
+      ]
+    ]
+  },
+  "2.1 Number of deities": {
+    "Header": [
+      "1d6",
+      "# of deities"
+    ],
+    "Rows": [
+      [
+        "1",
+        "1"
+      ],
+      [
+        "2",
+        "2"
+      ],
+      [
+        "3",
+        "2"
+      ],
+      [
+        "4",
+        "3"
+      ],
+      [
+        "5",
+        "3"
+      ],
+      [
+        "6",
+        "4"
+      ]
+    ]
+  },
+  "2.2 Domain": {
+    "Header": [
+      "1d6",
+      "deity of",
+      "examples"
+    ],
+    "Rows": [
+      [
+        "1",
+        "a geography",
+        "mountains, swamps, seas, rivers, deserts, volcanoes"
+      ],
+      [
+        "2",
+        "something in nature",
+        "sun, moon, storm, mushrooms animals birth"
+      ],
+      [
+        "3",
+        "an art or craft",
+        "smithing, the loom, arcana, knowledge, beer/wine, jewerly"
+      ],
+      [
+        "4",
+        "an endeavor",
+        "war, travel, the hunt, harvest games, music"
+      ],
+      [
+        "5",
+        "something around the home",
+        "garden, bread, hearth, cats, love, family"
+      ],
+      [
+        "6",
+        "something grim",
+        "death, grave, night, underworld, cannibalism, nightmares"
+      ]
+    ]
+  },
+  "2.3 Symbol": {
+    "Header": [
+      "1d6",
+      "design",
+      "examples"
+    ],
+    "Rows": [
+      [
+        "1",
+        "weapon",
+        "sword, dagger, hammer, arrow, spear, trident"
+      ],
+      [
+        "2",
+        "tool",
+        "scythe, pick, wheel, cup, key, horseshoe"
+      ],
+      [
+        "3",
+        "animal",
+        "fish, owl, lion, raven, spider, unicorn"
+      ],
+      [
+        "4",
+        "plant",
+        "tree, apple, carrot, flower, mushroom, branch"
+      ],
+      [
+        "5",
+        "natural",
+        "lightning, diamond, sun, moon, fire, comet"
+      ],
+      [
+        "6",
+        "body part",
+        "eye, skull, hand, heart, teeth, claw"
+      ]
+    ]
+  },
+  "Random Name List": {
+    "Header": [
+      "roll",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "Rows": [
+      [
+        "1",
+        "mith",
+        "tri",
+        "dar",
+        "gor",
+        "an",
+        "va"
+      ],
+      [
+        "2",
+        "col",
+        "sige",
+        "dir",
+        "era",
+        "altas",
+        "rama"
+      ],
+      [
+        "3",
+        "fir",
+        "alga",
+        "lorra",
+        "shiro",
+        "velen",
+        "amon"
+      ],
+      [
+        "4",
+        "for",
+        "ened",
+        "ziri",
+        "red",
+        "saur",
+        "baal"
+      ],
+      [
+        "5",
+        "li",
+        "serat",
+        "cho",
+        "maht",
+        "ali",
+        "esh"
+      ],
+      [
+        "6",
+        "sae",
+        "rah",
+        "on",
+        "tin",
+        "ti",
+        "ah"
+      ]
+    ]
+  },
+  "2.5 Sacred Sites": {
+    "Header": [
+      "2d6",
+      "site"
+    ],
+    "Rows": [
+      [
+        "2",
+        "bottomless pit"
+      ],
+      [
+        "3",
+        "lone mountain"
+      ],
+      [
+        "4",
+        "hot spring"
+      ],
+      [
+        "5",
+        "rock tower"
+      ],
+      [
+        "6",
+        "small lake"
+      ],
+      [
+        "7",
+        "ancient tree"
+      ],
+      [
+        "8",
+        "cave"
+      ],
+      [
+        "9",
+        "volcano"
+      ],
+      [
+        "10",
+        "grove"
+      ],
+      [
+        "11",
+        "henge"
+      ],
+      [
+        "12",
+        "geyser"
+      ]
+    ]
+  },
+  "3.1 Race Table": {
+    "Header": [
+      "2d6",
+      "Ancestry",
+      "Examples"
+    ],
+    "Rows": [
+      [
+        "2",
+        "Demonkind",
+        "Demonfolk, Imp, Tiefling"
+      ],
+      [
+        "3",
+        "Seafolk",
+        "Merfolk, Triton, Crabfolk"
+      ],
+      [
+        "4",
+        "Smallfolk",
+        "Halfling, Gnome, Deep Gnome, Fairy"
+      ],
+      [
+        "5",
+        "Reptilian",
+        "Lizardfolk, Kobold, Snakefolk, Dragonborn"
+      ],
+      [
+        "6",
+        "Dwarves",
+        "Mountain Dwarves, Hill Dwarves, Duergar"
+      ],
+      [
+        "7",
+        "Humans",
+        "Half-elf/orc or distinguishing culture (Egyptian, Norse, Chinese, Aztec, etc)"
+      ],
+      [
+        "8",
+        "Elves",
+        "High Elf, Wood Elf, Drow"
+      ],
+      [
+        "9",
+        "Greenskins",
+        "Orc, Goblin, Hobgoblin"
+      ],
+      [
+        "10",
+        "Animalfolk",
+        "Ratfolk, Gnoll, Kenku, Frogfolk, Catfolk"
+      ],
+      [
+        "11",
+        "Giantkind",
+        "Frost/Fire, Goliath"
+      ],
+      [
+        "12",
+        "Player's Choice",
+        "Either create your own or select one of the options above"
+      ]
+    ]
+  },
+  "3.2 Symbol": {
+    "Header": [
+      "roll",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "Rows": [
+      [
+        "1",
+        "Flame",
+        "Horse",
+        "Boar",
+        "Lion",
+        "Dragon",
+        "Hydra"
+      ],
+      [
+        "2",
+        "Lightning Bolt",
+        "Bird",
+        "Mountain",
+        "Sun",
+        "Moon",
+        "Leaf"
+      ],
+      [
+        "3",
+        "Tree",
+        "Claw",
+        "Spider",
+        "Grain",
+        "Bow",
+        "Horseshoe"
+      ],
+      [
+        "4",
+        "Harp",
+        "Fish",
+        "Anvil",
+        "Wolf",
+        "Wings",
+        "Skull"
+      ],
+      [
+        "5",
+        "Axe",
+        "Diamond",
+        "Flower",
+        "Apple",
+        "Cup",
+        "Spade"
+      ],
+      [
+        "6",
+        "Sword",
+        "Beholder",
+        "Scorpion",
+        "Crab",
+        "Unicorn",
+        "Star"
+      ]
+    ]
+  },
+  "Color": {
+    "Header": [
+      "roll",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "Rows": [
+      [
+        "1",
+        "Crimson",
+        "Red",
+        "Pink",
+        "Dark Blue",
+        "Lt Blue",
+        "Blue"
+      ],
+      [
+        "2",
+        "Dark Brown",
+        "Brown",
+        "Tan",
+        "Lime",
+        "Green",
+        "Dark Green"
+      ],
+      [
+        "3",
+        "Peach",
+        "Burgundy",
+        "Turquoise",
+        "Burnt Orange",
+        "Cream",
+        "Dark Purple"
+      ],
+      [
+        "4",
+        "Auburn",
+        "Lt Grey",
+        "Cyan",
+        "Magenta",
+        "Rose",
+        "Slate"
+      ],
+      [
+        "5",
+        "Grey",
+        "Charcoal",
+        "Light Grey",
+        "Amber",
+        "Purple",
+        "Dark Red"
+      ],
+      [
+        "6",
+        "Yellow",
+        "Orange",
+        "Gold",
+        "Silver",
+        "Black",
+        "White"
+      ]
+    ]
+  },
+  "Faction Names": {
+    "Header": [
+      "roll",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "Rows": [
+      [
+        "1",
+        "Kingdom",
+        "Empire",
+        "Unity",
+        "Order",
+        "Federation",
+        "Talon"
+      ],
+      [
+        "2",
+        "Union",
+        "Strike",
+        "Consortium",
+        "Tempest",
+        "Collective",
+        "Fate"
+      ],
+      [
+        "3",
+        "Sentinel",
+        "Alliance",
+        "Dominion",
+        "Confederacy",
+        "Nation",
+        "Domain"
+      ],
+      [
+        "4",
+        "Alliance",
+        "Tome",
+        "Dynasty",
+        "Horde",
+        "People",
+        "Flame"
+      ],
+      [
+        "5",
+        "Crusade",
+        "Republic",
+        "Council",
+        "Hierarchy",
+        "Covenant",
+        "Legion"
+      ],
+      [
+        "6",
+        "Hegemony",
+        "Imperium",
+        "Khanate",
+        "State",
+        "League",
+        "Sword"
+      ]
+    ]
+  },
+  "Neighbors Table": {
+    "Header": [
+      "1d6",
+      "Faction Type",
+      "examples"
+    ],
+    "Rows": [
+      [
+        "1",
+        "Hive or Swarm",
+        "(Insect, Fungus, Crustacean)"
+      ],
+      [
+        "2",
+        "Tribe or Clan",
+        "(Roll on the race chart page 7 )"
+      ],
+      [
+        "3",
+        "Minor Kingdom",
+        "(Roll on the race chart page 7, add 1 additional settlement)"
+      ],
+      [
+        "4",
+        "Magic User",
+        "(Mad mage, Necromancer, druid, etc)"
+      ],
+      [
+        "5",
+        "Cult / Order / Lair",
+        "(demons, bandits, worshippers)"
+      ],
+      [
+        "6",
+        "Legendary Monster",
+        "(Dragon, Hydra, Kraken)*"
+      ]
+    ]
+  },
+  "Settlement Table": {
+    "Header": [
+      "1d6",
+      "Settlement Purpose",
+      "examples"
+    ],
+    "Rows": [
+      [
+        "1",
+        "Food",
+        "(farm, fish, forage)"
+      ],
+      [
+        "2",
+        "Mining",
+        "(stone quarry, clay pit, metal mine)"
+      ],
+      [
+        "3",
+        "Industry",
+        "(goods production, textile, factory)"
+      ],
+      [
+        "4",
+        "Trade",
+        "(market, port, caravan stop)"
+      ],
+      [
+        "5",
+        "Military",
+        "(frontier fort, barracks, academy)"
+      ],
+      [
+        "6",
+        "Religion",
+        "(monastery, temple, shrine)"
+      ]
+    ]
+  },
+  "Age of Discovery Table": {
+    "Header": [
+      "3d6",
+      "Event",
+      "Description"
+    ],
+    "Rows": [
+      [
+        "3",
+        "Magical Event",
+        "Something magical, powerful, or otherworldly has been discovered. Describe and draw this relic, be sure to give it and the location where it was discovered a name. (ex. Tome of undeath, wand of power, divine weapon)"
+      ],
+      [
+        "4",
+        "Evil Lair or Hive",
+        "Sinister forces are lurking. Is it demons, twisted abominations, giant spiders? Draw in this new hostile neighbor with an appropriate settlement"
+      ],
+      [
+        "5",
+        "New Island",
+        "Your sea explorers have discovered a new island! Draw in 1 small island, roll on the geography table pg 5 twice and place on or near new island, then name the island after the explorer that discovered it."
+      ],
+      [
+        "6",
+        "Ancient Ruins",
+        "Your scouts discovered the ruins of a lost civilization. Draw in a ruin and place a new cult, hive, mage, or tribe nearby."
+      ],
+      [
+        "7",
+        "Neighbors Develop",
+        "Select a neighbor at random and roll on the appropriate Neighbors Develop Table on page 13"
+      ],
+      [
+        "8",
+        "Bandits/Pirates",
+        "Brigands have been raiding merchants and caravans. Place a new hostile camp on a trade route or bay, then give them a name and banner."
+      ],
+      [
+        "9",
+        "Minor Kingdom",
+        "Scouts have discovered another kingdom! Roll on the Race table pg 7, then place 2 settlements. Remember to give them a banner and a name!"
+      ],
+      [
+        "10",
+        "Colonization",
+        "Your empire is growing to distant shores. Build a new coastal settlement on the same or nearby island."
+      ],
+      [
+        "11",
+        "Expansion",
+        "Your empire is growing. Place a new settlement - Roll on the settlement table on the previous page 3.4"
+      ],
+      [
+        "12",
+        "Hostiles",
+        "Your explorers have made contact with hostiles. Roll on the Neighbors Table pg 9 and place them anywhere in your home region. Use the Race Table & Settlement Table pg 9 if necessary"
+      ],
+      [
+        "13",
+        "Military Expansion",
+        "Your empire is flexing it's might, draw in a new military settlement nearby"
+      ],
+      [
+        "14",
+        "Neighbor Expands",
+        "Choose one neighboring faction and add a new settlement for them."
+      ],
+      [
+        "15",
+        "New Resource",
+        "Your Explorers have discovered a valuable new resource! Place a new resource symbol in your home region"
+      ],
+      [
+        "16",
+        "Fantastic Landmark",
+        "Scouts have stumbled upon an impressive landmark, is it a strange rock formation, a lone monolith, magical grove? Draw it in then place a tribe nearby - roll on the Race Table pg 7 and place a settlement"
+      ],
+      [
+        "17",
+        "Roaming Herds",
+        "Strange and magnificent beasts have been spotted. Are they terrifyingly large, aggressive, tasty? Draw in a symbol and name for these new creatures."
+      ],
+      [
+        "18",
+        "Monster Awakens",
+        "Your scouts have disturbed and awakened a legendary monster, draw in a new monster and give it a name. ex: The Onyx Dragon, Titan of the North, Swamp Hydra"
+      ]
+    ]
+  },
+  "4.2 Profession": {
+    "Header": [
+      "3d6",
+      "Profession"
+    ],
+    "Rows": [
+      [
+        "3",
+        "Musician"
+      ],
+      [
+        "4",
+        "Sculpter"
+      ],
+      [
+        "5",
+        "Artist"
+      ],
+      [
+        "6",
+        "Poet"
+      ],
+      [
+        "7",
+        "Author"
+      ],
+      [
+        "8",
+        "Historian"
+      ],
+      [
+        "9",
+        "Military Leader"
+      ],
+      [
+        "10",
+        "City Leader"
+      ],
+      [
+        "11",
+        "Explorer"
+      ],
+      [
+        "12",
+        "Adventurer"
+      ],
+      [
+        "13",
+        "Inventor"
+      ],
+      [
+        "14",
+        "Diplomat"
+      ],
+      [
+        "15",
+        "Trader"
+      ],
+      [
+        "16",
+        "Humanitarian"
+      ],
+      [
+        "17",
+        "Mage"
+      ],
+      [
+        "18",
+        "Beast Tamer"
+      ]
+    ]
+  },
+  "4.3 Profession": {
+    "Header": [
+      "3d6",
+      "Profession"
+    ],
+    "Rows": [
+      [
+        "3",
+        "Music"
+      ],
+      [
+        "4",
+        "Alchemy or brew"
+      ],
+      [
+        "5",
+        "Artistic Trinkets"
+      ],
+      [
+        "6",
+        "Mining"
+      ],
+      [
+        "7",
+        "Explorers"
+      ],
+      [
+        "8",
+        "Seafarers"
+      ],
+      [
+        "9",
+        "Fine Carpentry"
+      ],
+      [
+        "10",
+        "Type of weaponry"
+      ],
+      [
+        "11",
+        "Metal Industry"
+      ],
+      [
+        "12",
+        "Type of Food"
+      ],
+      [
+        "13",
+        "Fighting style"
+      ],
+      [
+        "14",
+        "Magic Training"
+      ],
+      [
+        "15",
+        "Trade"
+      ],
+      [
+        "16",
+        "Horsemanship"
+      ],
+      [
+        "17",
+        "Metal Work"
+      ],
+      [
+        "18",
+        "Beast Raising"
+      ]
+    ]
+  },
+  "Age of Empires Table": {
+    "Header": [
+      "3d6",
+      "Event",
+      "Description"
+    ],
+    "Rows": [
+      [
+        "3",
+        "The King is Dead",
+        "Your king/leader has died without a proper heir and now your empire is in anarchy. Split your empire into at least 3 factions, creating new names/banners for each. If you wish you may switch your Prime Faction now."
+      ],
+      [
+        "4",
+        "Overthrown",
+        "One of your settlements has grown tired of your rule and thrown out the ruling class. Rename this new “free” city and give the new faction a name and banner."
+      ],
+      [
+        "5",
+        "Shrine",
+        "A nearby location has come to be seen as sacred grounds to your people. Place a shrine or temple and select the deity worshiped here (choose one already made or create a new one from Era II - pg 5)"
+      ],
+      [
+        "6",
+        "Hero Arrives",
+        "A powerful hero has shown up in the Empire, what did they do? Draw in a statue, monument, or name a geography near your capital or the location of the event."
+      ],
+      [
+        "7",
+        "Hostile Attack",
+        "A nearby hostile force has attacked! destroy a fort or settlement and replace it with a ruin, or claim it for the nearby invading faction."
+      ],
+      [
+        "8",
+        "War!",
+        "Your army is marching! Select any settlement not already owned by you and roll on the War! Table pg 16 with your empire acting as the Attacker."
+      ],
+      [
+        "9",
+        "Neighbors Develop",
+        "Select a neighbor at random and roll on the appropriate Neighbors Develop Table on the next page 5.2"
+      ],
+      [
+        "10",
+        "Expedition",
+        "A fleet of ships or military caravan has set out to gain a foothold in distant lands. Place a new coastal fort or frontier outpost, preferably in another’s home region."
+      ],
+      [
+        "11",
+        "Expand",
+        "Your empire is growing, Roll on the settlement table pg 9 and place a new settlement anywhere on the map"
+      ],
+      [
+        "12",
+        "Prosperity",
+        "People are flocking to your empire. Grow your cities if possible, add more farmland, draw ships in the ports, etc. Then draw in a monument or construction to show off your wealth. Name a nearby geography after the leader"
+      ],
+      [
+        "13",
+        "Trade",
+        "Economic Prosperity! Build a road connecting your empire to another faction, then add a trade post somewhere along the road. (consider resource locations) If no possible road connections exist, build a new coastal trade post."
+      ],
+      [
+        "14",
+        "Military Power",
+        "Your empire needs stability & security. Create a fort, city/border walls, or a barracks"
+      ],
+      [
+        "15",
+        "Gifted Academy",
+        "Your empire has cultivated a new craft, art, or ability. Are they spellcasters, researchers, monks, druids? Build a new academy, sanctuary, or library for this group and place this new settlement."
+      ],
+      [
+        "16",
+        "Disaster/Famine",
+        "Something terrible has struck the empire. Natural Disaster or Magical, famine or disease? Remove a settlement and replace it with a ruin."
+      ],
+      [
+        "17",
+        "Feed the People",
+        "Your growing empire needs food! Place either a new farming town or fishing village"
+      ],
+      [
+        "18",
+        "Revolution",
+        "Rebellion! Half your empire has split into a new faction. Give them a name +banner, treat them as a hostile neighbor from now on."
+      ]
+    ]
+  },
+  "Minor Faction": {
+    "Header": [
+      "1d6",
+      "",
+      ""
+    ],
+    "Rows": [
+      [
+        "1",
+        "Expand",
+        "Add a settlement"
+      ],
+      [
+        "2",
+        "Colonize",
+        "Build a new coastal settlement"
+      ],
+      [
+        "3",
+        "Militarize",
+        "Draw in a new fort or military settlement"
+      ],
+      [
+        "4",
+        "Union",
+        "Select a nearby tribe and merge them into the minor faction, becoming one nation."
+      ],
+      [
+        "5",
+        "Epic Construction",
+        "A new academy, altar, tower? Draw in a new construction"
+      ],
+      [
+        "6",
+        "Expand",
+        "Connect a road to a neighbor and build a trade settlement on that road. Or,create a new coastal trading port."
+      ]
+    ]
+  },
+  "Tribe / Bandits / Pirates": {
+    "Header": [
+      "1d6",
+      "",
+      ""
+    ],
+    "Rows": [
+      [
+        "1",
+        "Monster!",
+        "A new Legendary Monster has been discovered. Create one now and draw it in"
+      ],
+      [
+        "2",
+        "Warpath",
+        "War! Select a neighbor and roll on the War! Table pg 16"
+      ],
+      [
+        "3",
+        "Advancement",
+        "Strong leadership has taken control of the tribe. Upgrade to a Minor Faction by giving a banner and name."
+      ],
+      [
+        "4",
+        "Expand",
+        "Add a settlement"
+      ],
+      [
+        "5",
+        "Floating Village",
+        "Strap some ships together and create a floating village in a nearby sea or lake"
+      ],
+      [
+        "6",
+        "Invasion",
+        "A mighty leader has mustered together enough force to attack and take a town. Take one nearby settlement and switch control to the tribe."
+      ]
+    ]
+  },
+  "Hive": {
+    "Header": [
+      "1d6",
+      "",
+      ""
+    ],
+    "Rows": [
+      [
+        "1",
+        "Swarm",
+        "A new queen has taken a large group to settle a new hive, place a new Hive somewhere else on the map."
+      ],
+      [
+        "2",
+        "Expand",
+        "Add a new hive settlement/den/nest nearby"
+      ],
+      [
+        "3",
+        "Raid",
+        "Attack a nearby settlement, roll 1d6 for result Odd = settlement destroyed , Even = town defended"
+      ],
+      [
+        "4",
+        "Infest",
+        "Attack and replace a nearby settlement with a new nest/settlement of the hive."
+      ],
+      [
+        "5",
+        "Spawn",
+        "The hive has bred an incredible new foe. Create a new Legendary Monster"
+      ],
+      [
+        "6",
+        "Expand",
+        "Add a new hive settlement/den/nest nearby"
+      ]
+    ]
+  },
+  "Magic User": {
+    "Header": [
+      "1d6",
+      "",
+      ""
+    ],
+    "Rows": [
+      [
+        "1",
+        "Minions",
+        "A group of followers has joined. Build a settlement camp nearby."
+      ],
+      [
+        "2",
+        "Raid",
+        "Attack a nearby settlement, roll 1d6 Odd = settlement destroyed , Even = town defended"
+      ],
+      [
+        "3",
+        "Expand",
+        "Followers are flocking to the power (choice or force?), build a new resource camp settlement nearby."
+      ],
+      [
+        "4",
+        "Construction",
+        "A monolith, shrine, or portal? Draw in a new construction."
+      ],
+      [
+        "5",
+        "Alter Land",
+        "Eternal winter, forest grow, burned lands? Alter the lands nearby by adding a geography or destroying part of one."
+      ],
+      [
+        "6",
+        "Corruption",
+        "Foul or corrupted magic is tainting the land. Darken the land, kill the forests, or spoil the water supplies nearby."
+      ]
+    ]
+  },
+  "Cult / Lair / Order": {
+    "Header": [
+      "1d6",
+      "",
+      ""
+    ],
+    "Rows": [
+      [
+        "1",
+        "Expand",
+        "Add a settlement"
+      ],
+      [
+        "2",
+        "Worship",
+        "Draw a new Temple nearby and select a deity or create a new one"
+      ],
+      [
+        "3",
+        "Epic Construction",
+        "A new dungeon, tower, altar to a god? Draw in a new construction nearby"
+      ],
+      [
+        "4",
+        "Infiltrate",
+        "The Cult has taken control of a nearby settlement, switch faction control to the cult"
+      ],
+      [
+        "5",
+        "Ransack",
+        "A nearby settlement has something valuable (gems, weapons, people) draw in a camp nearby and describe the theft."
+      ],
+      [
+        "6",
+        "Expand",
+        "Add a settlement"
+      ]
+    ]
+  },
+  "Monster": {
+    "Header": [
+      "1d6",
+      "",
+      ""
+    ],
+    "Rows": [
+      [
+        "1",
+        "Raid",
+        "Attack a nearby settlement, roll 1d6 Odd = settlement destroyed , Even = town defended"
+      ],
+      [
+        "2",
+        "Treasure",
+        "Whether by offering, sacrifice, or assault, the monster has accumulated vast amounts of wealth. Draw in a treasure hold or gold laden lair."
+      ],
+      [
+        "3",
+        "Raid",
+        "Attack a nearby settlement, roll 1d6 Odd = settlement destroyed , Even = town defended"
+      ],
+      [
+        "4",
+        "Ascension",
+        "Fantastic stories are being spread about the monster. Add it to the list of gods and select a domain and symbol for it (give it a name if you haven’t yet)"
+      ],
+      [
+        "5",
+        "Lair Building",
+        "The monster is settling in, they or their followers are creating a proper lair or den. Draw in a home, cave, tower, or sanctum."
+      ],
+      [
+        "6",
+        "Fury",
+        "The monster has unleashed its rage onto a nearby settlement, destroy and replace it with a ruin"
+      ]
+    ]
+  },
+  "Age of Collapse Table": {
+    "Header": [
+      "3d6",
+      "Event",
+      "Description"
+    ],
+    "Rows": [
+      [
+        "3",
+        "Dug Too Deep",
+        "A Monster has risen from underground and destroyed or claimed one of your settlements. Place a new monster on the map now (don’t forget a name)"
+      ],
+      [
+        "4",
+        "Arcane Disturbance",
+        "Has a portal to a new realm opened, or perhaps a mad wizard has crafted a new tower? Describe & draw in a magical occurrence, anything from a new tower to a massive crater."
+      ],
+      [
+        "5",
+        "Royalty",
+        "Your rulers need a place to live! Build a palace for them near the capital or somewhere of importance. Name this region on the map after the ruling family"
+      ],
+      [
+        "6",
+        "Piety",
+        "A religion has gained prominence in the empire. Select a deity (or create a new one) and place a cathedral or large temple nearby"
+      ],
+      [
+        "7",
+        "Refugees",
+        "People are flocking to your city, are they fleeing war, monster attacks, disasters? Place a small village next to or expand your capital for these new citizens."
+      ],
+      [
+        "8",
+        "Rising Empire",
+        "Despite the times, your empire is thriving! Roll & draw in a new settlement or expand your existing one with farmland, walls, etc."
+      ],
+      [
+        "9",
+        "Neighboring War",
+        "Select any two neighboring factions, choose which is the attacker and defender, then roll on the War! Table pg 16"
+      ],
+      [
+        "10",
+        "War!",
+        "Your army is marching! Select any settlement not already owned by you and roll on the War! Table pg 16 with your empire acting as the Attacker. (this can be against any faction, tribe, or hostile force on the map)"
+      ],
+      [
+        "11",
+        "Neighbors Develop",
+        "Select a neighbor at random and roll on the appropriate Neighbors Develop Table on the previous page pg 13"
+      ],
+      [
+        "12",
+        "Mobilize",
+        "Draw in a new fort or military settlement"
+      ],
+      [
+        "13",
+        "Disaster",
+        "Something terrible has struck the empire. Natural Disaster or Magical, famine or disease? Roll 1 dice to determine the severity (6 is most severe, 1 is weak) - Remove at least 1 settlement and replace it with a ruin."
+      ],
+      [
+        "14",
+        "Evil Lurks",
+        "Something sinister has claimed a nearby ruin. Place a new cult, tribe, mage, hive, or monster onto the map on an existing ruin. (if no empty ruin exists, find an empty place on the map for them)"
+      ],
+      [
+        "15",
+        "Vassalage",
+        "A neighboring faction has joined your empire. Create an Alliance Banner and give your new united empire a name."
+      ],
+      [
+        "16",
+        "Revolution",
+        "Rebellion! Half your empire has split into a new faction. Give them a name + banner, treat them as a hostile neighbor from now on"
+      ],
+      [
+        "17",
+        "Nightmares",
+        "Something fowl is lurking in the forest (or any geography) is it lycanthropy, demonic spiders, a mad druid, rodents of unusual size? Treat them as a hostile faction and give the location an ominous name (ex: Forest of Death, Smouldering Jungle, Fire Swamp)"
+      ],
+      [
+        "18",
+        "Cataclysm",
+        "Total devastation! Something apocalyptic has struck your home region, island destroyed, comet impact, fury of the gods? Destroy a large section of your home region then describe the mythical story."
+      ]
+    ]
+  },
+  "Omen Table": {
+    "Header": [
+      "2d6",
+      "Event",
+      "Description"
+    ],
+    "Rows": [
+      [
+        "2",
+        "Black Smoke",
+        "Black smoke is seen rising from the tallest peak, name that peak now"
+      ],
+      [
+        "3",
+        "Abyss",
+        "Rumors begin to spread about strange sounds coming from a point in the largest ocean, name that ocean or bay now"
+      ],
+      [
+        "4",
+        "Blinding Light",
+        "A bright light appears, coming from the least inhabited island - name that island"
+      ],
+      [
+        "5",
+        "Silence",
+        "Rumors begin to spread amongst the world's temples that something is wrong with the gods..."
+      ],
+      [
+        "6",
+        "River of Blood",
+        "One of the world's rivers or lakes begins to change color. Name that river or lake."
+      ],
+      [
+        "7",
+        "Comet",
+        "A comet fills the night sky. Is this a dark omen or sign of prosperity?"
+      ],
+      [
+        "8",
+        "They Know Something",
+        "For several days, birds are all seen flying away from one island. Name that island"
+      ],
+      [
+        "9",
+        "Stench",
+        "A foul stench begins emanating from one of the Sacred Sites"
+      ],
+      [
+        "10",
+        "Howl",
+        "At sundown, a deafening howl is heard across the world"
+      ],
+      [
+        "11",
+        "Terror",
+        "Rumors spread the something is back..."
+      ],
+      [
+        "12",
+        "Meteor Storm",
+        "Thousands of meteors pepper the land. What's left when the dust clears?"
+      ]
+    ]
+  },
+  "War Table": {
+    "Header": [
+      "1d6",
+      "Results",
+      ""
+    ],
+    "Rows": [
+      [
+        "1",
+        "Devastating Loss and Counterattack",
+        "Defender crushes the attacker. Defender makes an immediate counter attack against a settlement they choose. Now rolling as the attacker. Defender also places a monument to their new war hero."
+      ],
+      [
+        "2",
+        "Failed Attack",
+        "Defender fights off the attackers, maintaining control of the settlement."
+      ],
+      [
+        "3",
+        "Stalemate",
+        "After many losses on both sides, the attack fails"
+      ],
+      [
+        "4",
+        "Successful Assault",
+        "Attacker wins and takes control of the settlement"
+      ],
+      [
+        "5",
+        "Great Victory",
+        "Attacker easily overpowers the defender and takes control of the settlement, then places a new fort nearby."
+      ],
+      [
+        "6",
+        "Great Campaign",
+        "Attacker crushes the enemy, then immediately makes another attack against another settlement. Create a monument to the new hero that emerged from this war."
+      ]
+    ]
+  }
+}

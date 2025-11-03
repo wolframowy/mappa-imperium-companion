@@ -1,8 +1,10 @@
 import json from "app/assets/text/6-Era4.json";
+import tableData from "app/assets/text/Tables.json";
 import Section from "~/components/section";
 import { Paragraph } from "~/components/paragraph";
 import Sidenote from "~/components/sidenote";
 import Page from "~/components/page";
+import Table from "~/components/table";
 
 export default function Era4() {
   return (
@@ -14,18 +16,18 @@ export default function Era4() {
       {/* Exploration Begins */}
       <Section title={json["4.1"].Title}>
         <Paragraph textHtml={json["4.1"].Text} />
-        <div>Tabela</div>
+        <Table tableData={tableData["Age of Discovery Table"]} />
       </Section>
       {/* Colonization */}
       <Section title={json["4.2"].Title}>
         <Paragraph textHtml={json["4.2"].Text} />
-        <div>Tabela</div>
+        <Table tableData={tableData["4.2 Profession"]} columnsNumber={2} />
         <Sidenote textHtml={json["4.2"].Sidenote} sidenoteType={"light"} />
       </Section>
       {/* Prosperity */}
       <Section title={json["4.3"].Title}>
         <Paragraph textHtml={json["4.3"].Text} />
-        <div>Tabela</div>
+        <Table tableData={tableData["4.3 Profession"]} columnsNumber={2} />
         <Paragraph textHtml={json["4.3"].BottomText} />
       </Section>
     </Page>
