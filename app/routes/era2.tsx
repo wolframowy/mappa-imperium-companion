@@ -1,9 +1,11 @@
 import json from "app/assets/text/4-Era2.json";
+import tableData from "app/assets/text/Tables.json";
 import Section from "~/components/section";
 import { Paragraph } from "~/components/paragraph";
 import Examples from "~/components/examples";
 import Sidenote from "~/components/sidenote";
 import Page from "~/components/page";
+import Table from "~/components/table";
 
 export default function Era2() {
   return (
@@ -15,14 +17,17 @@ export default function Era2() {
       {/*Number of deities*/}
       <Section title={json["2.1"].Title}>
         <Paragraph textHtml={json["2.1"].Text} />
+        <Table tableData={tableData["2.1 Number of deities"]} />
       </Section>
       {/*Domain*/}
       <Section title={json["2.2"].Title}>
         <Paragraph textHtml={json["2.2"].Text} />
+        <Table tableData={tableData["2.2 Domain"]} />
       </Section>
       {/*Symbol*/}
       <Section title={json["2.3"].Title}>
         <Paragraph textHtml={json["2.3"].Text} />
+        <Table tableData={tableData["2.3 Symbol"]} />
       </Section>
       {/*Name*/}
       <Section title={json["2.4"].Title}>
@@ -33,11 +38,13 @@ export default function Era2() {
           </div>
           <p>{json.Random.Text}</p>
         </div>
+        <Table tableData={tableData["Random Name List"]} />
       </Section>
       {/*Sacred sites*/}
       <Section title={json["2.5"].Title}>
         <Paragraph textHtml={json["2.5"].Text} />
         <Examples exampleTexts={json.Examples.List} />
+        <Table tableData={tableData["2.5 Sacred Sites"]} />
         <Sidenote textHtml={json.Sidenote} sidenoteType={"light"} />
       </Section>
     </Page>

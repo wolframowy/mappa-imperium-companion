@@ -1,7 +1,9 @@
 import { Paragraph } from "~/components/paragraph";
 import json from "app/assets/text/2-PlayOverview.json";
+import tableData from "app/assets/text/Tables.json";
 import Section from "~/components/section";
 import Page from "~/components/page";
+import Table from "~/components/table";
 
 export default function playOverview() {
   return (
@@ -39,6 +41,7 @@ export default function playOverview() {
       {/*Game Length*/}
       <Section title={json.GameLength.Title}>
         <Paragraph textHtml={json.GameLength.Text} />
+        <Table tableData={tableData["Number of Dice Rolls per Era"]} />
       </Section>
     </Page>
   );
