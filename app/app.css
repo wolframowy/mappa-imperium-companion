@@ -26,11 +26,10 @@
     --color-accent-yellow: oklch(60% 0.08 88);
     --color-accent-yellow-highlight: oklch(70% 0.08 88);
     color-scheme: dark;
-    @apply dark:text-text-primary;
   }
 
   :root {
-    --navbar-width-collapsed: 70px;
+    --navbar-width-collapsed: 75px;
     --navbar-width-expanded: 220px;
   }
 }
@@ -38,7 +37,7 @@
 @layer components {
   html,
   body {
-    @apply bg-primary-dark;
+    @apply bg-primary-dark text-text-primary;
   }
 
   a {

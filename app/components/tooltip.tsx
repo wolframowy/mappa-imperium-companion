@@ -21,11 +21,12 @@ export default function Tooltip({
   }[direction];
 
   return (
-    <span className="group relative" aria-describedby={tooltipId}>
+    <div className="group relative" aria-describedby={tooltipId}>
       {children}
       <span
         id={tooltipId}
         className={`absolute invisible opacity-0 py-1 px-2 z-10 text-center w-max bg-primary-light text-text-primary-muted rounded-md transition-opacity duration-300
+          font-normal text-base
           shadow-md inset-shadow-sm inset-shadow-primary-highlight
           group-hover:visible group-hover:opacity-100 group-focus:visible group-focus:opacity-100
           ${directionClasses}
@@ -33,6 +34,6 @@ export default function Tooltip({
       >
         {tooltip}
       </span>
-    </span>
+    </div>
   );
 }
