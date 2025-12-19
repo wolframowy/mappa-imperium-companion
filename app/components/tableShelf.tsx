@@ -11,7 +11,6 @@ export default function TableShelf() {
   };
 
   useEffect(() => {
-    console.log("Lookup Tables:", lookupTables.length);
     if (lookupTables.length === 0) {
       setIsExpanded(false);
     }
