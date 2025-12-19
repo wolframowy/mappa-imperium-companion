@@ -1,3 +1,7 @@
+import { useContext } from "react";
+import { TableShelfContext } from "~/root";
+import Tooltip from "./tooltip";
+
 export interface TableData {
   Header: string[];
   Rows: string[][];
@@ -6,13 +10,38 @@ export interface TableData {
 export interface TableProps {
   tableData: TableData;
   columnsNumber?: number;
+  addButton?: boolean;
 }
 
-export default function Table({ tableData, columnsNumber }: TableProps) {
+export default function Table({
+  tableData,
+  columnsNumber,
+  addButton = true,
+}: TableProps) {
+  const { lookupTables, setLookupTables } = useContext(TableShelfContext) || {
+    lookupTables: [],
+    setLookupTables: () => {},
+  };
+
+  return (
+    <div className="flex items-start max-w-full">
+      {render(tableData, columnsNumber)}
+      {addButton && (
+        <button onClick={() => setLookupTables([...lookupTables, tableData])}>
+          <Tooltip tooltip="Add table to quick access" direction="left">
+            +
+          </Tooltip>
+        </button>
+      )}
+    </div>
+  );
+}
+
+function render(tableData: TableData, columnsNumber?: number) {
   if (columnsNumber) {
     const tables = splitArrayToNChunks(tableData, columnsNumber);
     return (
-      <div className="flex justify-around gap-5">
+      <div className="overflow-x-auto flex justify-around gap-5">
         {tables.map((table, index) => (
           <div key={index}>{renderTable(table)}</div>
         ))}

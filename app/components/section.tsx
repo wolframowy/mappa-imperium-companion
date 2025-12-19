@@ -17,7 +17,7 @@ export default function Section({
 }: SectionProps) {
   return (
     <div
-      className={`py-4 px-1 sm:px-3 h-full bg-primary rounded-lg ${!noShadow && "inset-shadow-sm inset-shadow-primary-light shadow-md"}`}
+      className={`max-w-full py-4 px-1 sm:px-3 h-full bg-primary rounded-lg ${!noShadow && "inset-shadow-sm inset-shadow-primary-light shadow-md"}`}
     >
       {main ? (
         <h1
