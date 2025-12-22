@@ -1,6 +1,7 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import Table from "./table";
 import { TableShelfContext } from "~/root";
+import Tooltip from "./tooltip";
 
 export default function TableShelf() {
   const tableShelfRef = useRef<HTMLDivElement>(null);
@@ -42,23 +43,32 @@ export default function TableShelf() {
         transition-transform duration-300 ease-in-out ${isExpanded ? "translate-x-0 h-[60%]" : "translate-x-[calc(100%-20px)]"}`}
     >
       <button
-        className={"p-0.5 self-stretch flex items-start"}
+        className={
+          "p-0.5 self-stretch flex flex-col items-center gap-2 bg-accent-yellow hover:bg-accent-yellow-highlight text-neutral-100 transition-colors duration-200 rounded-tl-xl rounded-bl-xl"
+        }
         onClick={() => setIsExpanded(!isExpanded)}
       >
-        {isExpanded ? ">" : "<"}
+        <div>{isExpanded ? ">" : "<"}</div>
+        <div className="hidden md:block [writing-mode:vertical-rl] text-xs">
+          Quick Access
+        </div>
       </button>
       {/* List of tables */}
       <div className={"p-2 overflow-y-auto flex flex-col gap-3"}>
         {lookupTables.map((tableData, index) => (
           <div key={index}>
-            <Table tableData={tableData} columnsNumber={2} addButton={false} />
-            <button
-              onClick={() =>
-                setLookupTables(lookupTables.filter((_, i) => i !== index))
-              }
-            >
-              x
-            </button>
+            {index !== 0 && <hr className="border-primary-light mb-2" />}
+            <Table tableData={tableData} addButton={false} autoSplit={true} />
+            <Tooltip tooltip="Remove table from quick access" direction="left">
+              <button
+                className="w-6 h-6 rounded-md font-square bg-accent-red hover:bg-accent-red-highlight text-neutral-100 transition-colors duration-200"
+                onClick={() =>
+                  setLookupTables(lookupTables.filter((_, i) => i !== index))
+                }
+              >
+                -
+              </button>
+            </Tooltip>
           </div>
         ))}
       </div>

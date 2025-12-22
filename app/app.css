@@ -10,8 +10,12 @@
   --color-text-primary: oklch(5% 0.03 80);
   --color-text-primary-muted: oklch(40% 0.03 80);
   --color-accent-red: oklch(35% 0.11 31);
+  --color-accent-red-highlight: oklch(45% 0.11 31);
   --color-accent-yellow: oklch(60% 0.08 88);
   --color-accent-yellow-highlight: oklch(70% 0.08 88);
+  --color-accent-green: oklch(53.2% 0.157 131.589);
+  --color-accent-green-highlight: oklch(64.8% 0.2 131.684);
+  --font-square: "Nova Square", sans-serif;
 }
 
 @layer base {
@@ -23,8 +27,11 @@
     --color-text-primary: oklch(95% 0.03 80);
     --color-text-primary-muted: oklch(80% 0.03 80);
     --color-accent-red: oklch(48.359% 0.11385 31.427);
+    --color-accent-red-highlight: oklch(55% 0.11 31);
     --color-accent-yellow: oklch(60% 0.08 88);
     --color-accent-yellow-highlight: oklch(70% 0.08 88);
+    --color-accent-green: oklch(53.2% 0.157 131.589);
+    --color-accent-green-highlight: oklch(64.8% 0.2 131.684);
     color-scheme: dark;
   }
 
