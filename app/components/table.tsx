@@ -40,7 +40,7 @@ export default function Table({
       {addButton && (
         <Tooltip tooltip="Add table to quick access" direction="left">
           <button
-            className="ml-2 w-6 h-6 rounded-md font-square bg-accent-green hover:bg-accent-yellow-highlight text-neutral-100 transition-colors duration-200"
+            className="ml-2 w-6 h-6 rounded-md font-square bg-accent-green hover:bg-accent-green-highlight text-neutral-100 transition-colors duration-200"
             onClick={() => setLookupTables([...lookupTables, tableData])}
           >
             +
