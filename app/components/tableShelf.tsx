@@ -48,7 +48,7 @@ export default function TableShelf() {
         }
         onClick={() => setIsExpanded(!isExpanded)}
       >
-        <div>{isExpanded ? ">" : "<"}</div>
+        <div className="font-square">{isExpanded ? ">" : "<"}</div>
         <div className="hidden md:block [writing-mode:vertical-rl] text-xs">
           Quick Access
         </div>
@@ -58,17 +58,27 @@ export default function TableShelf() {
         {lookupTables.map((tableData, index) => (
           <div key={index}>
             {index !== 0 && <hr className="border-primary-light mb-2" />}
-            <Table tableData={tableData} addButton={false} autoSplit={true} />
-            <Tooltip tooltip="Remove table from quick access" direction="left">
-              <button
-                className="w-6 h-6 rounded-md font-square bg-accent-red hover:bg-accent-red-highlight text-neutral-100 transition-colors duration-200"
-                onClick={() =>
-                  setLookupTables(lookupTables.filter((_, i) => i !== index))
-                }
+            <div className="flex gap-2">
+              <Tooltip
+                tooltip="Remove table from quick access"
+                direction="right"
               >
-                -
-              </button>
-            </Tooltip>
+                <button
+                  className="w-6 h-6 rounded-md font-square bg-accent-red hover:bg-accent-red-highlight text-neutral-100 transition-colors duration-200"
+                  onClick={() =>
+                    setLookupTables(lookupTables.filter((_, i) => i !== index))
+                  }
+                >
+                  -
+                </button>
+              </Tooltip>
+              {tableData.Title && (
+                <div className="font-bold text-lg mb-1 text-accent-red">
+                  {tableData.Title}
+                </div>
+              )}
+            </div>
+            <Table tableData={tableData} addButton={false} autoSplit={true} />
           </div>
         ))}
       </div>

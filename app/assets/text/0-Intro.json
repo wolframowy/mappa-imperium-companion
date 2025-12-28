@@ -1,0 +1,14 @@
+{
+  "Game Components": {
+    "Title": "Game Components",
+    "List": ["1 sheet of paper & pencil", "3 six sided dice", "optional - a separate sheet of paper to keep a timeline and notes"]
+  },
+  "Inspiration": {
+    "Title": "Inspiration",
+    "List": ["Ex Novo by Sharkbomb <a href=\"https://sharkbombs.itch.io/ex-novo\">https://sharkbombs.itch.io/ex-novo</a>", "Wonderdraft by Megasploot <a href=\"https://www.wonderdraft.net/\">https://www.wonderdraft.net/</a>"]
+  },
+  "Play Online": {
+    "Title": "Play Online With",
+    "List": ["<a href=\"https://roll20.net/\">https://roll20.net</a>", "<a href=\"https://aggie.io/\">https://aggie.io/</a>", "<a href=\"https://www.owlbear.rodeo/\">https://www.owlbear.rodeo</a>"]
+  }
+}

@@ -42,7 +42,7 @@ export function NavBar({ onThemeChange }: NavBarProps) {
           aria-label={
             isExpanded ? "Collapse navigation bar" : "Expand navigation bar"
           }
-          className="px-3 py-2 rounded-md hover:bg-primary-light hover:inset-shadow-xs hover:inset-shadow-primary-highlight hover:shadow-sm"
+          className="px-3 py-2 rounded-md hover:bg-primary-light hover:inset-shadow-xs hover:inset-shadow-primary-highlight hover:shadow-sm font-square"
         >
           {isExpanded ? "<<" : ">>"}
         </button>
@@ -77,7 +77,7 @@ export function NavBar({ onThemeChange }: NavBarProps) {
             aria-label={
               isExpanded ? "Collapse navigation bar" : "Expand navigation bar"
             }
-            className="px-5 py-1 self-end w-[var(--navbar-width-collapsed)] hover:bg-primary-light hover:inset-shadow-xs hover:inset-shadow-primary-highlight hover:shadow-sm"
+            className="px-5 py-1 self-end w-[var(--navbar-width-collapsed)] hover:bg-primary-light hover:inset-shadow-xs hover:inset-shadow-primary-highlight hover:shadow-sm font-square"
           >
             {isExpanded ? "<<" : ">>"}
           </button>

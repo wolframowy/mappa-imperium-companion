@@ -1,5 +1,6 @@
 {
   "Number of Dice Rolls per Era": {
+    "Title": "Game Length",
     "Header": [
       "",
       "Short",
@@ -32,6 +33,7 @@
     ]
   },
   "1.1 Create the lands": {
+    "Title": "1.1 Create the lands",
     "Header": [
       "1d6",
       "Landmass"
@@ -64,6 +66,7 @@
     ]
   },
   "1.2 Geography": {
+    "Title": "1.2 Geography",
     "Header": [
       "2d6",
       "Geography"
@@ -116,6 +119,7 @@
     ]
   },
   "2.1 Number of deities": {
+    "Title": "2.1 Number of deities",
     "Header": [
       "1d6",
       "# of deities"
@@ -148,6 +152,7 @@
     ]
   },
   "2.2 Domain": {
+    "Title": "2.2 Domain",
     "Header": [
       "1d6",
       "deity of",
@@ -187,6 +192,7 @@
     ]
   },
   "2.3 Symbol": {
+    "Title": "2.3 Symbol",
     "Header": [
       "1d6",
       "design",
@@ -226,6 +232,7 @@
     ]
   },
   "Random Name List": {
+    "Title": "2.4 Random Name List",
     "Header": [
       "roll",
       "1",
@@ -293,6 +300,7 @@
     ]
   },
   "2.5 Sacred Sites": {
+    "Title": "2.5 Sacred Sites",
     "Header": [
       "2d6",
       "site"
@@ -345,6 +353,7 @@
     ]
   },
   "3.1 Race Table": {
+    "Title": "3.1 Race Table",
     "Header": [
       "2d6",
       "Ancestry",
@@ -409,6 +418,7 @@
     ]
   },
   "3.2 Symbol": {
+    "Title": "3.2 Symbol",
     "Header": [
       "roll",
       "1",
@@ -476,6 +486,7 @@
     ]
   },
   "Color": {
+    "Title": "3.2 Color",
     "Header": [
       "roll",
       "1",
@@ -543,6 +554,7 @@
     ]
   },
   "Faction Names": {
+    "Title": "3.2 Faction Names",
     "Header": [
       "roll",
       "1",
@@ -610,6 +622,7 @@
     ]
   },
   "Neighbors Table": {
+    "Title": "3.3 Neighbors Table",
     "Header": [
       "1d6",
       "Faction Type",
@@ -649,6 +662,7 @@
     ]
   },
   "Settlement Table": {
+    "Title": "3.4 Settlement Table",
     "Header": [
       "1d6",
       "Settlement Purpose",
@@ -688,6 +702,7 @@
     ]
   },
   "Age of Discovery Table": {
+    "Title": "4.1 Age of Discovery Table",
     "Header": [
       "3d6",
       "Event",
@@ -777,6 +792,7 @@
     ]
   },
   "4.2 Profession": {
+    "Title": "4.2 Profession",
     "Header": [
       "3d6",
       "Profession"
@@ -849,6 +865,7 @@
     ]
   },
   "4.3 Profession": {
+    "Title": "4.3 Profession",
     "Header": [
       "3d6",
       "Profession"
@@ -921,6 +938,7 @@
     ]
   },
   "Age of Empires Table": {
+    "Title": "5.1 Age of Empires Table",
     "Header": [
       "3d6",
       "Event",
@@ -1010,6 +1028,7 @@
     ]
   },
   "Minor Faction": {
+    "Title": "5.2 Minor Faction Table",
     "Header": [
       "1d6",
       "",
@@ -1049,6 +1068,7 @@
     ]
   },
   "Tribe / Bandits / Pirates": {
+    "Title": "5.2 Tribe / Bandits / Pirates Table",
     "Header": [
       "1d6",
       "",
@@ -1088,6 +1108,7 @@
     ]
   },
   "Hive": {
+    "Title": "5.2 Hive Table",
     "Header": [
       "1d6",
       "",
@@ -1127,6 +1148,7 @@
     ]
   },
   "Magic User": {
+    "Title": "5.2 Magic User Table",
     "Header": [
       "1d6",
       "",
@@ -1166,6 +1188,7 @@
     ]
   },
   "Cult / Lair / Order": {
+    "Title": "5.2 Cult / Lair / Order Table",
     "Header": [
       "1d6",
       "",
@@ -1205,6 +1228,7 @@
     ]
   },
   "Monster": {
+    "Title": "5.2 Monster Table",
     "Header": [
       "1d6",
       "",
@@ -1244,6 +1268,7 @@
     ]
   },
   "Age of Collapse Table": {
+    "Title": "6.1 Age of Collapse Table",
     "Header": [
       "3d6",
       "Event",
@@ -1333,6 +1358,7 @@
     ]
   },
   "Omen Table": {
+    "Title": "6.3 Omen Table",
     "Header": [
       "2d6",
       "Event",
@@ -1397,6 +1423,7 @@
     ]
   },
   "War Table": {
+    "Title": "War Table",
     "Header": [
       "1d6",
       "Results",
