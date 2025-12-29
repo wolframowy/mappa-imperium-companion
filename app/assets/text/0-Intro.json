@@ -5,10 +5,10 @@
   },
   "Inspiration": {
     "Title": "Inspiration",
-    "List": ["Ex Novo by Sharkbomb <a href=\"https://sharkbombs.itch.io/ex-novo\">https://sharkbombs.itch.io/ex-novo</a>", "Wonderdraft by Megasploot <a href=\"https://www.wonderdraft.net/\">https://www.wonderdraft.net/</a>"]
+    "List": ["Ex Novo by Sharkbomb <a href=\"https://sharkbombs.itch.io/ex-novo\" target=\"_blank\">https://sharkbombs.itch.io/ex-novo</a>", "Wonderdraft by Megasploot <a href=\"https://www.wonderdraft.net/\" target=\"_blank\">https://www.wonderdraft.net/</a>"]
   },
   "Play Online": {
     "Title": "Play Online With",
-    "List": ["<a href=\"https://roll20.net/\">https://roll20.net</a>", "<a href=\"https://aggie.io/\">https://aggie.io/</a>", "<a href=\"https://www.owlbear.rodeo/\">https://www.owlbear.rodeo</a>"]
+    "List": ["<a href=\"https://roll20.net/\" target=\"_blank\">https://roll20.net</a>", "<a href=\"https://aggie.io/\" target=\"_blank\">https://aggie.io/</a>", "<a href=\"https://www.owlbear.rodeo/\" target=\"_blank\">https://www.owlbear.rodeo</a>"]
   }
 }
