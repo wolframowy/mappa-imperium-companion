@@ -6,7 +6,7 @@ import Page from "~/components/page";
 
 export default function Intro() {
   return (
-    <Page>
+    <>
       <div className="grid lg:grid-rows-3 lg:grid-flow-col lg:auto-cols-fr gap-4">
         {/*Basics*/}
         <div className="row-span-2">
@@ -32,6 +32,6 @@ export default function Intro() {
           <Paragraph textHtml={json.Drawing.Text} />
         </Section>
       </div>
-    </Page>
+    </>
   );
 }

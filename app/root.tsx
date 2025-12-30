@@ -1,7 +1,6 @@
 import {
   isRouteErrorResponse,
   Links,
-  NavLink,
   Outlet,
   Scripts,
   ScrollRestoration,
@@ -12,6 +11,7 @@ import "./app.css";
 import { createContext, useEffect, useState } from "react";
 import { NavBar } from "./components/navbar";
 import TableShelf from "./components/tableShelf";
+import Page from "./components/page";
 
 export const TableShelfContext = createContext<{
   lookupTables: Array<any>;
@@ -74,9 +74,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <TableShelfContext value={{ lookupTables, setLookupTables }}>
           <div className="flex w-screen">
             <NavBar onThemeChange={toggleLightDark} />
-            <div className="h-screen flex-grow min-w-xs px-3 sm:px-7 py-6 sm:ml-[var(--navbar-width-collapsed)] overflow-y-auto">
-              {children}
-            </div>
+            <Page>{children}</Page>
           </div>
           <TableShelf />
         </TableShelfContext>
@@ -93,9 +91,9 @@ export default function App() {
 
 export function HydrateFallback() {
   return (
-    <div className="pt-16 p-4 container mx-auto">
+    <Page>
       <h1>Loading...</h1>
-    </div>
+    </Page>
   );
 }
 

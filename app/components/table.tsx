@@ -1,9 +1,10 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { TableShelfContext } from "~/root";
 import Tooltip from "./tooltip";
 
 // 6 rows per column for autosplit. 6 is chosen because when d6 are used it creates pretty natural split behavior.
 const MAX_ROWS_PER_COLUMN = 6;
+const MAX_CELL_LENGTH = 80;
 
 export interface TableData {
   Header: string[];
@@ -27,13 +28,25 @@ export default function Table({
     lookupTables: [],
     setLookupTables: () => {},
   };
+  const [areCellsSmallEnough, setAreCellsSmallEnough] = useState(false);
+  useEffect(() => {
+    for (const row of tableData.Rows) {
+      for (const cell of row) {
+        if (cell.length > MAX_CELL_LENGTH) {
+          setAreCellsSmallEnough(false);
+          return;
+        }
+      }
+    }
+    setAreCellsSmallEnough(true);
+  }, [tableData]);
 
   return (
     <div className="flex items-start max-w-full">
       {render(
         tableData,
         columnsNumber ||
-          (autoSplit
+          (autoSplit && areCellsSmallEnough
             ? Math.ceil(tableData.Rows.length / MAX_ROWS_PER_COLUMN)
             : undefined)
       )}

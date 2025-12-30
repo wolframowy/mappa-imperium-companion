@@ -7,7 +7,7 @@ import Table from "~/components/table";
 
 export default function Era1() {
   return (
-    <Page>
+    <>
       {/*Era 1*/}
       <Section title={json.Intro.Title} noUnderline main>
         <Paragraph textHtml={json.Intro.Text} />
@@ -17,14 +17,14 @@ export default function Era1() {
         <Section title={json["1.1"].Title}>
           <Paragraph textHtml={json["1.1"].Text} />
           <div className="self-center">
-            <Table tableData={tableData["1.1 Create the lands"]} />
+            <Table tableData={tableData["1.1"]} />
           </div>
         </Section>
         {/*Geography*/}
         <Section title={json["1.2"].Title}>
           <Paragraph textHtml={json["1.2"].Text} />
           <div className="self-center">
-            <Table tableData={tableData["1.2 Geography"]} columnsNumber={2} />
+            <Table tableData={tableData["1.2"]} columnsNumber={2} />
           </div>
         </Section>
         {/*Touching up*/}
@@ -36,6 +36,6 @@ export default function Era1() {
           <Paragraph textHtml={json["1.4"].Text} />
         </Section>
       </div>
-    </Page>
+    </>
   );
 }
