@@ -3,7 +3,6 @@ import tableData from "app/assets/text/Tables.json";
 import Section from "~/components/section";
 import { Paragraph } from "~/components/paragraph";
 import Sidenote from "~/components/sidenote";
-import Page from "~/components/page";
 import Table from "~/components/table";
 
 export default function Era4() {

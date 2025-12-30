@@ -2,7 +2,6 @@ import { Paragraph } from "~/components/paragraph";
 import json from "app/assets/text/2-PlayOverview.json";
 import tableData from "app/assets/text/Tables.json";
 import Section from "~/components/section";
-import Page from "~/components/page";
 import Table from "~/components/table";
 
 export default function PlayOverview() {

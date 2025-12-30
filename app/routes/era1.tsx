@@ -1,6 +1,5 @@
 import json from "app/assets/text/3-Era1.json";
 import tableData from "app/assets/text/Tables.json";
-import Page from "~/components/page";
 import { Paragraph } from "~/components/paragraph";
 import Section from "~/components/section";
 import Table from "~/components/table";

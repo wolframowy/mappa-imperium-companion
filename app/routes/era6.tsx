@@ -2,7 +2,6 @@ import json from "app/assets/text/8-Era6.json";
 import tableData from "app/assets/text/Tables.json";
 import Section from "~/components/section";
 import { Paragraph } from "~/components/paragraph";
-import Page from "~/components/page";
 import Table from "~/components/table";
 
 export default function Era6() {

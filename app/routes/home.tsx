@@ -1,6 +1,4 @@
-import type { Route } from "./+types/home";
 import json from "app/assets/text/0-Intro.json";
-import Page from "~/components/page";
 import Section from "~/components/section";
 
 export default function Home() {

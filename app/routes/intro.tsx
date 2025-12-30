@@ -2,7 +2,6 @@ import { Paragraph } from "~/components/paragraph";
 import json from "~/assets/text/1-Basics.json";
 import Section from "~/components/section";
 import Sidenote from "~/components/sidenote";
-import Page from "~/components/page";
 
 export default function Intro() {
   return (
