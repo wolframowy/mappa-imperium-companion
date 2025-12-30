@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <div className="flex flex-col items-center justify-center gap-4 text-center mb-4">
-        <div className="text-8xl">Mappa Imperium</div>
+        <div className="text-7xl sm:text-8xl">Mappa Imperium</div>
       </div>
       <Section noUnderline>A World Building Game for 1 or More Players</Section>
       <Section title={json["Game Components"].Title}>
