@@ -36,7 +36,7 @@ export function NavBar({ onThemeChange }: NavBarProps) {
   return (
     <>
       {/* Mobile Navigation Bar */}
-      <div className="fixed sm:hidden top-3.5 left-3.5 z-10 flex rounded-md bg-primary/60">
+      <div className="fixed sm:hidden top-2.5 left-2.5 z-10 flex rounded-md bg-primary/60">
         <button
           onClick={handleExpandClick}
           aria-label={
