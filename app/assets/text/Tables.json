@@ -637,12 +637,12 @@
       [
         "2",
         "Tribe or Clan",
-        "(Roll on the race chart page 7 )"
+        "(Roll on the [3.1](race chart))"
       ],
       [
         "3",
         "Minor Kingdom",
-        "(Roll on the race chart page 7, add 1 additional settlement)"
+        "(Roll on the [3.1](race chart), add 1 additional settlement in step 3.4)"
       ],
       [
         "4",
@@ -722,7 +722,7 @@
       [
         "5",
         "New Island",
-        "Your sea explorers have discovered a new island! Draw in 1 small island, roll on the geography table pg 5 twice and place on or near new island, then name the island after the explorer that discovered it."
+        "Your sea explorers have discovered a new island! Draw in 1 small island, roll on the [1.2](geography table) twice and place on or near new island, then name the island after the explorer that discovered it."
       ],
       [
         "6",
@@ -732,7 +732,7 @@
       [
         "7",
         "Neighbors Develop",
-        "Select a neighbor at random and roll on the appropriate Neighbors Develop Table on page 13"
+        "Select a neighbor at random and roll on the appropriate [5.2](Neighbors Develop Table)"
       ],
       [
         "8",
@@ -742,7 +742,7 @@
       [
         "9",
         "Minor Kingdom",
-        "Scouts have discovered another kingdom! Roll on the Race table pg 7, then place 2 settlements. Remember to give them a banner and a name!"
+        "Scouts have discovered another kingdom! Roll on the [3.1](Race table), then place 2 [3.4](settlements). Remember to give them a [3.2](banner and a name)!"
       ],
       [
         "10",
@@ -752,12 +752,12 @@
       [
         "11",
         "Expansion",
-        "Your empire is growing. Place a new settlement - Roll on the settlement table on the previous page 3.4"
+        "Your empire is growing. Place a new settlement - Roll on the [3.4](settlement table)"
       ],
       [
         "12",
         "Hostiles",
-        "Your explorers have made contact with hostiles. Roll on the Neighbors Table pg 9 and place them anywhere in your home region. Use the Race Table & Settlement Table pg 9 if necessary"
+        "Your explorers have made contact with hostiles. Roll on the [3.3](Neighbors Table) and place them anywhere in your home region. Use the [3.4](Settlement Table) if necessary"
       ],
       [
         "13",
@@ -777,7 +777,7 @@
       [
         "16",
         "Fantastic Landmark",
-        "Scouts have stumbled upon an impressive landmark, is it a strange rock formation, a lone monolith, magical grove? Draw it in then place a tribe nearby - roll on the Race Table pg 7 and place a settlement"
+        "Scouts have stumbled upon an impressive landmark, is it a strange rock formation, a lone monolith, magical grove? Draw it in then place a tribe nearby - roll on the [3.1](Race Table) and place a [3.4](settlement)"
       ],
       [
         "17",
@@ -958,7 +958,7 @@
       [
         "5",
         "Shrine",
-        "A nearby location has come to be seen as sacred grounds to your people. Place a shrine or temple and select the deity worshiped here (choose one already made or create a new one from Era II - pg 5)"
+        "A nearby location has come to be seen as sacred grounds to your people. Place a shrine or temple and select the deity worshiped here (choose one already made or create a new one from [2](Era II))"
       ],
       [
         "6",
@@ -973,12 +973,12 @@
       [
         "8",
         "War!",
-        "Your army is marching! Select any settlement not already owned by you and roll on the War! Table pg 16 with your empire acting as the Attacker."
+        "Your army is marching! Select any settlement not already owned by you and roll on the [War](War Table) with your empire acting as the Attacker."
       ],
       [
         "9",
         "Neighbors Develop",
-        "Select a neighbor at random and roll on the appropriate Neighbors Develop Table on the next page 5.2"
+        "Select a neighbor at random and roll on the appropriate [5.2](Neighbors Develop Table)"
       ],
       [
         "10",
@@ -988,7 +988,7 @@
       [
         "11",
         "Expand",
-        "Your empire is growing, Roll on the settlement table pg 9 and place a new settlement anywhere on the map"
+        "Your empire is growing, Roll on the [3.4](settlement table) and place a new settlement anywhere on the map"
       ],
       [
         "12",
@@ -1023,7 +1023,7 @@
       [
         "18",
         "Revolution",
-        "Rebellion! Half your empire has split into a new faction. Give them a name +banner, treat them as a hostile neighbor from now on."
+        "Rebellion! Half your empire has split into a new faction. Give them a name and banner, treat them as a hostile neighbor from now on."
       ]
     ]
   },
@@ -1083,7 +1083,7 @@
       [
         "2",
         "Warpath",
-        "War! Select a neighbor and roll on the War! Table pg 16"
+        "War! Select a neighbor and roll on the [War](War Table)"
       ],
       [
         "3",
@@ -1308,17 +1308,17 @@
       [
         "9",
         "Neighboring War",
-        "Select any two neighboring factions, choose which is the attacker and defender, then roll on the War! Table pg 16"
+        "Select any two neighboring factions, choose which is the attacker and defender, then roll on the [War](War Table)"
       ],
       [
         "10",
         "War!",
-        "Your army is marching! Select any settlement not already owned by you and roll on the War! Table pg 16 with your empire acting as the Attacker. (this can be against any faction, tribe, or hostile force on the map)"
+        "Your army is marching! Select any settlement not already owned by you and roll on the [War](War Table) with your empire acting as the Attacker. (this can be against any faction, tribe, or hostile force on the map)"
       ],
       [
         "11",
         "Neighbors Develop",
-        "Select a neighbor at random and roll on the appropriate Neighbors Develop Table on the previous page pg 13"
+        "Select a neighbor at random and roll on the appropriate [5.2](Neighbors Develop Table)"
       ],
       [
         "12",

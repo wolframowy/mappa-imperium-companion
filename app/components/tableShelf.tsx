@@ -39,8 +39,8 @@ export default function TableShelf() {
   return (
     <div
       ref={tableShelfRef}
-      className={`absolute flex bg-primary right-0 top-3 h-10 sm:h-[60%] min-w-[50px] max-w-[90%] md:max-w-[60%] border-primary-light border-1 rounded-tl-xl rounded-bl-xl
-        transition-transform duration-300 ease-in-out ${isExpanded ? "translate-x-0 h-[60%]" : "translate-x-[calc(100%-20px)]"}`}
+      className={`absolute flex bg-primary right-0 top-3 min-w-[50px] max-w-[90%] md:max-w-[60%] border-primary-light border-1 rounded-tl-xl rounded-bl-xl
+        transition-transform duration-300 ease-in-out ${isExpanded ? "translate-x-0 h-[60%]" : "translate-x-[calc(100%-20px)] h-[150px] sm:h-[60%]"}`}
     >
       <button
         className={
@@ -49,9 +49,7 @@ export default function TableShelf() {
         onClick={() => setIsExpanded(!isExpanded)}
       >
         <div className="font-square">{isExpanded ? ">" : "<"}</div>
-        <div className="hidden md:block [writing-mode:vertical-rl] text-xs">
-          Quick Access
-        </div>
+        <div className="[writing-mode:vertical-rl] text-xs">Quick Access</div>
       </button>
       {/* List of tables */}
       <div className={"p-2 overflow-y-auto flex flex-col gap-3"}>
