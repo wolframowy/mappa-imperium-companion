@@ -8,30 +8,30 @@ export default function Era1() {
   return (
     <>
       {/*Era 1*/}
-      <Section title={json.Intro.Title} noUnderline main>
+      <Section title={json.Intro.Title} noUnderline main id="1">
         <Paragraph textHtml={json.Intro.Text} />
       </Section>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         {/*Create the lands*/}
-        <Section title={json["1.1"].Title}>
+        <Section title={json["1.1"].Title} id="1.1">
           <Paragraph textHtml={json["1.1"].Text} />
           <div className="self-center">
             <Table tableData={tableData["1.1"]} />
           </div>
         </Section>
         {/*Geography*/}
-        <Section title={json["1.2"].Title}>
+        <Section title={json["1.2"].Title} id="1.2">
           <Paragraph textHtml={json["1.2"].Text} />
           <div className="self-center">
             <Table tableData={tableData["1.2"]} columnsNumber={2} />
           </div>
         </Section>
         {/*Touching up*/}
-        <Section title={json["1.3"].Title}>
+        <Section title={json["1.3"].Title} id="1.3">
           <Paragraph textHtml={json["1.3"].Text} />
         </Section>
         {/*Resources & Special Sites*/}
-        <Section title={json["1.4"].Title}>
+        <Section title={json["1.4"].Title} id="1.4">
           <Paragraph textHtml={json["1.4"].Text} />
         </Section>
       </div>

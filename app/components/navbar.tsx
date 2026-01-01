@@ -85,7 +85,8 @@ export function NavBar({ onThemeChange }: NavBarProps) {
             <NavLink
               key={route.to}
               to={route.to}
-              className="relative px-5 py-3 grow-0 whitespace-nowrap"
+              className="relative px-5 py-3 grow-0 whitespace-nowrap
+              hover:bg-primary-light hover:inset-shadow-xs hover:inset-shadow-primary-highlight hover:shadow-sm"
               end
             >
               {isExpanded ? (

@@ -10,16 +10,16 @@ export default function Era3() {
   return (
     <>
       {/*Era 3*/}
-      <Section title={json.Intro.Title} noUnderline main>
+      <Section title={json.Intro.Title} noUnderline main id="3">
         <Paragraph textHtml={json.Intro.Text} />
       </Section>
       {/*Prime faction*/}
-      <Section title={json["3.1"].Title}>
+      <Section title={json["3.1"].Title} id="3.1">
         <Paragraph textHtml={json["3.1"].Text} />
         <Table tableData={tableData["3.1"]} />
       </Section>
       {/*Faction development*/}
-      <Section title={json["3.2"].Title} main noUnderline>
+      <Section title={json["3.2"].Title} main noUnderline id="3.2">
         <Paragraph textHtml={json["3.2"].Text} />
         {/*Symbol*/}
         <Section title={json["3.2"].Symbol.Title} noShadow>
@@ -50,7 +50,7 @@ export default function Era3() {
         <Sidenote textHtml={json["3.2"].Sidenote} sidenoteType={"light"} />
       </Section>
       {/*Neighbours*/}
-      <Section title={json["3.3"].Title}>
+      <Section title={json["3.3"].Title} id="3.3">
         <Paragraph textHtml={json["3.3"].Text} />
         <Section title={json["3.3"].Neighbors.Title} noShadow>
           <Table tableData={tableData["3.3"]} />
@@ -63,7 +63,7 @@ export default function Era3() {
       </Section>
 
       {/*Early settlers*/}
-      <Section title={json["3.4"].Title}>
+      <Section title={json["3.4"].Title} id="3.4">
         <Paragraph textHtml={json["3.4"].Text} />
         <br />
         <div>

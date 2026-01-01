@@ -5,7 +5,9 @@ export default function Page({ children }: PropsWithChildren) {
   const location = useLocation();
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    ref.current?.scrollTo(0, 0);
+    if (!location.hash) {
+      ref.current?.scrollTo(0, 0);
+    }
   }, [location]);
   return (
     <div

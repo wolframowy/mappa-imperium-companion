@@ -1,12 +1,14 @@
 import { useContext, useEffect, useState } from "react";
 import { TableShelfContext } from "~/root";
 import Tooltip from "./tooltip";
+import TextWithRefs from "~/components/textWithRefs";
 
 // 6 rows per column for autosplit. 6 is chosen because when d6 are used it creates pretty natural split behavior.
 const MAX_ROWS_PER_COLUMN = 6;
 const MAX_CELL_LENGTH = 80;
 
 export interface TableData {
+  Title?: string;
   Header: string[];
   Rows: string[][];
 }
@@ -81,7 +83,7 @@ function render(tableData: TableData, columnsNumber?: number) {
 
 function renderTable(tableData: TableData) {
   return (
-    <div className="overflow-x-auto mb-2 inset-shadow-sm inset-shadow-primary-highlight shadow-md dark:shadow-xl/40 rounded-md">
+    <div className="overflow-x-auto mb-2 inset-shadow-sm inset-shadow-primary-highlight shadow-md dark:shadow-md/40 rounded-md">
       <table className={`w-full text-left`}>
         <thead className="bg-primary-highlight dark:text-shadow-md">
           <tr>
@@ -101,7 +103,7 @@ function renderTable(tableData: TableData) {
                     key={index}
                     className="first:text-center px-4 h-auto py-2"
                   >
-                    {data}
+                    <TextWithRefs text={data} />
                   </td>
                 ))}
               </tr>
