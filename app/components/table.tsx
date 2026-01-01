@@ -1,3 +1,11 @@
+import { useContext, useEffect, useState } from "react";
+import { TableShelfContext } from "~/root";
+import Tooltip from "./tooltip";
+
+// 6 rows per column for autosplit. 6 is chosen because when d6 are used it creates pretty natural split behavior.
+const MAX_ROWS_PER_COLUMN = 6;
+const MAX_CELL_LENGTH = 80;
+
 export interface TableData {
   Header: string[];
   Rows: string[][];
@@ -6,13 +14,61 @@ export interface TableData {
 export interface TableProps {
   tableData: TableData;
   columnsNumber?: number;
+  addButton?: boolean;
+  autoSplit?: boolean;
 }
 
-export default function Table({ tableData, columnsNumber }: TableProps) {
+export default function Table({
+  tableData,
+  columnsNumber,
+  addButton = true,
+  autoSplit = false,
+}: TableProps) {
+  const { lookupTables, setLookupTables } = useContext(TableShelfContext) || {
+    lookupTables: [],
+    setLookupTables: () => {},
+  };
+  const [areCellsSmallEnough, setAreCellsSmallEnough] = useState(false);
+  useEffect(() => {
+    for (const row of tableData.Rows) {
+      for (const cell of row) {
+        if (cell.length > MAX_CELL_LENGTH) {
+          setAreCellsSmallEnough(false);
+          return;
+        }
+      }
+    }
+    setAreCellsSmallEnough(true);
+  }, [tableData]);
+
+  return (
+    <div className="flex items-start max-w-full">
+      {render(
+        tableData,
+        columnsNumber ||
+          (autoSplit && areCellsSmallEnough
+            ? Math.ceil(tableData.Rows.length / MAX_ROWS_PER_COLUMN)
+            : undefined)
+      )}
+      {addButton && (
+        <Tooltip tooltip="Add table to quick access" direction="left">
+          <button
+            className="ml-2 w-6 h-6 rounded-md font-square bg-accent-green hover:bg-accent-green-highlight text-neutral-100 transition-colors duration-200"
+            onClick={() => setLookupTables([...lookupTables, tableData])}
+          >
+            +
+          </button>
+        </Tooltip>
+      )}
+    </div>
+  );
+}
+
+function render(tableData: TableData, columnsNumber?: number) {
   if (columnsNumber) {
     const tables = splitArrayToNChunks(tableData, columnsNumber);
     return (
-      <div className="flex justify-around gap-5">
+      <div className="overflow-x-auto flex justify-around gap-5">
         {tables.map((table, index) => (
           <div key={index}>{renderTable(table)}</div>
         ))}
@@ -25,7 +81,7 @@ export default function Table({ tableData, columnsNumber }: TableProps) {
 
 function renderTable(tableData: TableData) {
   return (
-    <div className="overflow-x-auto inset-shadow-sm inset-shadow-primary-highlight shadow-md dark:shadow-xl/40 rounded-md">
+    <div className="overflow-x-auto mb-2 inset-shadow-sm inset-shadow-primary-highlight shadow-md dark:shadow-xl/40 rounded-md">
       <table className={`w-full text-left`}>
         <thead className="bg-primary-highlight dark:text-shadow-md">
           <tr>

@@ -36,13 +36,13 @@ export function NavBar({ onThemeChange }: NavBarProps) {
   return (
     <>
       {/* Mobile Navigation Bar */}
-      <div className="fixed sm:hidden top-3.5 left-3.5 z-10 flex rounded-md bg-primary/60">
+      <div className="fixed sm:hidden top-2.5 left-2.5 z-10 flex rounded-md bg-primary/60">
         <button
           onClick={handleExpandClick}
           aria-label={
             isExpanded ? "Collapse navigation bar" : "Expand navigation bar"
           }
-          className="px-3 py-2 rounded-md hover:bg-primary-light hover:inset-shadow-xs hover:inset-shadow-primary-highlight hover:shadow-sm"
+          className="px-3 py-2 rounded-md hover:bg-primary-light hover:inset-shadow-xs hover:inset-shadow-primary-highlight hover:shadow-sm font-square"
         >
           {isExpanded ? "<<" : ">>"}
         </button>
@@ -77,7 +77,7 @@ export function NavBar({ onThemeChange }: NavBarProps) {
             aria-label={
               isExpanded ? "Collapse navigation bar" : "Expand navigation bar"
             }
-            className="px-5 py-1 self-end w-[var(--navbar-width-collapsed)] hover:bg-primary-light hover:inset-shadow-xs hover:inset-shadow-primary-highlight hover:shadow-sm"
+            className="px-5 py-1 self-end w-[var(--navbar-width-collapsed)] hover:bg-primary-light hover:inset-shadow-xs hover:inset-shadow-primary-highlight hover:shadow-sm font-square"
           >
             {isExpanded ? "<<" : ">>"}
           </button>

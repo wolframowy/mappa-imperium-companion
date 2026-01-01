@@ -4,12 +4,11 @@ import Section from "~/components/section";
 import { Paragraph } from "~/components/paragraph";
 import Examples from "~/components/examples";
 import Sidenote from "~/components/sidenote";
-import Page from "~/components/page";
 import Table from "~/components/table";
 
 export default function Era3() {
   return (
-    <Page>
+    <>
       {/*Era 3*/}
       <Section title={json.Intro.Title} noUnderline main>
         <Paragraph textHtml={json.Intro.Text} />
@@ -17,7 +16,7 @@ export default function Era3() {
       {/*Prime faction*/}
       <Section title={json["3.1"].Title}>
         <Paragraph textHtml={json["3.1"].Text} />
-        <Table tableData={tableData["3.1 Race Table"]} />
+        <Table tableData={tableData["3.1"]} />
       </Section>
       {/*Faction development*/}
       <Section title={json["3.2"].Title} main noUnderline>
@@ -25,12 +24,12 @@ export default function Era3() {
         {/*Symbol*/}
         <Section title={json["3.2"].Symbol.Title} noShadow>
           <Paragraph textHtml={json["3.2"].Symbol.Text} />
-          <Table tableData={tableData["3.2 Symbol"]} />
+          <Table tableData={tableData["3.2.1"]} />
         </Section>
         {/*Color*/}
         <Section title={json["3.2"].Color.Title} noShadow>
           <Paragraph textHtml={json["3.2"].Color.Text} />
-          <Table tableData={tableData["Color"]} />
+          <Table tableData={tableData["3.2.2"]} />
         </Section>
         {/*Theme*/}
         <Section title={json["3.2"].Theme.Title} noShadow>
@@ -40,7 +39,7 @@ export default function Era3() {
         {/*Naming*/}
         <Section title={json["3.2"].Naming.Title} noShadow>
           <Paragraph textHtml={json["3.2"].Naming.Text} />
-          <Table tableData={tableData["Faction Names"]} />
+          <Table tableData={tableData["3.2.4"]} />
           <Examples exampleTexts={json["3.2"].Naming.ExamplesList} />
         </Section>
         {/*Leadership*/}
@@ -54,7 +53,7 @@ export default function Era3() {
       <Section title={json["3.3"].Title}>
         <Paragraph textHtml={json["3.3"].Text} />
         <Section title={json["3.3"].Neighbors.Title} noShadow>
-          <Table tableData={tableData["Neighbors Table"]} />
+          <Table tableData={tableData["3.3"]} />
           <Paragraph textHtml={json["3.3"].Neighbors.Text} />
         </Section>
         <Sidenote
@@ -71,9 +70,9 @@ export default function Era3() {
           <b>{json["3.4"].Roll}</b>
         </div>
         <Section title={json["3.4"].SettlementTable.Title} noShadow>
-          <Table tableData={tableData["Settlement Table"]} />
+          <Table tableData={tableData["3.4"]} />
         </Section>
       </Section>
-    </Page>
+    </>
   );
 }

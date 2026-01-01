@@ -1,7 +1,6 @@
 import {
   isRouteErrorResponse,
   Links,
-  NavLink,
   Outlet,
   Scripts,
   ScrollRestoration,
@@ -9,8 +8,15 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { NavBar } from "./components/navbar";
+import TableShelf from "./components/tableShelf";
+import Page from "./components/page";
+
+export const TableShelfContext = createContext<{
+  lookupTables: Array<any>;
+  setLookupTables: (tables: Array<any>) => void;
+} | null>(null);
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -23,12 +29,17 @@ export const links: Route.LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
+  {
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/css2?family=Nova+Square&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap",
+  },
 ];
 
 // Layout is above App so it can render things above ErrorBoundary and HydrateFallback
 // put things here that you  always want to show up like a nav bar
 export function Layout({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
+  const [lookupTables, setLookupTables] = useState<Array<any>>([]);
 
   useEffect(() => {
     if (typeof window !== "undefined" && localStorage?.theme) {
@@ -59,13 +70,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Links />
       </head>
-      <body>
-        <div className="flex w-screen">
-          <NavBar onThemeChange={toggleLightDark} />
-          <div className="h-screen flex-grow min-w-xs px-3 sm:px-5 py-6 sm:ml-[var(--navbar-width-collapsed)] overflow-y-auto">
-            {children}
+      <body className="overflow-x-hidden">
+        <TableShelfContext value={{ lookupTables, setLookupTables }}>
+          <div className="flex w-screen">
+            <NavBar onThemeChange={toggleLightDark} />
+            <Page>{children}</Page>
           </div>
-        </div>
+          <TableShelf />
+        </TableShelfContext>
         <ScrollRestoration />
         <Scripts />
       </body>
@@ -79,9 +91,9 @@ export default function App() {
 
 export function HydrateFallback() {
   return (
-    <div className="pt-16 p-4 container mx-auto">
+    <Page>
       <h1>Loading...</h1>
-    </div>
+    </Page>
   );
 }
 
