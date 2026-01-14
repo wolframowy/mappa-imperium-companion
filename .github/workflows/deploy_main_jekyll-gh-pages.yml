@@ -43,6 +43,13 @@ jobs:
         env:
           NODE_ENV: production
 
+      # Workaround for github pages wrongly handling SPA routes
+      - name: Create 404.html for GitHub Pages SPA routing
+        run: cp ./build/client/index.html ./build/client/404.html
+
+      - name: Create .nojekyll file
+        run: touch ./build/client/.nojekyll
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
