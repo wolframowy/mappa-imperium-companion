@@ -56,7 +56,7 @@ export default function TableShelf() {
         {/* List of tables */}
         <div
           className={
-            "p-2 overflow-y-auto overflow-x-hidden flex flex-col gap-3"
+            "p-2 md:p-3 overflow-y-auto overflow-x-hidden flex flex-col gap-3"
           }
         >
           {lookupTables.map((tableData, index) => (
