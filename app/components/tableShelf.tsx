@@ -54,7 +54,11 @@ export default function TableShelf() {
           <div className="[writing-mode:vertical-rl] text-xs">Quick Access</div>
         </button>
         {/* List of tables */}
-        <div className={"p-2 overflow-y-auto flex flex-col gap-3"}>
+        <div
+          className={
+            "p-2 overflow-y-auto overflow-x-hidden flex flex-col gap-3"
+          }
+        >
           {lookupTables.map((tableData, index) => (
             <div key={index}>
               {index !== 0 && <hr className="border-primary-light mb-2" />}
