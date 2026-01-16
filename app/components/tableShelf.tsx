@@ -41,7 +41,7 @@ export default function TableShelf() {
     <div className="overflow-x-hidden pointer-events-none fixed invisible right-0 top-0 h-screen w-screen">
       <div
         ref={tableShelfRef}
-        className={`absolute flex bg-primary pointer-events-auto visible right-0 top-3 min-w-[50px] max-w-[75%] md:max-w-[60%] border-primary-light border-1 rounded-tl-xl rounded-bl-xl
+        className={`absolute flex bg-primary pointer-events-auto visible right-0 top-3 min-w-[50px] max-w-[75%] md:max-w-[60%] border-primary-light border rounded-tl-xl rounded-bl-xl
         transition-[height translate] duration-300 ease-in-out ${isExpanded ? "translate-x-0 h-[60%]" : "translate-x-[calc(100%-20px)] h-[150px] sm:h-[60%]"}`}
       >
         <button
