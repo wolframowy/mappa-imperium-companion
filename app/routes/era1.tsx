@@ -15,16 +15,12 @@ export default function Era1() {
         {/*Create the lands*/}
         <Section title={json["1.1"].Title} id="1.1">
           <Paragraph textHtml={json["1.1"].Text} />
-          <div className="self-center">
-            <Table tableData={tableData["1.1"]} />
-          </div>
+          <Table tableData={tableData["1.1"]} />
         </Section>
         {/*Geography*/}
         <Section title={json["1.2"].Title} id="1.2">
           <Paragraph textHtml={json["1.2"].Text} />
-          <div className="self-center">
-            <Table tableData={tableData["1.2"]} columnsNumber={2} />
-          </div>
+          <Table tableData={tableData["1.2"]} columnsNumber={2} />
         </Section>
         {/*Touching up*/}
         <Section title={json["1.3"].Title} id="1.3">
