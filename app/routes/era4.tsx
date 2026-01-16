@@ -9,22 +9,22 @@ export default function Era4() {
   return (
     <>
       {/* Era 4 */}
-      <Section title={json.Intro.Title} main noUnderline>
+      <Section title={json.Intro.Title} main noUnderline id="4">
         <Paragraph textHtml={json.Intro.Text} />
       </Section>
       {/* Exploration Begins */}
-      <Section title={json["4.1"].Title}>
+      <Section title={json["4.1"].Title} id="4.1">
         <Paragraph textHtml={json["4.1"].Text} />
         <Table tableData={tableData["4.1"]} />
       </Section>
       {/* Colonization */}
-      <Section title={json["4.2"].Title}>
+      <Section title={json["4.2"].Title} id="4.2">
         <Paragraph textHtml={json["4.2"].Text} />
         <Table tableData={tableData["4.2"]} columnsNumber={2} />
         <Sidenote textHtml={json["4.2"].Sidenote} sidenoteType={"light"} />
       </Section>
       {/* Prosperity */}
-      <Section title={json["4.3"].Title}>
+      <Section title={json["4.3"].Title} id="4.3">
         <Paragraph textHtml={json["4.3"].Text} />
         <Table tableData={tableData["4.3"]} columnsNumber={2} />
         <Paragraph textHtml={json["4.3"].BottomText} />

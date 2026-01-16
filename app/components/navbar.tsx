@@ -67,9 +67,9 @@ export function NavBar({ onThemeChange }: NavBarProps) {
         ref={navBarRef}
         className={`
           fixed overflow-hidden -translate-x-full
-          w-[var(--navbar-width-collapsed)] sm:overflow-visible sm:translate-x-0
-          z-20 bg-primary flex flex-col flex-shrink-0 justify-between gap-4 h-screen border-r-2 border-primary-dark transition-all duration-300
-          ${isExpanded && "w-[var(--navbar-width-expanded)] sm:w-[var(--navbar-width-expanded)] translate-x-0"}`}
+          w-(--navbar-width-collapsed) sm:overflow-visible sm:translate-x-0
+          z-20 bg-primary flex flex-col shrink-0 justify-between gap-4 h-screen border-r-2 border-primary-dark transition-all duration-300
+          ${isExpanded && "w-(--navbar-width-expanded) sm:w-(--navbar-width-expanded) translate-x-0"}`}
       >
         <div className="flex flex-col">
           <button
@@ -77,7 +77,7 @@ export function NavBar({ onThemeChange }: NavBarProps) {
             aria-label={
               isExpanded ? "Collapse navigation bar" : "Expand navigation bar"
             }
-            className="px-5 py-1 self-end w-[var(--navbar-width-collapsed)] hover:bg-primary-light hover:inset-shadow-xs hover:inset-shadow-primary-highlight hover:shadow-sm font-square"
+            className="px-5 py-1 self-end w-(--navbar-width-collapsed) hover:bg-primary-light hover:inset-shadow-xs hover:inset-shadow-primary-highlight hover:shadow-sm font-square"
           >
             {isExpanded ? "<<" : ">>"}
           </button>
@@ -85,7 +85,8 @@ export function NavBar({ onThemeChange }: NavBarProps) {
             <NavLink
               key={route.to}
               to={route.to}
-              className="relative px-5 py-3 grow-0 whitespace-nowrap"
+              className="relative px-5 py-3 grow-0 whitespace-nowrap
+              hover:bg-primary-light hover:inset-shadow-xs hover:inset-shadow-primary-highlight hover:shadow-sm"
               end
             >
               {isExpanded ? (

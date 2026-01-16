@@ -42,18 +42,23 @@
 }
 
 @layer components {
+  :root,
   html,
   body {
     @apply bg-primary-dark text-text-primary;
   }
 
+  @media (prefers-reduced-motion: no-preference) {
+    :root,
+    html,
+    body {
+      @apply scroll-smooth;
+    }
+  }
+
   a {
     &.active {
       @apply font-bold bg-primary-light inset-shadow-xs inset-shadow-primary-highlight shadow-sm;
-    }
-
-    &:hover {
-      @apply bg-primary-light inset-shadow-xs inset-shadow-primary-highlight shadow-sm;
     }
   }
 

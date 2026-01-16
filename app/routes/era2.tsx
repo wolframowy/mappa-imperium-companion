@@ -10,27 +10,27 @@ export default function Era2() {
   return (
     <>
       {/*Era 2*/}
-      <Section title={json.Intro.Title} noUnderline main>
+      <Section title={json.Intro.Title} noUnderline main id="2">
         <Paragraph textHtml={json.Intro.Text} />
       </Section>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         {/*Number of deities*/}
-        <Section title={json["2.1"].Title}>
+        <Section title={json["2.1"].Title} id="2.1">
           <Paragraph textHtml={json["2.1"].Text} />
           <Table tableData={tableData["2.1"]} />
         </Section>
         {/*Domain*/}
-        <Section title={json["2.2"].Title}>
+        <Section title={json["2.2"].Title} id="2.2">
           <Paragraph textHtml={json["2.2"].Text} />
           <Table tableData={tableData["2.2"]} />
         </Section>
         {/*Symbol*/}
-        <Section title={json["2.3"].Title}>
+        <Section title={json["2.3"].Title} id="2.3">
           <Paragraph textHtml={json["2.3"].Text} />
           <Table tableData={tableData["2.3"]} />
         </Section>
         {/*Name*/}
-        <Section title={json["2.4"].Title}>
+        <Section title={json["2.4"].Title} id="2.4">
           <Paragraph textHtml={json["2.4"].Text} />
           <div className="mt-1">
             <div className="text-2xl">
@@ -42,7 +42,7 @@ export default function Era2() {
         </Section>
       </div>
       {/*Sacred sites*/}
-      <Section title={json["2.5"].Title}>
+      <Section title={json["2.5"].Title} id="2.5">
         <Paragraph textHtml={json["2.5"].Text} />
         <Examples exampleTexts={json.Examples.List} />
         <Table tableData={tableData["2.5"]} columnsNumber={2} />
