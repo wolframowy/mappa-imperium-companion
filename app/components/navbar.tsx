@@ -119,10 +119,11 @@ export function NavBar({ onThemeChange }: NavBarProps) {
           </button>
           <NavLink
             to="/options"
-            className="py-4 self-stretch text-center hover:bg-primary-light"
+            aria-label="Options"
+            className="py-4 self-stretch text-center hover:bg-primary-light text-xl"
             end
           >
-            Options
+            ⚙
           </NavLink>
         </div>
       </div>
