@@ -21,6 +21,7 @@ export interface TableProps {
   columnsNumber?: number;
   addButton?: boolean;
   autoSplit?: boolean;
+  editable?: boolean;
 }
 
 // Load custom table data from localStorage
@@ -42,6 +43,7 @@ export default function Table({
   columnsNumber,
   addButton = true,
   autoSplit = false,
+  editable = true,
 }: TableProps) {
   const { lookupTables, setLookupTables } = useContext(TableShelfContext) || {
     lookupTables: [],
@@ -57,6 +59,10 @@ export default function Table({
       customTables[tableId] = data;
       localStorage.setItem(STORAGE_KEY, JSON.stringify(customTables));
       setHasCustomData(true);
+      // Dispatch custom event to notify other components about the table update
+      window.dispatchEvent(
+        new CustomEvent("tableDataUpdated", { detail: { tableId } }),
+      );
     } catch (error) {
       console.error("Error saving custom table data:", error);
     }
@@ -72,6 +78,10 @@ export default function Table({
       delete customTables[tableId];
       localStorage.setItem(STORAGE_KEY, JSON.stringify(customTables));
       setHasCustomData(false);
+      // Dispatch custom event to notify other components about the table reset
+      window.dispatchEvent(
+        new CustomEvent("tableDataUpdated", { detail: { tableId } }),
+      );
     } catch (error) {
       console.error("Error resetting table data:", error);
     }
@@ -94,7 +104,7 @@ export default function Table({
     // Fallback to a safe empty table to avoid runtime crashes when tableId is missing.
     console.error(
       `Table data not found for tableId "${tableId}". ` +
-        "Ensure this ID exists in Tables.json or custom table storage."
+        "Ensure this ID exists in Tables.json or custom table storage.",
     );
 
     return {
@@ -132,7 +142,7 @@ export default function Table({
   const handleCellEdit = (
     rowIndex: number,
     cellIndex: number,
-    value: string
+    value: string,
   ) => {
     const newRows = [...tableData.Rows];
     newRows[rowIndex] = [...newRows[rowIndex]];
@@ -174,7 +184,7 @@ export default function Table({
         columnsNumber ||
           (autoSplit && areCellsSmallEnough
             ? Math.ceil(tableData.Rows.length / MAX_ROWS_PER_COLUMN)
-            : undefined)
+            : undefined),
       )}
       <div className="flex flex-col gap-1 ml-2">
         {addButton && (
@@ -187,22 +197,24 @@ export default function Table({
             </button>
           </Tooltip>
         )}
-        <Tooltip
-          tooltip={isEditing ? "View mode" : "Edit mode"}
-          direction="left"
-        >
-          <button
-            className={`w-6 h-6 rounded-md font-square transition-colors duration-200 text-neutral-100 ${
-              isEditing
-                ? "bg-accent-red hover:bg-accent-red-highlight"
-                : "bg-accent-yellow hover:bg-accent-yellow-highlight"
-            }`}
-            onClick={() => setIsEditing(!isEditing)}
+        {editable && (
+          <Tooltip
+            tooltip={isEditing ? "View mode" : "Edit mode"}
+            direction="left"
           >
-            {isEditing ? "✓" : "✎"}
-          </button>
-        </Tooltip>
-        {hasCustomData && (
+            <button
+              className={`w-6 h-6 rounded-md font-square transition-colors duration-200 text-neutral-100 ${
+                isEditing
+                  ? "bg-accent-red hover:bg-accent-red-highlight"
+                  : "bg-accent-yellow hover:bg-accent-yellow-highlight"
+              }`}
+              onClick={() => setIsEditing(!isEditing)}
+            >
+              {isEditing ? "✓" : "✎"}
+            </button>
+          </Tooltip>
+        )}
+        {editable && hasCustomData && (
           <Tooltip tooltip="Reset to default" direction="left">
             <button
               className="w-6 h-6 rounded-md font-square bg-primary-highlight hover:bg-primary-light text-text-primary transition-colors duration-200 text-xs"
@@ -223,7 +235,7 @@ function render(
   handleCellEdit: (rowIndex: number, cellIndex: number, value: string) => void,
   handleHeaderEdit: (headerIndex: number, value: string) => void,
   handleTitleEdit: (value: string) => void,
-  columnsNumber?: number
+  columnsNumber?: number,
 ) {
   if (columnsNumber) {
     const tables = splitArrayToNChunks(tableData, columnsNumber);
@@ -237,7 +249,7 @@ function render(
               handleCellEdit,
               handleHeaderEdit,
               handleTitleEdit,
-              index * Math.ceil(tableData.Rows.length / columnsNumber)
+              index * Math.ceil(tableData.Rows.length / columnsNumber),
             )}
           </div>
         ))}
@@ -249,7 +261,7 @@ function render(
       isEditing,
       handleCellEdit,
       handleHeaderEdit,
-      handleTitleEdit
+      handleTitleEdit,
     );
   }
 }
@@ -260,7 +272,7 @@ function renderTable(
   handleCellEdit: (rowIndex: number, cellIndex: number, value: string) => void,
   handleHeaderEdit: (headerIndex: number, value: string) => void,
   handleTitleEdit: (value: string) => void,
-  rowOffset = 0
+  rowOffset = 0,
 ) {
   return (
     <div className="overflow-x-auto mb-2 inset-shadow-sm inset-shadow-primary-highlight shadow-md dark:shadow-md/40 rounded-md">
@@ -314,7 +326,7 @@ function renderTable(
                           handleCellEdit(
                             actualRowIndex,
                             cellIndex,
-                            e.target.value
+                            e.target.value,
                           )
                         }
                         className="w-full bg-primary-dark text-text-primary px-2 py-1 rounded border border-primary-light focus:outline-none focus:border-accent-yellow"

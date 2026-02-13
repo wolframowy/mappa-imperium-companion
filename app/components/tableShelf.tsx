@@ -7,6 +7,7 @@ import allTablesData from "app/assets/text/Tables.json";
 export default function TableShelf() {
   const tableShelfRef = useRef<HTMLDivElement>(null);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [tableUpdateTrigger, setTableUpdateTrigger] = useState(0);
   const { lookupTables, setLookupTables } = useContext(TableShelfContext) || {
     lookupTables: [],
     setLookupTables: () => {},
@@ -16,6 +17,23 @@ export default function TableShelf() {
     if (lookupTables.length === 0) {
       setIsExpanded(false);
     }
+  }, [lookupTables]);
+
+  // Listen for table data updates from other Table components
+  useEffect(() => {
+    const handleTableUpdate = (event: Event) => {
+      const customEvent = event as CustomEvent<{ tableId: string }>;
+      // Check if the updated table is in our lookupTables
+      if (lookupTables.includes(customEvent.detail.tableId)) {
+        // Trigger re-render by updating state
+        setTableUpdateTrigger((prev) => prev + 1);
+      }
+    };
+
+    window.addEventListener("tableDataUpdated", handleTableUpdate);
+    return () => {
+      window.removeEventListener("tableDataUpdated", handleTableUpdate);
+    };
   }, [lookupTables]);
 
   useEffect(() => {
@@ -77,7 +95,7 @@ export default function TableShelf() {
                       className="w-6 h-6 rounded-md font-square bg-accent-red hover:bg-accent-red-highlight text-neutral-100 transition-colors duration-200"
                       onClick={() =>
                         setLookupTables(
-                          lookupTables.filter((_, i) => i !== index)
+                          lookupTables.filter((_, i) => i !== index),
                         )
                       }
                     >
@@ -90,7 +108,13 @@ export default function TableShelf() {
                     </div>
                   )}
                 </div>
-                <Table tableId={tableId} addButton={false} autoSplit={true} />
+                <Table
+                  key={`${tableId}-${tableUpdateTrigger}`}
+                  tableId={tableId}
+                  addButton={false}
+                  autoSplit={true}
+                  editable={false}
+                />
               </div>
             );
           })}
