@@ -14,8 +14,8 @@ import TableShelf from "./components/tableShelf";
 import Page from "./components/page";
 
 export const TableShelfContext = createContext<{
-  lookupTables: Array<any>;
-  setLookupTables: (tables: Array<any>) => void;
+  lookupTables: Array<string>;
+  setLookupTables: (tables: Array<string>) => void;
 } | null>(null);
 
 export const links: Route.LinksFunction = () => [
@@ -39,7 +39,7 @@ export const links: Route.LinksFunction = () => [
 // put things here that you  always want to show up like a nav bar
 export function Layout({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
-  const [lookupTables, setLookupTables] = useState<Array<any>>([]);
+  const [lookupTables, setLookupTables] = useState<Array<string>>([]);
 
   useEffect(() => {
     if (typeof window !== "undefined" && localStorage?.theme) {

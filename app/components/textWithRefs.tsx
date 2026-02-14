@@ -73,7 +73,7 @@ export default function TextWithRefs({ text }: TextWithRefsProps) {
                           </div>
                         )}
                       </div>
-                      <Table tableData={tableData[tableKey]} autoSplit={true} />
+                      <Table tableId={tableKey} autoSplit={true} />
                     </div>
                   ))}
                 </div>

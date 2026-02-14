@@ -1,5 +1,4 @@
 import json from "app/assets/text/9-SpecialRules.json";
-import tableData from "app/assets/text/Tables.json";
 import Section from "~/components/section";
 import { Paragraph } from "~/components/paragraph";
 import Table from "~/components/table";
@@ -12,7 +11,7 @@ export default function SpecialRules() {
         {/* War */}
         <Section title={json.War.Title} noShadow>
           <Paragraph textHtml={json.War.Text} />
-          <Table tableData={tableData["War"]} />
+          <Table tableId="War" />
         </Section>
         {/* Fallen Empires*/}
         <Section title={json.FallenEmpires.Title} noShadow>
