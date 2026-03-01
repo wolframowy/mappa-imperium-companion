@@ -101,7 +101,7 @@ export function NavBar({ onThemeChange }: NavBarProps) {
             </NavLink>
           ))}
         </div>
-        <div className="flex flex-col items-center gap-4">
+        <div className="pb-2 flex flex-col justify-evenly items-center gap-4">
           <button
             className="group size-8 flex justify-center items-center"
             onClick={onThemeChange}
@@ -120,11 +120,22 @@ export function NavBar({ onThemeChange }: NavBarProps) {
           <NavLink
             to="/options"
             aria-label="Options"
-            className="py-4 self-stretch text-center hover:bg-primary-light text-xl"
+            className="self-stretch text-center hover:bg-primary-light text-xl"
             end
           >
             ⚙
           </NavLink>
+          <a href="https://www.buymeacoffee.com/wolframowy" target="_blank">
+            <img
+              className="max-h-10"
+              src={
+                isExpanded
+                  ? "https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+                  : "https://studio.buymeacoffee.com/assets/img/qr-logo.svg"
+              }
+              alt="Buy Me A Coffee"
+            />
+          </a>
         </div>
       </div>
     </>
