@@ -1,0 +1,13 @@
+{
+  "Intro": {
+    "Title": "Special Rules"
+  },
+  "War": {
+    "Title": "War!",
+    "Text": "War is played out through a simple dice roll by the attacker. Roll on the table below and describe/draw in the results.\nWith a “Neighboring War” roll, choose any two factions on the map and select one to be the attacker then roll on the chart and draw in the results."
+  },
+  "FallenEmpires": {
+    "Title": "Fallen Empires",
+    "Text": "If through the luck of dice rolls you find your empire has fallen you have two options:\n <ul style=list-style:inside><li>Take control over any of the minor factions that have risen\nup over the course of the game, treat them as your new\nEmpire.</li><li>Your people flee the final city, sailing or running to distant\nlands to set up a new village. Place a new settlement\nanywhere on the map and continue play as usual</li></ul>"
+  }
+}

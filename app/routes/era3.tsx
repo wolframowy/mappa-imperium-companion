@@ -1,0 +1,87 @@
+import json from "app/assets/text/5-Era3.json";
+import Section from "~/components/section";
+import { Paragraph } from "~/components/paragraph";
+import Examples from "~/components/examples";
+import Sidenote from "~/components/sidenote";
+import Table from "~/components/table";
+import { BottomScrollButton } from "~/components/bottomScrollButton";
+import { useNavigate } from "react-router";
+
+export default function Era3() {
+  const navigate = useNavigate();
+  return (
+    <>
+      {/*Era 3*/}
+      <Section title={json.Intro.Title} noUnderline main id="3">
+        <Paragraph textHtml={json.Intro.Text} />
+      </Section>
+      {/*Prime faction*/}
+      <Section title={json["3.1"].Title} id="3.1">
+        <Paragraph textHtml={json["3.1"].Text} />
+        <Table tableId="3.1" />
+      </Section>
+      {/*Faction development*/}
+      <Section title={json["3.2"].Title} main noUnderline id="3.2">
+        <Paragraph textHtml={json["3.2"].Text} />
+        {/*Symbol*/}
+        <Section title={json["3.2"].Symbol.Title} noShadow>
+          <Paragraph textHtml={json["3.2"].Symbol.Text} />
+          <Table tableId="3.2.1" />
+        </Section>
+        {/*Color*/}
+        <Section title={json["3.2"].Color.Title} noShadow>
+          <Paragraph textHtml={json["3.2"].Color.Text} />
+          <Table tableId="3.2.2" />
+        </Section>
+        {/*Theme*/}
+        <Section title={json["3.2"].Theme.Title} noShadow>
+          <Paragraph textHtml={json["3.2"].Theme.Text} />
+          <Examples exampleTexts={json["3.2"].Theme.ExamplesList} noDisc />
+        </Section>
+        {/*Naming*/}
+        <Section title={json["3.2"].Naming.Title} noShadow>
+          <Paragraph textHtml={json["3.2"].Naming.Text} />
+          <Table tableId="3.2.4" />
+          <Examples exampleTexts={json["3.2"].Naming.ExamplesList} />
+        </Section>
+        {/*Leadership*/}
+        <Section title={json["3.2"].Leadership.Title} noShadow>
+          <Paragraph textHtml={json["3.2"].Leadership.Text} />
+          <Examples exampleTexts={json["3.2"].Leadership.ExamplesList} />
+        </Section>
+        <Sidenote textHtml={json["3.2"].Sidenote} sidenoteType={"light"} />
+      </Section>
+      {/*Neighbours*/}
+      <Section title={json["3.3"].Title} id="3.3">
+        <Paragraph textHtml={json["3.3"].Text} />
+        <Section title={json["3.3"].Neighbors.Title} noShadow>
+          <Table tableId="3.3" />
+          <Paragraph textHtml={json["3.3"].Neighbors.Text} />
+        </Section>
+        <Sidenote
+          textHtml={json["3.3"].Neighbors.Sidenote}
+          sidenoteType={"light"}
+        />
+      </Section>
+
+      {/*Early settlers*/}
+      <Section title={json["3.4"].Title} id="3.4">
+        <Paragraph textHtml={json["3.4"].Text} />
+        <br />
+        <div>
+          <b>{json["3.4"].Roll}</b>
+        </div>
+        <Section title={json["3.4"].SettlementTable.Title} noShadow>
+          <Table tableId="3.4" />
+        </Section>
+      </Section>
+      <BottomScrollButton
+        onClick={() => navigate("/era-4")}
+        targetSelector="#mainPage"
+        bottomPosition={200}
+      >
+        Era IV
+      </BottomScrollButton>
+    </>
+  );
+}

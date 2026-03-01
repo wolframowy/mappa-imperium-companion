@@ -1,0 +1,55 @@
+{
+  "Intro": {
+    "Title": "Era III: Age of Foundation",
+    "Text": "The lands have been drawn. The wandering clans of the world are beginning to come together and form permanent settlements.\n\nThis era will create your prime factions and begin to develop them into burgeoning empires. Each player will focus solely on their home regions and consists of the first 30 years of your faction's story."
+  },
+  "3.1": {
+    "Title": "3.1 Prime Faction",
+    "Text": "Using the table below, each player will create their prime faction, this is the empire they will be devoting most of their time to for the majority of the game. <br/> <ul style=list-style:inside><li>Roll two six sided dice to determine the prominent ancestory of each Prime Faction</li><li>Place a capital settlement on the map</li></ul>"
+  },
+  "3.2": {
+    "Title": "3.2 Faction Development",
+    "Text": "The following sections will take you through the development of your Prime Faction using a number of tables. They may not add much detail on the map itself but will help build the story of the world.\nFeel free to skip the rolling and design your faction however you wish, but if needed the tables should help distinguish them with crest designs, color, theme, and leadership.",
+    "Symbol": {
+      "Title": "Symbol",
+      "Text": "<ul style=list-style:inside><li>Pick a symbol to represent the faction using the table below <i>(Roll one die for column, then one for row)</i></li></ul>"
+    },
+    "Color": {
+      "Title": "Color",
+      "Text": "<ul style=list-style:inside><li>Determine a primary color for your faction \n- If you wish to have a secondary color you may roll twice</li></ul>"
+    },
+    "Theme": {
+      "Title": "Theme",
+      "Text": "<ul style=list-style:inside><li>Using the symbol and color as inspiration, create a theme to define the faction</li></ul>",
+      "ExamplesList": ["<b>Horsehoe symbol</b> = theme of horsemen & cavalry = all cities named with horse theme in mind (Mustang, Clydesdale, Manedale, Stirrup Flats, Gallopton)", "<b>Tree Symbol</b> = theme of woodsmen & forest living folk, cities names Oakdale, Pinewood, Birch Bay, Cedar Valley", "<b>Spider symbol</b> = theme of spiders / stealthy, poison, assassins city names Thorax, Venom, Web Grove, Orbweaver, Recluse"]
+    },
+    "Naming": {
+      "Title": "Naming",
+      "Text": "<ul style=list-style:inside><li>Create a name for the faction, then draw the crest alongside the name on the map near the capital\n\n<i>-some ideas for faction names</i></li></ul>",
+      "ExamplesList": ["Chova Collective", "Crusade of Valendar", "Riverwood Domain", "Whitestone Kingdom"]
+    },
+    "Leadership": {
+      "Title": "Leadership",
+      "Text": "Someone must have inspired your people into forming this new united faction. Whether by war, diplomacy, feats of strength, or charisma. \nCreate a name for this hero or group and name a nearby location or geography after this first leader",
+      "ExamplesList": ["Lady Spirefoot Bay", "Mt. Humperdink", "Threepwood Valley"]
+    },
+    "Sidenote": "<b>Alternate Faction Rules:</b> At any time during the game a player may switch their Prime Faction to a different, avalaible faction on the map, or create a new one."
+  },
+  "3.3": {
+    "Title": "3.3 Neighbors",
+    "Text": "Each player takes turns rolling on the Faction Table below to select their neighbors, then places them anywhere in their home region. Give them a name and draw in an appropriate symbol to designate their location. (Small camp, tower, dragon, etc)\nWhether they are treated as hostile or friendly, or if that behavior changes throughout the game is up to each player.",
+    "Neighbors": {
+      "Title": "Neighbors Table",
+      "Text": "<ul style=list-style:inside><li>Roll on the Race Table on the previous page if needed</li></ul>",
+      "Sidenote": "Every new entity, monster, neighbor, etc. added to the map throughout the game is considered a faction for the purpose of the rules."
+    }
+  },
+  "3.4": {
+    "Title": "3.4 Early Settlers",
+    "Text": "Each player will take turns rolling on the table below, placing new settlements for their prime faction. These must all be placed on the same island as their capital. Be sure to name and connect each settlement with a road.\n\n<ul style=list-style:inside><li>a dotted line works well to represent this</li></ul>",
+    "Roll": "Roll twice for each player",
+    "SettlementTable": {
+      "Title": "Settlement Table"
+    }
+  }
+}

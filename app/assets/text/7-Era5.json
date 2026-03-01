@@ -1,0 +1,20 @@
+{
+  "Intro": {
+    "Title": "Era V: Age of Empires",
+    "Text": "Your empires have gained a foothold and perhaps even expanded onto neighboring islands. Now it’s time to flex their might and expand, or perhaps fight, their way across the seas."
+  },
+  "5.1": {
+    "Title": "5.1 Worldwide Expansion",
+    "Text": "All results can now be placed in any region on the map. Roll 6 times in this Era for 60 years of advancement, using the Growing Empires Table below and recording the results."
+  },
+  "5.2": {
+    "Title": "5.2 Neighbors Develop",
+    "Text": "Each player will take turns rolling on the appropriate table for every non-prime faction in their home region.  Roll once for each neighbor",
+    "MinorFaction": "Minor Faction",
+    "Tribe": "Tribe/Bandits/Pirates",
+    "Hive": "Hive",
+    "MagicUser": "Magic User",
+    "Cult": "Cult/Lair/Order",
+    "Monster": "Monster"
+  }
+}

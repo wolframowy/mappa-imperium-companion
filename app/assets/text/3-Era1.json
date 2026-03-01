@@ -1,0 +1,25 @@
+{
+  "Intro": {
+    "Title": "Era I: Age of Creation",
+    "Text": "Mountains rise & forests grow. The world begins to take shape.\nDuring this stage of the game, each player will take turns drawing out the islands, geography, and resources in their “<i>Home Region</i>”"
+  },
+  "1.1": {
+    "Title": "1.1 Create the lands",
+    "Text": "Roll 1 six sided die, consult the table below and take turns drawing islands into your Home Region. If two or more players wish to combine islands to create a large continent that spreads over multiple home regions they may do so."
+  },
+  "Sidenote": {
+    "Text": "<b>Alternate Pangea Rule:</b> All players subtract 1 island from their results and place 1 massive continent spanning the center of the map across every player's home region."
+  },
+  "1.2": {
+    "Title": "1.2 Geography",
+    "Text": "Roll 2 six sided dice and consult the table below, each player will take turns placing the results into their Home Region. These can be placed anywhere and on any island, it is up to each player to design their own Home Region.<br/> <ul style=list-style:inside><li><i>each player rolls on this table 8 times</i></li></ul>"
+  },
+  "1.3": {
+    "Title": "1.3 Touching up",
+    "Text": "Each player may take a moment to touch up and fill any gaps in their lands as they see fit. Feel free to add tiny islands, small groves of trees, minor rivers & lakes, glaciers, etc."
+  },
+  "1.4": {
+    "Title": "1.4 Resources & Special Sites",
+    "Text": "Take turns placing 2 different resources or special locations into each player’s <i>Home Regions</i>. You can use these to add some fantasy uniqueness to your map outside of the typical lumber, stone, clay. These are up to each player to decide what to place and where. \nUse a symbol to represent the resource location. These resources will help you decide where events and settlements may take place in your world.\n<p style=text-indent:1rem><i>examples: mana fountains, mithril snails, flying cats</i></p>"
+  }
+}

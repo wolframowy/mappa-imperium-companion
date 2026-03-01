@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary-dark: oklch(85% 0.03 80);
+  --color-primary: oklch(90% 0.03 80);
+  --color-primary-light: oklch(95% 0.03 80);
+  --color-primary-highlight: oklch(99% 0.03 80);
+  --color-text-primary: oklch(5% 0.03 80);
+  --color-text-primary-muted: oklch(40% 0.03 80);
+  --color-accent-red: oklch(35% 0.11 31);
+  --color-accent-red-highlight: oklch(45% 0.11 31);
+  --color-accent-yellow: oklch(60% 0.08 88);
+  --color-accent-yellow-highlight: oklch(70% 0.08 88);
+  --color-accent-green: oklch(53.2% 0.157 131.589);
+  --color-accent-green-highlight: oklch(64.8% 0.2 131.684);
+  --font-square: "Nova Square", sans-serif;
+}
+
+@layer base {
+  .dark {
+    --color-primary-dark: oklch(10% 0.016 71);
+    --color-primary: oklch(20% 0.016 71);
+    --color-primary-light: oklch(33% 0.016 71);
+    --color-primary-highlight: oklch(50% 0.016 71);
+    --color-text-primary: oklch(95% 0.03 80);
+    --color-text-primary-muted: oklch(80% 0.03 80);
+    --color-accent-red: oklch(48.359% 0.11385 31.427);
+    --color-accent-red-highlight: oklch(55% 0.11 31);
+    --color-accent-yellow: oklch(60% 0.08 88);
+    --color-accent-yellow-highlight: oklch(70% 0.08 88);
+    --color-accent-green: oklch(53.2% 0.157 131.589);
+    --color-accent-green-highlight: oklch(64.8% 0.2 131.684);
+    color-scheme: dark;
+  }
+
+  :root {
+    --navbar-width-collapsed: 75px;
+    --navbar-width-expanded: 220px;
+  }
+}
+
+@layer components {
+  :root,
+  html,
+  body {
+    @apply bg-primary-dark text-text-primary;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    :root,
+    html,
+    body {
+      @apply scroll-smooth;
+    }
+  }
+
+  a {
+    &.active {
+      @apply font-bold bg-primary-light inset-shadow-xs inset-shadow-primary-highlight shadow-sm;
+    }
+  }
+
+  h1,
+  h2 {
+    @apply font-bold text-accent-red;
+  }
+
+  h1 {
+    @apply text-3xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+}
