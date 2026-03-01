@@ -2,8 +2,11 @@ import json from "app/assets/text/7-Era5.json";
 import Section from "~/components/section";
 import { Paragraph } from "~/components/paragraph";
 import Table from "~/components/table";
+import { BottomScrollButton } from "~/components/bottomScrollButton";
+import { useNavigate } from "react-router";
 
 export default function Era5() {
+  const navigate = useNavigate();
   return (
     <>
       {/* Era 5 */}
@@ -43,6 +46,13 @@ export default function Era5() {
           <Table tableId="5.2.6" />
         </Section>
       </Section>
+      <BottomScrollButton
+        onClick={() => navigate("/era-6")}
+        targetSelector="#mainPage"
+        bottomPosition={200}
+      >
+        Era VI
+      </BottomScrollButton>
     </>
   );
 }

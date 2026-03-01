@@ -1,24 +1,20 @@
 # mappa-imperium-companion
 
-Web app for Mappa Imperium game that allows for quicker table lookups and customizable options
+App available at [Mappa Imperium Companion](https://wolframowy.github.io/mappa-imperium-companion/)
 
-# Welcome to React Router!
-
-A modern, production-ready template for building full-stack React applications using React Router.
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+Web app for [Mappa Imperium](https://nookrium.itch.io/mappa-imperium) game made by Nookrium that allows for quicker table lookups and customizable options.
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- Custom table editing
+- Quick lookup shelf
+- Easy referencing of previous tables
 
-## Getting Started
+## Tech Stack
+
+- react
+- react-router
+- tailwind
 
 ### Installation
 
@@ -46,46 +42,6 @@ Create a production build:
 npm run build
 ```
 
-## Deployment
+# Credits
 
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+- <b>Game content:</b> "[Mappa Imperium](https://nookrium.itch.io/mappa-imperium)" tables and text by Nookrium. Used with permission.

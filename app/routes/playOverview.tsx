@@ -2,8 +2,11 @@ import { Paragraph } from "~/components/paragraph";
 import json from "app/assets/text/2-PlayOverview.json";
 import Section from "~/components/section";
 import Table from "~/components/table";
+import { BottomScrollButton } from "~/components/bottomScrollButton";
+import { useNavigate } from "react-router";
 
 export default function PlayOverview() {
+  const navigate = useNavigate();
   return (
     <>
       {/*Play Overview*/}
@@ -41,6 +44,13 @@ export default function PlayOverview() {
         <Paragraph textHtml={json.GameLength.Text} />
         <Table tableId="0" />
       </Section>
+      <BottomScrollButton
+        onClick={() => navigate("/era-1")}
+        targetSelector="#mainPage"
+        bottomPosition={200}
+      >
+        Era 1
+      </BottomScrollButton>
     </>
   );
 }
