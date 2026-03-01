@@ -2,8 +2,11 @@ import { Paragraph } from "~/components/paragraph";
 import json from "~/assets/text/1-Basics.json";
 import Section from "~/components/section";
 import Sidenote from "~/components/sidenote";
+import { BottomScrollButton } from "~/components/bottomScrollButton";
+import { useNavigate } from "react-router";
 
 export default function Intro() {
+  const navigate = useNavigate();
   return (
     <>
       <div className="grid lg:grid-rows-3 lg:grid-flow-col lg:auto-cols-fr gap-4">
@@ -31,6 +34,13 @@ export default function Intro() {
           <Paragraph textHtml={json.Drawing.Text} />
         </Section>
       </div>
+      <BottomScrollButton
+        onClick={() => navigate("/play-overview")}
+        targetSelector="#mainPage"
+        bottomPosition={200}
+      >
+        Play Overview
+      </BottomScrollButton>
     </>
   );
 }

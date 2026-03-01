@@ -1,7 +1,10 @@
 import json from "app/assets/text/0-Intro.json";
+import { useNavigate } from "react-router";
+import { BottomScrollButton } from "~/components/bottomScrollButton";
 import Section from "~/components/section";
 
 export default function Home() {
+  const navigate = useNavigate();
   return (
     <>
       <div className="flex flex-col items-center justify-center gap-4 text-center mb-4">
@@ -29,6 +32,13 @@ export default function Home() {
           ))}
         </ul>
       </Section>
+      <BottomScrollButton
+        onClick={() => navigate("/intro")}
+        targetSelector="#mainPage"
+        bottomPosition={200}
+      >
+        Intro
+      </BottomScrollButton>
     </>
   );
 }

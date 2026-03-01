@@ -3,8 +3,11 @@ import Section from "~/components/section";
 import { Paragraph } from "~/components/paragraph";
 import Sidenote from "~/components/sidenote";
 import Table from "~/components/table";
+import { useNavigate } from "react-router";
+import { BottomScrollButton } from "~/components/bottomScrollButton";
 
 export default function Era4() {
+  const navigate = useNavigate();
   return (
     <>
       {/* Era 4 */}
@@ -28,6 +31,13 @@ export default function Era4() {
         <Table tableId="4.3" columnsNumber={2} />
         <Paragraph textHtml={json["4.3"].BottomText} />
       </Section>
+      <BottomScrollButton
+        onClick={() => navigate("/era-5")}
+        targetSelector="#mainPage"
+        bottomPosition={200}
+      >
+        Era V
+      </BottomScrollButton>
     </>
   );
 }

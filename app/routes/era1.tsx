@@ -1,9 +1,12 @@
 import json from "app/assets/text/3-Era1.json";
+import { useNavigate } from "react-router";
+import { BottomScrollButton } from "~/components/bottomScrollButton";
 import { Paragraph } from "~/components/paragraph";
 import Section from "~/components/section";
 import Table from "~/components/table";
 
 export default function Era1() {
+  const navigate = useNavigate();
   return (
     <>
       {/*Era 1*/}
@@ -30,6 +33,13 @@ export default function Era1() {
           <Paragraph textHtml={json["1.4"].Text} />
         </Section>
       </div>
+      <BottomScrollButton
+        onClick={() => navigate("/era-2")}
+        targetSelector={"#mainPage"}
+        bottomPosition={200}
+      >
+        Era II
+      </BottomScrollButton>
     </>
   );
 }

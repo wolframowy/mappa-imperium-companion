@@ -11,6 +11,7 @@ export default function Page({ children }: PropsWithChildren) {
   }, [location]);
   return (
     <div
+      id="mainPage"
       ref={ref}
       className="h-screen grow min-w-xs px-3 sm:px-7 py-6 sm:ml-(--navbar-width-collapsed) overflow-y-auto"
     >

@@ -4,8 +4,11 @@ import { Paragraph } from "~/components/paragraph";
 import Examples from "~/components/examples";
 import Sidenote from "~/components/sidenote";
 import Table from "~/components/table";
+import { BottomScrollButton } from "~/components/bottomScrollButton";
+import { useNavigate } from "react-router";
 
 export default function Era2() {
+  const navigate = useNavigate();
   return (
     <>
       {/*Era 2*/}
@@ -47,6 +50,13 @@ export default function Era2() {
         <Table tableId="2.5" columnsNumber={2} />
         <Sidenote textHtml={json.Sidenote} sidenoteType={"light"} />
       </Section>
+      <BottomScrollButton
+        onClick={() => navigate("/era-3")}
+        targetSelector="#mainPage"
+        bottomPosition={200}
+      >
+        Era III
+      </BottomScrollButton>
     </>
   );
 }
