@@ -57,6 +57,11 @@
   }
 
   a {
+    @apply text-text-primary-muted transition-colors duration-200 underline;
+    &:hover {
+      @apply text-accent-red;
+    }
+
     &.active {
       @apply font-bold bg-primary-light inset-shadow-xs inset-shadow-primary-highlight shadow-sm;
     }
