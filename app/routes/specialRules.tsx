@@ -2,8 +2,11 @@ import json from "app/assets/text/9-SpecialRules.json";
 import Section from "~/components/section";
 import { Paragraph } from "~/components/paragraph";
 import Table from "~/components/table";
+import { BottomScrollButton } from "~/components/bottomScrollButton";
+import { useNavigate } from "react-router";
 
 export default function SpecialRules() {
+  const navigate = useNavigate();
   return (
     <>
       {/* Special Rules */}
@@ -18,6 +21,13 @@ export default function SpecialRules() {
           <Paragraph textHtml={json.FallenEmpires.Text} />
         </Section>
       </Section>
+      <BottomScrollButton
+        onClick={() => navigate("/about")}
+        targetSelector="#mainPage"
+        bottomPosition={200}
+      >
+        About
+      </BottomScrollButton>
     </>
   );
 }

@@ -2,8 +2,11 @@ import json from "app/assets/text/8-Era6.json";
 import Section from "~/components/section";
 import { Paragraph } from "~/components/paragraph";
 import Table from "~/components/table";
+import { BottomScrollButton } from "~/components/bottomScrollButton";
+import { useNavigate } from "react-router";
 
 export default function Era6() {
+  const navigate = useNavigate();
   return (
     <>
       {/* Era 6 */}
@@ -28,6 +31,13 @@ export default function Era6() {
       <Section title={json["6.4"].Title} id="6.4">
         <Paragraph textHtml={json["6.4"].Text} />
       </Section>
+      <BottomScrollButton
+        onClick={() => navigate("/special-rules")}
+        targetSelector="#mainPage"
+        bottomPosition={200}
+      >
+        Special Rules
+      </BottomScrollButton>
     </>
   );
 }
