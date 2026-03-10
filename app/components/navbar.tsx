@@ -85,7 +85,7 @@ export function NavBar({ onThemeChange }: NavBarProps) {
             <NavLink
               key={route.to}
               to={route.to}
-              className="relative px-5 py-3 grow-0 whitespace-nowrap
+              className="relative px-5 py-3 grow-0 whitespace-nowrap no-underline
               hover:bg-primary-light hover:inset-shadow-xs hover:inset-shadow-primary-highlight hover:shadow-sm"
               end
             >
@@ -154,4 +154,5 @@ const NavbarRoutes = [
   { to: "/era-5", text: "Era V: Age of Empires", shortText: "V" },
   { to: "/era-6", text: "Era VI: Age of Collapse", shortText: "VI" },
   { to: "/special-rules", text: "Special Rules", shortText: "SR" },
+  { to: "/about", text: "About", shortText: "A" },
 ];
