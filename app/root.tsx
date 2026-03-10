@@ -68,6 +68,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <title>Mappa Imperium Companion</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="google-site-verification"
+          content="qSfqjmJH-5v0KpYWLeTO3qvA7EjkqFNzmmArXs0-F04"
+        />
         <Links />
       </head>
       <body className="overflow-x-hidden">
