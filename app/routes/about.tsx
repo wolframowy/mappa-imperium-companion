@@ -46,6 +46,28 @@ export default function About() {
             - developer by trade and Tabletop RPG Game master by heart. Trying
             to share with community what I find fun and helpful.
           </p>
+          <p>
+            My other project -{" "}
+            <a
+              href="http://pokierejszowany.mooo.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              PF2E Loot Generator
+            </a>
+          </p>
+          <p>
+            If you want to support me first buy something cool for yourself.
+            Then for your loved ones. And if you still want to support me then
+            buy me a beer.
+          </p>
+          <a href="https://www.buymeacoffee.com/wolframowy" target="_blank">
+            <img
+              className="max-h-10"
+              src={"https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"}
+              alt="Buy Me A Coffee"
+            />
+          </a>
         </Section>
         <Section title={"Contributors"} noShadow noUnderline>
           <p>Krecik, Kompanpawel</p>

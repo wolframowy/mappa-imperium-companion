@@ -4,11 +4,11 @@ import Tooltip from "./tooltip";
 import TextWithRefs from "~/components/textWithRefs";
 import allTablesData from "app/assets/text/Tables.json";
 import debounce from "~/util/debounce";
+import { CONSTANTS } from "~/consts";
 
 // 6 rows per column for autosplit. 6 is chosen because when d6 are used it creates pretty natural split behavior.
 const MAX_ROWS_PER_COLUMN = 6;
 const MAX_CELL_LENGTH = 80;
-const STORAGE_KEY = "mappa-imperium-custom-tables";
 
 export interface TableData {
   Title?: string;
@@ -28,7 +28,7 @@ export interface TableProps {
 export function loadCustomTableData(tableId: string): TableData | null {
   if (typeof window === "undefined") return null;
   try {
-    const stored = localStorage.getItem(STORAGE_KEY);
+    const stored = localStorage.getItem(CONSTANTS.STORAGE_KEY);
     if (!stored) return null;
     const customTables = JSON.parse(stored);
     return customTables[tableId] || null;
@@ -54,10 +54,10 @@ export default function Table({
   const saveCustomTableData = (tableId: string, data: TableData) => {
     if (typeof window === "undefined") return;
     try {
-      const stored = localStorage.getItem(STORAGE_KEY);
+      const stored = localStorage.getItem(CONSTANTS.STORAGE_KEY);
       const customTables = stored ? JSON.parse(stored) : {};
       customTables[tableId] = data;
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(customTables));
+      localStorage.setItem(CONSTANTS.STORAGE_KEY, JSON.stringify(customTables));
       setHasCustomData(true);
       // Dispatch custom event to notify other components about the table update
       window.dispatchEvent(
@@ -72,11 +72,11 @@ export default function Table({
   const resetTableData = (tableId: string) => {
     if (typeof window === "undefined") return;
     try {
-      const stored = localStorage.getItem(STORAGE_KEY);
+      const stored = localStorage.getItem(CONSTANTS.STORAGE_KEY);
       if (!stored) return;
       const customTables = JSON.parse(stored);
       delete customTables[tableId];
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(customTables));
+      localStorage.setItem(CONSTANTS.STORAGE_KEY, JSON.stringify(customTables));
       setHasCustomData(false);
       // Dispatch custom event to notify other components about the table reset
       window.dispatchEvent(
@@ -198,10 +198,7 @@ export default function Table({
           </Tooltip>
         )}
         {editable && (
-          <Tooltip
-            tooltip={isEditing ? "View mode" : "Edit mode"}
-            direction="left"
-          >
+          <Tooltip tooltip={isEditing ? "Save" : "Edit mode"} direction="left">
             <button
               className={`w-6 h-6 rounded-md font-square transition-colors duration-200 text-neutral-100 ${
                 isEditing

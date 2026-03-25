@@ -6,6 +6,7 @@ export interface SectionProps {
   title?: string;
   children?: ReactNode;
   noShadow?: boolean;
+  customClass?: string;
   id?: string;
 }
 
@@ -14,13 +15,14 @@ export default function Section({
   main,
   noUnderline,
   noShadow,
+  customClass,
   title,
   id,
 }: SectionProps) {
   return (
     <div
       id={id}
-      className={`max-w-full py-4 px-1 sm:px-3 h-full bg-primary rounded-lg ${!noShadow && "inset-shadow-sm inset-shadow-primary-light shadow-md"}`}
+      className={`max-w-full py-4 px-1 sm:px-3 h-full bg-primary rounded-lg ${!noShadow && "inset-shadow-sm inset-shadow-primary-light shadow-md"} ${customClass || ""}`}
     >
       {title &&
         (main ? (
