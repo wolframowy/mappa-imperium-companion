@@ -92,7 +92,7 @@ export function NavBar({ onThemeChange }: NavBarProps) {
               {isExpanded ? (
                 <div className="overflow-x-hidden">{route.text}</div>
               ) : (
-                <div className="text-center">
+                <div className="flex justify-center">
                   <Tooltip tooltip={route.text} direction="right">
                     {route.shortText}
                   </Tooltip>
@@ -117,15 +117,14 @@ export function NavBar({ onThemeChange }: NavBarProps) {
               className="hidden w-6 h-6 dark:block group-hover:brightness-125"
             />
           </button>
-          {/* Options button left for future export/import/reset */}
-          {/* <NavLink
+          <NavLink
             to="/options"
             aria-label="Options"
-            className="self-stretch text-center hover:bg-primary-light text-xl"
+            className="self-stretch text-center hover:bg-primary-light text-xl no-underline"
             end
           >
             ⚙
-          </NavLink> */}
+          </NavLink>
           <a href="https://www.buymeacoffee.com/wolframowy" target="_blank">
             <img
               className="max-h-10"

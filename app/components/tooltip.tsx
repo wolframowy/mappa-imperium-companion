@@ -21,7 +21,7 @@ export default function Tooltip({
   }[direction];
 
   return (
-    <div className="group relative" aria-describedby={tooltipId}>
+    <div className="group relative size-fit" aria-describedby={tooltipId}>
       {children}
       <span
         id={tooltipId}
