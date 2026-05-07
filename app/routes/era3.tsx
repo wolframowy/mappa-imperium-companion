@@ -19,6 +19,10 @@ export default function Era3() {
       <Section title={json["3.1"].Title} id="3.1">
         <Paragraph textHtml={json["3.1"].Text} />
         <Table tableId="3.1" />
+        {/* Fallen Empires*/}
+        <Section title={json["3.1.1"].Title} noShadow>
+          <Paragraph textHtml={json["3.1.1"].Text} />
+        </Section>
       </Section>
       {/*Faction development*/}
       <Section title={json["3.2"].Title} main noUnderline id="3.2">
