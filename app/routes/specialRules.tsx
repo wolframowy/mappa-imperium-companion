@@ -16,10 +16,6 @@ export default function SpecialRules() {
           <Paragraph textHtml={json.War.Text} />
           <Table tableId="War" />
         </Section>
-        {/* Fallen Empires*/}
-        <Section title={json.FallenEmpires.Title} noShadow>
-          <Paragraph textHtml={json.FallenEmpires.Text} />
-        </Section>
       </Section>
       {/* Neighbors Develop*/}
       <Section title={json["NeighborsDevelop"].Title} id="5.2">
