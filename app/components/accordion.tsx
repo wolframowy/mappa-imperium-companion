@@ -1,0 +1,42 @@
+import { useState, useId, type ReactNode } from "react";
+
+interface AccordionProps {
+  title: string;
+  isOpen?: boolean;
+  children?: ReactNode;
+}
+
+export default function Accordion({
+  title,
+  children,
+  isOpen = false,
+}: AccordionProps) {
+  const [isOpenState, setIsOpenState] = useState(isOpen);
+  const contentId = useId();
+
+  return (
+    <div className="max-w-full inset-shadow-sm inset-shadow-primary-light shadow-md">
+      <button
+        type="button"
+        onClick={() => setIsOpenState((prev) => !prev)}
+        className="w-full flex items-center justify-between p-1 cursor-pointer"
+        aria-expanded={isOpenState}
+        aria-controls={contentId}
+      >
+        <div className="font-bold text-lg text-accent-red">{title}</div>
+        <span
+          className={`text-accent-red transition-transform duration-200 ${isOpenState ? "rotate-180" : ""}`}
+          aria-hidden
+        >
+          ▾
+        </span>
+      </button>
+      <div
+        id={contentId}
+        className={`p-1 border-t border-primary-light overflow-hidden ${isOpenState ? "" : "invisible h-0 p-0!"}`}
+      >
+        {children}
+      </div>
+    </div>
+  );
+}
