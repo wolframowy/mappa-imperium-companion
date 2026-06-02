@@ -12,6 +12,14 @@ interface TextWithRefsProps {
 export default function TextWithRefs({ text }: TextWithRefsProps) {
   const [isModal, setIsModal] = useState(getLgQuery()?.matches || false);
 
+  // This is a bit of a hack to force the popup to reposition when the content changes size (e.g. accordion opens)
+  const [repositionTrigger, setRepositionTrigger] = useState(0);
+  useEffect(() => {
+    if (repositionTrigger > 0) {
+      window.dispatchEvent(new Event("resize"));
+    }
+  }, [repositionTrigger]);
+
   useEffect(() => {
     const mediaQuery = getLgQuery();
     if (!mediaQuery) return;
@@ -51,17 +59,23 @@ export default function TextWithRefs({ text }: TextWithRefsProps) {
                   {displayText}
                 </button>
               }
-              position="bottom center"
+              position={[
+                "bottom center",
+                "left center",
+                "top center",
+                "right center",
+              ]} // Fallback positions
               closeOnDocumentClick
               arrow={false}
               keepTooltipInside="body"
               modal={isModal}
+              repositionOnResize
               nested
             >
               {
                 ((close: () => void) => (
                   <div className="p-2 bg-primary-dark rounded shadow-md inset-shadow-sm inset-shadow-primary-highlight">
-                    <div className="max-w-[80vw] lg:max-w-[40vw] max-h-[60vh] flex flex-col gap-3">
+                    <div className="max-w-[80vw] lg:max-w-[60vw] max-h-[60vh] min-h-0 flex flex-col gap-3">
                       <div className="flex items-start justify-between gap-2 bg-primary-dark">
                         <h2>
                           {displayText.charAt(0).toUpperCase() +
@@ -91,6 +105,9 @@ export default function TextWithRefs({ text }: TextWithRefsProps) {
                             <div key={index}>
                               <Accordion
                                 title={tableData[tableKey].Title ?? ""}
+                                onToggle={() => {
+                                  setRepositionTrigger((prev) => prev + 1);
+                                }}
                               >
                                 <Table tableId={tableKey} autoSplit={true} />
                               </Accordion>
