@@ -16,6 +16,7 @@
   --color-accent-green: oklch(53.2% 0.157 131.589);
   --color-accent-green-highlight: oklch(64.8% 0.2 131.684);
   --font-square: "Nova Square", sans-serif;
+  --font-medieval: "MedievalSharp", cursive;
 }
 
 @layer base {
