@@ -14,7 +14,7 @@ export default function Home() {
       </div>
       <Section noUnderline>
         <div className="flex flex-col pt-3 ps-3 gap-2">
-          <p className="text-lg">
+          <p className="text-xl font-bold">
             A World Building Game by <i>Nookrium</i>{" "}
             <a
               href="https://nookrium.itch.io/mappa-imperium"
@@ -33,7 +33,12 @@ export default function Home() {
           </p>
         </div>
         {/*Inspiration*/}
-        <Section title={json["Inspiration"].Title} noUnderline noShadow>
+        <Section
+          title={json["Inspiration"].Title}
+          noUnderline
+          noShadow
+          customClass="pt-1"
+        >
           <ul className="list-disc list-inside">
             {json["Inspiration"].List.map((text, index) => (
               <li key={index} dangerouslySetInnerHTML={{ __html: text }}></li>
