@@ -26,7 +26,7 @@ export default function Accordion({
             return !prev;
           })
         }
-        className="w-full flex items-center justify-between p-1 cursor-pointer"
+        className="w-full flex items-center justify-between p-1 cursor-pointer bg-primary inset-shadow-sm inset-shadow-primary-light"
         aria-expanded={isOpenState}
         aria-controls={contentId}
       >

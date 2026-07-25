@@ -15,6 +15,8 @@
   --color-accent-yellow-highlight: oklch(70% 0.08 88);
   --color-accent-green: oklch(53.2% 0.157 131.589);
   --color-accent-green-highlight: oklch(64.8% 0.2 131.684);
+  --color-accent-blue: oklch(62.3% 0.214 259.815);
+  --color-accent-blue-highlight: oklch(70.7% 0.165 254.624);
   --font-square: "Nova Square", sans-serif;
   --font-medieval: "MedievalSharp", cursive;
 }
@@ -33,6 +35,8 @@
     --color-accent-yellow-highlight: oklch(70% 0.08 88);
     --color-accent-green: oklch(53.2% 0.157 131.589);
     --color-accent-green-highlight: oklch(64.8% 0.2 131.684);
+    --color-accent-blue: oklch(62.3% 0.214 259.815);
+    --color-accent-blue-highlight: oklch(70.7% 0.165 254.624);
     color-scheme: dark;
   }
 
