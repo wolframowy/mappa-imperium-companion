@@ -55,7 +55,7 @@ export default function Era2() {
         targetSelector="#mainPage"
         bottomPosition={200}
       >
-        Era III
+        Era III: Age of Foundation
       </BottomScrollButton>
     </>
   );

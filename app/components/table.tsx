@@ -190,7 +190,7 @@ export default function Table({
         {addButton && (
           <Tooltip tooltip="Add table to quick access" direction="left">
             <button
-              className="w-6 h-6 rounded-md font-square bg-accent-green hover:bg-accent-green-highlight text-neutral-100 transition-colors duration-200"
+              className="w-6 h-6 rounded-md font-square bg-accent-blue hover:bg-accent-blue-highlight text-neutral-100 transition-colors duration-200"
               onClick={() => setLookupTables([...lookupTables, tableId])}
             >
               +
@@ -202,7 +202,7 @@ export default function Table({
             <button
               className={`w-6 h-6 rounded-md font-square transition-colors duration-200 text-neutral-100 ${
                 isEditing
-                  ? "bg-accent-red hover:bg-accent-red-highlight"
+                  ? "bg-accent-green hover:bg-accent-green-highlight"
                   : "bg-accent-yellow hover:bg-accent-yellow-highlight"
               }`}
               onClick={() => setIsEditing(!isEditing)}
@@ -214,7 +214,7 @@ export default function Table({
         {editable && hasCustomData && (
           <Tooltip tooltip="Reset to default" direction="left">
             <button
-              className="w-6 h-6 rounded-md font-square bg-primary-highlight hover:bg-primary-light text-text-primary transition-colors duration-200 text-xs"
+              className="w-6 h-6 rounded-md font-square bg-primary-highlight hover:bg-primary-light text-text-primary transition-colors duration-200"
               onClick={handleReset}
             >
               ↻

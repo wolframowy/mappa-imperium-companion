@@ -74,9 +74,9 @@ export default function TextWithRefs({ text }: TextWithRefsProps) {
             >
               {
                 ((close: () => void) => (
-                  <div className="p-2 bg-primary-dark rounded shadow-md inset-shadow-sm inset-shadow-primary-highlight">
+                  <div className="p-2 bg-primary-dark rounded shadow-md inset-shadow-sm inset-shadow-primary-highlight border-l-8 border-l-accent-yellow">
                     <div className="max-w-[80vw] lg:max-w-[60vw] max-h-[60vh] min-h-0 flex flex-col gap-3">
-                      <div className="flex items-start justify-between gap-2 bg-primary-dark">
+                      <div className="flex items-start justify-between gap-2 bg-primary-dark border-b-2 border-accent-yellow">
                         <h2>
                           {displayText.charAt(0).toUpperCase() +
                             displayText.slice(1)}
@@ -84,7 +84,7 @@ export default function TextWithRefs({ text }: TextWithRefsProps) {
                         <button
                           type="button"
                           onClick={close}
-                          className="shrink-0 text-accent-red hover:text-accent-red-highlight cursor-pointer leading-none"
+                          className="shrink-0 text-accent-red hover:text-accent-red-highlight cursor-pointer leading-none text-xl"
                           aria-label="Close"
                         >
                           ✕

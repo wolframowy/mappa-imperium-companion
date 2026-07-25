@@ -36,7 +36,7 @@ export default function Era4() {
         targetSelector="#mainPage"
         bottomPosition={200}
       >
-        Era V
+        Era V: Age of Empires
       </BottomScrollButton>
     </>
   );

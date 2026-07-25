@@ -84,7 +84,7 @@ export default function Era3() {
         targetSelector="#mainPage"
         bottomPosition={200}
       >
-        Era IV
+        Era IV: Age of Discovery
       </BottomScrollButton>
     </>
   );

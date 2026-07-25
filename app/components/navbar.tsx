@@ -101,9 +101,9 @@ export function NavBar({ onThemeChange }: NavBarProps) {
             </NavLink>
           ))}
         </div>
-        <div className="pb-2 flex flex-col justify-evenly items-center gap-4">
+        <div className="pb-2 flex flex-col justify-evenly items-center">
           <button
-            className="group size-8 flex justify-center items-center"
+            className="group flex justify-center items-center self-stretch text-center hover:bg-primary-light py-2"
             onClick={onThemeChange}
           >
             <img
@@ -120,7 +120,7 @@ export function NavBar({ onThemeChange }: NavBarProps) {
           <NavLink
             to="/options"
             aria-label="Options"
-            className="self-stretch text-center hover:bg-primary-light text-xl no-underline"
+            className="self-stretch text-center hover:bg-primary-light text-2xl no-underline py-2"
             end
           >
             ⚙
@@ -129,6 +129,7 @@ export function NavBar({ onThemeChange }: NavBarProps) {
             href="https://www.buymeacoffee.com/wolframowy"
             target="_blank"
             rel="noopener noreferrer"
+            className="pt-2"
           >
             <img
               className="max-h-10"
@@ -148,7 +149,6 @@ export function NavBar({ onThemeChange }: NavBarProps) {
 
 const NavbarRoutes = [
   { to: "/", text: "Home", shortText: "H" },
-  { to: "/intro", text: "Intro", shortText: "Intro" },
   { to: "/play-overview", text: "Play Overview", shortText: "PO" },
   { to: "/era-1", text: "Era I: Age of Creation", shortText: "I" },
   { to: "/era-2", text: "Era II: Age of Myth", shortText: "II" },

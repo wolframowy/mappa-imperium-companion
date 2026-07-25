@@ -30,30 +30,12 @@ export default function Section({
             className={`py-1 mb-4 group ${noUnderline ? "" : "border-b-2 border-accent-yellow"}`}
           >
             {title}
-            {id && (
-              <a
-                aria-label="Link to this section"
-                href={`#${id}`}
-                className="ml-2 md:opacity-0 group-hover:opacity-100 focus:opacity-100 hover:text-accent-red-highlight transition-opacity duration-300"
-              >
-                #
-              </a>
-            )}
           </h1>
         ) : (
           <h2
             className={`py-1 mb-3 group ${noUnderline ? "" : "border-b-2 border-accent-yellow"}`}
           >
             {title}
-            {id && (
-              <a
-                aria-label="Link to this section"
-                href={`#${id}`}
-                className="ml-2 md:opacity-0 group-hover:opacity-100 focus:opacity-100 hover:text-accent-red-highlight transition-opacity duration-300"
-              >
-                #
-              </a>
-            )}
           </h2>
         ))}
       {children ? (
