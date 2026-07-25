@@ -23,7 +23,7 @@ export default function Era5() {
         targetSelector="#mainPage"
         bottomPosition={200}
       >
-        Era VI
+        Era VI: Age of Collapse
       </BottomScrollButton>
     </>
   );

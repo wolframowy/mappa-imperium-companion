@@ -49,7 +49,7 @@ export default function PlayOverview() {
         targetSelector="#mainPage"
         bottomPosition={200}
       >
-        Era 1
+        Era I: Age of Creation
       </BottomScrollButton>
     </>
   );

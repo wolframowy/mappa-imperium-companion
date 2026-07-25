@@ -18,9 +18,19 @@ export function BottomScrollButton({
     const currTarget =
       (targetSelector ? document.querySelector(targetSelector) : null) ??
       document.documentElement;
+    const isAtBottom =
+      currTarget.clientHeight + currTarget.scrollTop >=
+      currTarget.scrollHeight - bottomPosition;
+    setIsVisible(isAtBottom);
+    console.log(
+      `BottomScrollButton: Initial visibility set to ${isAtBottom} for target ${targetSelector || "document.documentElement"}`,
+    );
+  }, []);
 
-    // Initial visibility: if content fits without scrolling, show the button.
-    setIsVisible(currTarget.scrollHeight <= currTarget.clientHeight);
+  useEffect(() => {
+    const currTarget =
+      (targetSelector ? document.querySelector(targetSelector) : null) ??
+      document.documentElement;
 
     const handleScroll = () => {
       // Check if user has scrolled to bottom (within bottomPosition px)
@@ -36,12 +46,14 @@ export function BottomScrollButton({
     };
   }, [bottomPosition, targetSelector]);
   return (
-    <button
-      onClick={onClick}
-      className={`fixed bottom-6 right-6 px-3 py-2 text-neutral-100 bg-accent-yellow hover:bg-accent-yellow-highlight rounded-lg shadow-lg hover:shadow-xl transition-opacity z-10 duration-300
+    <div className="self-center">
+      <button
+        onClick={onClick}
+        className={` w-max px-3 py-2 text-neutral-100 bg-accent-yellow hover:bg-accent-yellow-highlight rounded-lg shadow-lg hover:shadow-xl transition-opacity z-10 duration-300
         ${isVisible ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
-    >
-      {children} &gt;
-    </button>
+      >
+        {children} &gt;
+      </button>
+    </div>
   );
 }

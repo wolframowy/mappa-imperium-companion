@@ -38,7 +38,7 @@ export default function Era1() {
         targetSelector={"#mainPage"}
         bottomPosition={200}
       >
-        Era II
+        Era II: Age of Myth
       </BottomScrollButton>
     </>
   );

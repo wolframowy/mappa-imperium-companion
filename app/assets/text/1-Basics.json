@@ -1,12 +1,35 @@
 {
   "Intro": {
     "Title": "Basics",
-    "Text": "In Mappa Imperium, you and any number of friends will take control of an entire fantasy world. Dividing the map equally and working together you will create unique landmasses, geography, and resources for your world. From there each player will take command of a kingdom and develop it from a struggling settlement to a massive empire, or perhaps, drive it into the lost histories of time.\n Each player will take turns rolling the dice and placing features into their section of the map. Each of these regions will be home to one major empire and many smaller factions. Throughout the game each player will create the story of the empires within their play area. They will roll dice to decide many aspects of the world but much of the story and design will be up to each player's imagination."
+    "Text": "In Mappa Imperium, you and any number of friends will take control of an entire fantasy world. Dividing the map equally and working together you will create unique landmasses, geography, and resources for your world. From there each player will take command of a kingdom and develop it from a struggling settlement to a massive empire, or perhaps, drive it into the lost histories of time.\n\n Each player will take turns rolling the dice and placing features into their section of the map. Each of these regions will be home to one major empire and many smaller factions. Throughout the game each player will create the story of the empires within their play area. They will roll dice to decide many aspects of the world but much of the story and design will be up to each player's imagination."
   },
   "Sidenote": "Mappa Imperium is first and foremost a cooperative storytelling game and is played best when the players work together. By the end of the game you will have a full fantasy map complete with empires, lore, hostile tribes, and horrific monsters.",
+  "Inspiration": {
+    "Title": "Inspiration",
+    "List": [
+      "Ex Novo by Sharkbomb <a href=\"https://sharkbombs.itch.io/ex-novo\" target=\"_blank\" rel=\"noopener noreferrer\">https://sharkbombs.itch.io/ex-novo</a>",
+      "Wonderdraft by Megasploot <a href=\"https://www.wonderdraft.net/\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.wonderdraft.net/</a>"
+    ]
+  },
+  "Game Components": {
+    "Title": "Game Components",
+    "List": [
+      "1 sheet of paper & pencil per player",
+      "3 six sided dice",
+      "optional - a separate sheet of paper to keep a timeline and notes"
+    ]
+  },
+  "Play Online": {
+    "Title": "Or play online on",
+    "List": [
+      "<a href=\"https://roll20.net\" target=\"_blank\" rel=\"noopener noreferrer\">https://roll20.net</a>",
+      "<a href=\"https://magma.com\" target=\"_blank\" rel=\"noopener noreferrer\">https://magma.com</a>",
+      "<a href=\"https://www.owlbear.rodeo\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.owlbear.rodeo</a>"
+    ]
+  },
   "Setup": {
     "Title": "Setup",
-    "Text": "Divide your sheet of paper equally by the number of players. You can draw a line or create a fold to help separate the regions. Each player will take control of one of these regions (They will be referred to as “Home Regions” going forth)"
+    "Text": "Divide your sheet of paper equally by the number of players. You can draw a line or create a fold to help separate the regions. Each player will take control of one of these regions - they will be referred to as “Home Regions” going forth."
   },
   "SoloPlay": {
     "Title": "Solo Play",
@@ -19,5 +42,18 @@
   "Drawing": {
     "Title": "Drawing",
     "Text": "Throughout the course of the game you will be drawing features of your world and empire onto the paper; from forests and mountains, to cities and monsters.\nIf drawing is not your strong suit feel free to use simple symbols and icons to represent details on your map. The different drawing styles of each player will give your finished map a unique charm and help distinguish each empire."
+  },
+  "Resources": {
+    "Title": "Resources",
+    "Map": {
+      "Title": "Map drawing",
+      "Text": "Here are some resources to help you draw your map.",
+      "List": [
+        "<a href=\"https://www.youtube.com/watch?v=2dXymefWOuc\" target=\"_blank\" rel=\"noopener noreferrer\">Trees and forests</a>",
+        "<a href=\"https://www.youtube.com/watch?v=D_O-Qry-aAE\" target=\"_blank\" rel=\"noopener noreferrer\">Mountains</a>",
+        "<a href=\"https://www.youtube.com/watch?v=1w4kLRWNiqI\" target=\"_blank\" rel=\"noopener noreferrer\">Towns and settlements</a>",
+        "<a href=\"https://www.youtube.com/watch?v=QaY0lbPd_AE\" target=\"_blank\" rel=\"noopener noreferrer\">Cliffs, Canyons, & Chasms</a>"
+      ]
+    }
   }
 }
