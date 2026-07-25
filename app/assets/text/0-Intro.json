@@ -1,14 +1,38 @@
 {
   "Game Components": {
     "Title": "Game Components",
-    "List": ["1 sheet of paper & pencil", "3 six sided dice", "optional - a separate sheet of paper to keep a timeline and notes"]
+    "List": [
+      "1 sheet of paper & pencil",
+      "3 six sided dice",
+      "optional - a separate sheet of paper to keep a timeline and notes"
+    ]
   },
   "Inspiration": {
     "Title": "Inspiration",
-    "List": ["Ex Novo by Sharkbomb <a href=\"https://sharkbombs.itch.io/ex-novo\" target=\"_blank\">https://sharkbombs.itch.io/ex-novo</a>", "Wonderdraft by Megasploot <a href=\"https://www.wonderdraft.net/\" target=\"_blank\">https://www.wonderdraft.net/</a>"]
+    "List": [
+      "Ex Novo by Sharkbomb <a href=\"https://sharkbombs.itch.io/ex-novo\" target=\"_blank\">https://sharkbombs.itch.io/ex-novo</a>",
+      "Wonderdraft by Megasploot <a href=\"https://www.wonderdraft.net/\" target=\"_blank\">https://www.wonderdraft.net/</a>"
+    ]
+  },
+  "Resources": {
+    "Title": "Resources",
+    "Map": {
+      "Title": "Map drawing",
+      "Text": "Here are some resources to help you draw your map.",
+      "List": [
+        "<a href=\"https://www.youtube.com/watch?v=2dXymefWOuc\" target=\"_blank\">Trees and forests</a>",
+        "<a href=\"https://www.youtube.com/watch?v=D_O-Qry-aAE\" target=\"_blank\">Mountains</a>",
+        "<a href=\"https://www.youtube.com/watch?v=1w4kLRWNiqI\" target=\"_blank\">Towns and settlements</a>",
+        "<a href=\"https://www.youtube.com/watch?v=QaY0lbPd_AE\" target=\"_blank\">Cliffs, Canyons, & Chasms</a>"
+      ]
+    }
   },
   "Play Online": {
     "Title": "Play Online With",
-    "List": ["<a href=\"https://roll20.net/\" target=\"_blank\">https://roll20.net</a>", "<a href=\"https://aggie.io/\" target=\"_blank\">https://aggie.io/</a>", "<a href=\"https://www.owlbear.rodeo/\" target=\"_blank\">https://www.owlbear.rodeo</a>"]
+    "List": [
+      "<a href=\"https://roll20.net/\" target=\"_blank\">https://roll20.net</a>",
+      "<a href=\"https://aggie.io/\" target=\"_blank\">https://aggie.io/</a>",
+      "<a href=\"https://www.owlbear.rodeo/\" target=\"_blank\">https://www.owlbear.rodeo</a>"
+    ]
   }
 }

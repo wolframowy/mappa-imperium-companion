@@ -61,7 +61,11 @@ export default function About() {
             Then for your loved ones. And if you still want to support me then
             buy me a beer.
           </p>
-          <a href="https://www.buymeacoffee.com/wolframowy" target="_blank">
+          <a
+            href="https://www.buymeacoffee.com/wolframowy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               className="max-h-10"
               src={"https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"}

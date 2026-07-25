@@ -125,7 +125,11 @@ export function NavBar({ onThemeChange }: NavBarProps) {
           >
             ⚙
           </NavLink>
-          <a href="https://www.buymeacoffee.com/wolframowy" target="_blank">
+          <a
+            href="https://www.buymeacoffee.com/wolframowy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               className="max-h-10"
               src={
