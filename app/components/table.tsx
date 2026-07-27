@@ -2,9 +2,10 @@ import { useContext, useEffect, useState, useMemo } from "react";
 import { TableShelfContext } from "~/root";
 import Tooltip from "./tooltip";
 import TextWithRefs from "~/components/textWithRefs";
-import allTablesData from "app/assets/text/Tables.json";
+import allTablesData from "~/assets/text/Tables.json";
 import debounce from "~/util/debounce";
 import { CONSTANTS } from "~/consts";
+import toastMsg from "~/util/toastMsg";
 
 // 6 rows per column for autosplit. 6 is chosen because when d6 are used it creates pretty natural split behavior.
 const MAX_ROWS_PER_COLUMN = 6;
@@ -48,6 +49,14 @@ export default function Table({
   const { lookupTables, setLookupTables } = useContext(TableShelfContext) || {
     lookupTables: [],
     setLookupTables: () => {},
+  };
+
+  const addTableToLookup = () => {
+    setLookupTables([...lookupTables, tableId]);
+    toastMsg(
+      `Added table "${tableData.Title ?? tableId}" to quick access`,
+      "success",
+    );
   };
 
   // Save custom table data to localStorage
@@ -171,6 +180,7 @@ export default function Table({
     setTableData(defaultTableData);
     setHasCustomData(false);
     setIsEditing(false);
+    toastMsg(`Reset table "${tableId}" to default`, "info");
   };
 
   return (
@@ -191,7 +201,7 @@ export default function Table({
           <Tooltip tooltip="Add table to quick access" direction="left">
             <button
               className="w-6 h-6 rounded-md font-square bg-accent-blue hover:bg-accent-blue-highlight text-neutral-100 transition-colors duration-200"
-              onClick={() => setLookupTables([...lookupTables, tableId])}
+              onClick={() => addTableToLookup()}
             >
               +
             </button>
