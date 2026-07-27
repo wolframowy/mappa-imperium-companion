@@ -12,6 +12,7 @@ import { createContext, useEffect, useState } from "react";
 import { NavBar } from "./components/navbar";
 import TableShelf from "./components/tableShelf";
 import Page from "./components/page";
+import { ToastContainer } from "react-toastify";
 
 export const TableShelfContext = createContext<{
   lookupTables: Array<string>;
@@ -86,6 +87,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
           <TableShelf />
         </TableShelfContext>
+        <ToastContainer position="bottom-center" theme="colored" />
         <ScrollRestoration />
         <Scripts />
       </body>
