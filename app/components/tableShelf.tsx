@@ -2,7 +2,9 @@ import { useContext, useEffect, useRef, useState } from "react";
 import Table, { loadCustomTableData } from "./table";
 import { TableShelfContext } from "~/root";
 import Tooltip from "./tooltip";
-import allTablesData from "app/assets/text/Tables.json";
+import allTablesData from "~/assets/text/Tables.json";
+import toastMsg from "~/util/toastMsg";
+import Accordion from "./accordion";
 
 export default function TableShelf() {
   const tableShelfRef = useRef<HTMLDivElement>(null);
@@ -12,12 +14,24 @@ export default function TableShelf() {
     lookupTables: [],
     setLookupTables: () => {},
   };
+  const [closeInsideTablesTrigger, setCloseInsideTablesTrigger] = useState(0);
+
+  const removeTableFromLookup = (tableId: string) => {
+    setLookupTables(lookupTables.filter((id) => id !== tableId));
+    toastMsg(`Removed table "${tableId}" from quick access`, "info");
+  };
 
   useEffect(() => {
     if (lookupTables.length === 0) {
       setIsExpanded(false);
     }
   }, [lookupTables]);
+
+  useEffect(() => {
+    if (isExpanded) {
+      setCloseInsideTablesTrigger((prev) => prev + 1);
+    }
+  }, [isExpanded]);
 
   // Listen for table data updates from other Table components
   useEffect(() => {
@@ -92,29 +106,26 @@ export default function TableShelf() {
                     direction="right"
                   >
                     <button
-                      className="w-6 h-6 rounded-md font-square bg-accent-red hover:bg-accent-red-highlight text-neutral-100 transition-colors duration-200"
-                      onClick={() =>
-                        setLookupTables(
-                          lookupTables.filter((_, i) => i !== index),
-                        )
-                      }
+                      className="my-1 w-6 h-6 rounded-md font-square bg-accent-red hover:bg-accent-red-highlight text-neutral-100 transition-colors duration-200"
+                      onClick={() => removeTableFromLookup(tableId)}
                     >
                       -
                     </button>
                   </Tooltip>
-                  {tableData?.Title && (
-                    <div className="font-bold text-lg mb-1 text-accent-red">
-                      {tableData.Title}
-                    </div>
-                  )}
+                  <Accordion
+                    key={closeInsideTablesTrigger}
+                    title={tableData?.Title ?? ""}
+                    isOpen={false}
+                  >
+                    <Table
+                      key={`${tableId}-${tableUpdateTrigger}`}
+                      tableId={tableId}
+                      addButton={false}
+                      autoSplit={true}
+                      editable={false}
+                    />
+                  </Accordion>
                 </div>
-                <Table
-                  key={`${tableId}-${tableUpdateTrigger}`}
-                  tableId={tableId}
-                  addButton={false}
-                  autoSplit={true}
-                  editable={false}
-                />
               </div>
             );
           })}
