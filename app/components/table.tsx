@@ -52,11 +52,18 @@ export default function Table({
   };
 
   const addTableToLookup = () => {
-    setLookupTables([...lookupTables, tableId]);
-    toastMsg(
-      `Added table "${tableData.Title ?? tableId}" to quick access`,
-      "success",
-    );
+    if (lookupTables.includes(tableId)) {
+      toastMsg(
+        `Table "${tableData.Title ?? tableId}" is already in quick access`,
+        "warning",
+      );
+    } else {
+      setLookupTables([...lookupTables, tableId]);
+      toastMsg(
+        `Added table "${tableData.Title ?? tableId}" to quick access`,
+        "success",
+      );
+    }
   };
 
   // Save custom table data to localStorage
@@ -284,14 +291,7 @@ function renderTable(
   return (
     <div className="overflow-x-auto mb-2 inset-shadow-sm inset-shadow-primary-highlight shadow-md dark:shadow-md/40 rounded-md">
       {tableData.Title && isEditing && (
-        <div className="px-4 py-2 bg-primary-highlight">
-          <input
-            type="text"
-            value={tableData.Title}
-            onChange={(e) => handleTitleEdit(e.target.value)}
-            className="w-full bg-primary text-text-primary px-2 py-1 rounded border border-primary-light focus:outline-none focus:border-accent-yellow"
-          />
-        </div>
+        <div className="px-4 py-2 bg-primary-highlight">{tableData.Title}</div>
       )}
       <table className={`w-full text-left`}>
         <thead className="bg-primary-highlight dark:text-shadow-md">
