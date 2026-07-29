@@ -2,7 +2,6 @@ import Popup from "reactjs-popup";
 import tableData from "~/assets/text/Tables.json";
 import Table from "~/components/table";
 import { useState, useEffect } from "react";
-import { getLgQuery } from "~/util/mediaQueries";
 import Accordion from "./accordion";
 
 interface TextWithRefsProps {
@@ -10,8 +9,6 @@ interface TextWithRefsProps {
 }
 
 export default function TextWithRefs({ text }: TextWithRefsProps) {
-  const [isModal, setIsModal] = useState(getLgQuery()?.matches || false);
-
   // This is a bit of a hack to force the popup to reposition when the content changes size (e.g. accordion opens)
   const [repositionTrigger, setRepositionTrigger] = useState(0);
   useEffect(() => {
@@ -20,20 +17,6 @@ export default function TextWithRefs({ text }: TextWithRefsProps) {
     }
   }, [repositionTrigger]);
 
-  useEffect(() => {
-    const mediaQuery = getLgQuery();
-    if (!mediaQuery) return;
-
-    const handleChange = (e: MediaQueryListEvent) => {
-      setIsModal(e.matches);
-    };
-
-    mediaQuery.addEventListener("change", handleChange);
-
-    return () => {
-      mediaQuery.removeEventListener("change", handleChange);
-    };
-  }, []);
   const refLinkPattern = /(\[.+?\]\(.+?\))/g;
   const capturingRegex = /\[(.+?)\]\((.+?)\)/;
   const parts = text.split(refLinkPattern);
@@ -68,7 +51,7 @@ export default function TextWithRefs({ text }: TextWithRefsProps) {
               closeOnDocumentClick
               arrow={false}
               keepTooltipInside="body"
-              modal={isModal}
+              modal={true}
               repositionOnResize
               nested
             >

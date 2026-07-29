@@ -17,7 +17,7 @@ export default function Accordion({
   const contentId = useId();
 
   return (
-    <div className="max-w-full inset-shadow-sm inset-shadow-primary-light shadow-md">
+    <div className="max-w-full inset-shadow-sm inset-shadow-primary-light shadow-md grow">
       <button
         type="button"
         onClick={() =>
@@ -32,7 +32,7 @@ export default function Accordion({
       >
         <div className="font-bold text-lg text-accent-red">{title}</div>
         <span
-          className={`text-accent-red transition-transform duration-200 ${isOpenState ? "rotate-180" : ""}`}
+          className={`text-accent-red mx-2 transition-transform duration-200 text-xl ${isOpenState ? "rotate-180" : ""}`}
           aria-hidden
         >
           ▾
