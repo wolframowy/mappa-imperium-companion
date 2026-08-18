@@ -2,6 +2,8 @@ import { NavLink } from "react-router";
 
 import sunIcon from "app/assets/icons/sun.svg";
 import moonIcon from "app/assets/icons/moon.svg";
+import castleLightIcon from "app/assets/castle_light.svg";
+import castleDarkIcon from "app/assets/castle_dark.svg";
 import { useEffect, useRef, useState } from "react";
 import Tooltip from "./tooltip";
 
@@ -32,6 +34,61 @@ export function NavBar({ onThemeChange }: NavBarProps) {
   const handleExpandClick = () => {
     setIsExpanded(!isExpanded);
   };
+
+  const renderRoute = (route: (typeof NavbarRoutes)[0]) => (
+    <NavLink
+      key={route.to}
+      to={route.to}
+      className="relative px-4 py-2 grow-0 whitespace-nowrap no-underline
+              hover:bg-primary-light hover:inset-shadow-xs hover:inset-shadow-primary-highlight hover:shadow-sm"
+      end
+    >
+      {isExpanded ? (
+        <div className="flex gap-2 items-center">
+          {route.icon && (
+            <>
+              <img
+                src={route.icon}
+                alt={route.text}
+                className="w-6 h-6 dark:hidden"
+              ></img>
+              <img
+                src={route.darkIcon}
+                alt={route.text}
+                className="w-6 h-6 hidden dark:block"
+              ></img>
+            </>
+          )}
+          <div className="overflow-x-hidden">{route.text}</div>
+        </div>
+      ) : (
+        <div className="flex justify-center">
+          {route.icon ? (
+            <Tooltip tooltip={route.text} direction="right">
+              <>
+                <img
+                  src={route.icon}
+                  alt={route.text}
+                  className="w-6 h-6 dark:hidden"
+                ></img>
+                <img
+                  src={route.darkIcon}
+                  alt={route.text}
+                  className="w-6 h-6 hidden dark:block"
+                ></img>
+              </>
+            </Tooltip>
+          ) : (
+            <Tooltip tooltip={route.text} direction="right">
+              <span className="w-6 h-6 flex items-center justify-center">
+                {route.shortText}
+              </span>
+            </Tooltip>
+          )}
+        </div>
+      )}
+    </NavLink>
+  );
 
   return (
     <>
@@ -81,25 +138,7 @@ export function NavBar({ onThemeChange }: NavBarProps) {
           >
             {isExpanded ? "<<" : ">>"}
           </button>
-          {NavbarRoutes.map((route) => (
-            <NavLink
-              key={route.to}
-              to={route.to}
-              className="relative px-5 py-3 grow-0 whitespace-nowrap no-underline
-              hover:bg-primary-light hover:inset-shadow-xs hover:inset-shadow-primary-highlight hover:shadow-sm"
-              end
-            >
-              {isExpanded ? (
-                <div className="overflow-x-hidden">{route.text}</div>
-              ) : (
-                <div className="flex justify-center">
-                  <Tooltip tooltip={route.text} direction="right">
-                    {route.shortText}
-                  </Tooltip>
-                </div>
-              )}
-            </NavLink>
-          ))}
+          {NavbarRoutes.map(renderRoute)}
         </div>
         <div className="pb-2 flex flex-col justify-evenly items-center">
           <button
@@ -148,7 +187,13 @@ export function NavBar({ onThemeChange }: NavBarProps) {
 }
 
 const NavbarRoutes = [
-  { to: "/", text: "Home", shortText: "H" },
+  {
+    to: "/",
+    text: "Home",
+    shortText: "H",
+    icon: castleLightIcon,
+    darkIcon: castleDarkIcon,
+  },
   { to: "/play-overview", text: "Play Overview", shortText: "PO" },
   { to: "/era-1", text: "Era I: Age of Creation", shortText: "I" },
   { to: "/era-2", text: "Era II: Age of Myth", shortText: "II" },
