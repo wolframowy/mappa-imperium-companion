@@ -9,7 +9,17 @@ export default function Home() {
   const navigate = useNavigate();
   return (
     <>
-      <div className="flex flex-col items-center justify-center gap-4 text-center mb-4">
+      <div className="flex flex-col sm:flex-row items-center justify-center sm:gap-4 text-center mb-4 sm:max-h-48">
+        <img
+          src="/app/assets/logo/logo_light.svg"
+          alt="Mappa Imperium Logo"
+          className="min-h-24 min-w-24 max-h-24 sm:max-h-48 dark:hidden"
+        ></img>
+        <img
+          src="/app/assets/logo/logo_dark.svg"
+          alt="Mappa Imperium Logo"
+          className="min-h-24 min-w-24 max-h-24 sm:max-h-48 hidden dark:block"
+        ></img>
         <div className="font-medieval text-7xl sm:text-8xl">Mappa Imperium</div>
       </div>
       <Section noUnderline>
