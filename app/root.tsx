@@ -20,7 +20,7 @@ export const TableShelfContext = createContext<{
 } | null>(null);
 
 export const links: Route.LinksFunction = () => [
-  { rel: "icon", href: "/favicon.svg" },
+  { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",
