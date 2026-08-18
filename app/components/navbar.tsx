@@ -2,6 +2,8 @@ import { NavLink } from "react-router";
 
 import sunIcon from "app/assets/icons/sun.svg";
 import moonIcon from "app/assets/icons/moon.svg";
+import castleLightIcon from "app/assets/castle_light.svg";
+import castleDarkIcon from "app/assets/castle_dark.svg";
 import { useEffect, useRef, useState } from "react";
 import Tooltip from "./tooltip";
 
@@ -189,8 +191,8 @@ const NavbarRoutes = [
     to: "/",
     text: "Home",
     shortText: "H",
-    icon: "app/assets/castle_light.svg",
-    darkIcon: "app/assets/castle_dark.svg",
+    icon: castleLightIcon,
+    darkIcon: castleDarkIcon,
   },
   { to: "/play-overview", text: "Play Overview", shortText: "PO" },
   { to: "/era-1", text: "Era I: Age of Creation", shortText: "I" },

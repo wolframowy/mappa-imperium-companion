@@ -4,6 +4,8 @@ import { BottomScrollButton } from "~/components/bottomScrollButton";
 import Section from "~/components/section";
 import { Paragraph } from "~/components/paragraph";
 import Sidenote from "~/components/sidenote";
+import logoLight from "~/assets/logo/logo_light.svg";
+import logoDark from "~/assets/logo/logo_dark.svg";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -11,12 +13,12 @@ export default function Home() {
     <>
       <div className="flex flex-col sm:flex-row items-center justify-center sm:gap-4 text-center mb-4 sm:max-h-48">
         <img
-          src="/app/assets/logo/logo_light.svg"
+          src={logoLight}
           alt="Mappa Imperium Logo"
           className="min-h-24 min-w-24 max-h-24 sm:max-h-48 dark:hidden"
         ></img>
         <img
-          src="/app/assets/logo/logo_dark.svg"
+          src={logoDark}
           alt="Mappa Imperium Logo"
           className="min-h-24 min-w-24 max-h-24 sm:max-h-48 hidden dark:block"
         ></img>
