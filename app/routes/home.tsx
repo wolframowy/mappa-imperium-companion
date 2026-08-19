@@ -6,6 +6,7 @@ import { Paragraph } from "~/components/paragraph";
 import Sidenote from "~/components/sidenote";
 import logoLight from "~/assets/logo/logo_light.svg";
 import logoDark from "~/assets/logo/logo_dark.svg";
+import ExternalIcon from "~/assets/icons/externalIcon";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -32,9 +33,10 @@ export default function Home() {
               href="https://nookrium.itch.io/mappa-imperium"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block"
+              className="inline-flex items-center gap-1"
             >
               Mappa Imperium on itch.io
+              <ExternalIcon />
             </a>
           </p>
           <p>
@@ -52,9 +54,21 @@ export default function Home() {
           customClass="pt-1"
         >
           <ul className="list-disc list-inside">
-            {json["Inspiration"].List.map((text, index) => (
-              <li key={index} dangerouslySetInnerHTML={{ __html: text }}></li>
-            ))}
+            {json["Inspiration"].LinkList.map(
+              (link: { text: string; url: string }, index) => (
+                <li key={index}>
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1"
+                  >
+                    {link.text}
+                    <ExternalIcon />
+                  </a>
+                </li>
+              ),
+            )}
           </ul>
         </Section>
       </Section>
@@ -85,12 +99,21 @@ export default function Home() {
             </Section>
             <Section title={json["Play Online"].Title} noUnderline noShadow>
               <ul className="list-disc list-inside">
-                {json["Play Online"].List.map((text, index) => (
-                  <li
-                    key={index}
-                    dangerouslySetInnerHTML={{ __html: text }}
-                  ></li>
-                ))}
+                {json["Play Online"].LinkList.map(
+                  (link: { text: string; url: string }, index) => (
+                    <li key={index}>
+                      <a
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1"
+                      >
+                        {link.text}
+                        <ExternalIcon />
+                      </a>
+                    </li>
+                  ),
+                )}
               </ul>
             </Section>
           </Section>
@@ -111,9 +134,21 @@ export default function Home() {
             <Paragraph textHtml={json.Drawing.Text} />
             <Paragraph textHtml={json["Resources"].Map.Text} />
             <ul className="list-disc list-inside">
-              {json["Resources"].Map.List.map((text, index) => (
-                <li key={index} dangerouslySetInnerHTML={{ __html: text }}></li>
-              ))}
+              {json["Resources"].Map.LinkList.map(
+                (link: { text: string; url: string }, index) => (
+                  <li key={index}>
+                    <a
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1"
+                    >
+                      {link.text}
+                      <ExternalIcon />
+                    </a>
+                  </li>
+                ),
+              )}
             </ul>
           </Section>
         </div>
