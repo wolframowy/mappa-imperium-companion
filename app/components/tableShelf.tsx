@@ -16,9 +16,12 @@ export default function TableShelf() {
   };
   const [closeInsideTablesTrigger, setCloseInsideTablesTrigger] = useState(0);
 
-  const removeTableFromLookup = (tableId: string) => {
+  const removeTableFromLookup = (tableId: string, tableTitle: string) => {
     setLookupTables(lookupTables.filter((id) => id !== tableId));
-    toastMsg(`Removed table "${tableId}" from quick access`, "info");
+    toastMsg(
+      `Removed table "${tableTitle || tableId}" from quick access`,
+      "info",
+    );
   };
 
   useEffect(() => {
@@ -107,7 +110,9 @@ export default function TableShelf() {
                   >
                     <button
                       className="my-1 w-6 h-6 rounded-md font-square bg-accent-red hover:bg-accent-red-highlight text-neutral-100 transition-colors duration-200"
-                      onClick={() => removeTableFromLookup(tableId)}
+                      onClick={() =>
+                        removeTableFromLookup(tableId, tableData?.Title)
+                      }
                     >
                       -
                     </button>

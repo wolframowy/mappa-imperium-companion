@@ -6,9 +6,15 @@
   "Sidenote": "Mappa Imperium is first and foremost a cooperative storytelling game and is played best when the players work together. By the end of the game you will have a full fantasy map complete with empires, lore, hostile tribes, and horrific monsters.",
   "Inspiration": {
     "Title": "Inspiration",
-    "List": [
-      "Ex Novo by Sharkbomb <a href=\"https://sharkbombs.itch.io/ex-novo\" target=\"_blank\" rel=\"noopener noreferrer\">https://sharkbombs.itch.io/ex-novo</a>",
-      "Wonderdraft by Megasploot <a href=\"https://www.wonderdraft.net/\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.wonderdraft.net/</a>"
+    "LinkList": [
+      {
+        "text": "Ex Novo by Sharkbomb",
+        "url": "https://sharkbombs.itch.io/ex-novo"
+      },
+      {
+        "text": "Wonderdraft by Megasploot",
+        "url": "https://www.wonderdraft.net/"
+      }
     ]
   },
   "Game Components": {
@@ -21,10 +27,13 @@
   },
   "Play Online": {
     "Title": "Or play online on",
-    "List": [
-      "<a href=\"https://roll20.net\" target=\"_blank\" rel=\"noopener noreferrer\">https://roll20.net</a>",
-      "<a href=\"https://magma.com\" target=\"_blank\" rel=\"noopener noreferrer\">https://magma.com</a>",
-      "<a href=\"https://www.owlbear.rodeo\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.owlbear.rodeo</a>"
+    "LinkList": [
+      { "text": "https://roll20.net", "url": "https://roll20.net" },
+      { "text": "https://magma.com", "url": "https://magma.com" },
+      {
+        "text": "https://www.owlbear.rodeo",
+        "url": "https://www.owlbear.rodeo"
+      }
     ]
   },
   "Setup": {
@@ -48,11 +57,23 @@
     "Map": {
       "Title": "Map drawing",
       "Text": "Here are some resources to help you draw your map.",
-      "List": [
-        "<a href=\"https://www.youtube.com/watch?v=2dXymefWOuc\" target=\"_blank\" rel=\"noopener noreferrer\">Trees and forests</a>",
-        "<a href=\"https://www.youtube.com/watch?v=D_O-Qry-aAE\" target=\"_blank\" rel=\"noopener noreferrer\">Mountains</a>",
-        "<a href=\"https://www.youtube.com/watch?v=1w4kLRWNiqI\" target=\"_blank\" rel=\"noopener noreferrer\">Towns and settlements</a>",
-        "<a href=\"https://www.youtube.com/watch?v=QaY0lbPd_AE\" target=\"_blank\" rel=\"noopener noreferrer\">Cliffs, Canyons, & Chasms</a>"
+      "LinkList": [
+        {
+          "text": "Trees and forests",
+          "url": "https://www.youtube.com/watch?v=2dXymefWOuc"
+        },
+        {
+          "text": "Mountains",
+          "url": "https://www.youtube.com/watch?v=D_O-Qry-aAE"
+        },
+        {
+          "text": "Towns and settlements",
+          "url": "https://www.youtube.com/watch?v=1w4kLRWNiqI"
+        },
+        {
+          "text": "Cliffs, Canyons, & Chasms",
+          "url": "https://www.youtube.com/watch?v=QaY0lbPd_AE"
+        }
       ]
     }
   }
