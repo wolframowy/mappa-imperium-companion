@@ -2,6 +2,7 @@ import { useNavigate } from "react-router";
 import { BottomScrollButton } from "~/components/bottomScrollButton";
 import Section from "~/components/section";
 import { version } from "~/../package.json";
+import ExternalIcon from "~/assets/icons/externalIcon";
 
 export default function About() {
   const navigate = useNavigate();
@@ -16,8 +17,10 @@ export default function About() {
               href="https://github.com/wolframowy/mappa-imperium-companion"
               target="_blank"
               rel="noopener noreferrer"
+              className="inline-flex items-center gap-1"
             >
               GitHub
+              <ExternalIcon />
             </a>
           </p>
           <p>
@@ -26,8 +29,10 @@ export default function About() {
               href="https://github.com/wolframowy/mappa-imperium-companion/issues"
               target="_blank"
               rel="noopener noreferrer"
+              className="inline-flex items-center gap-1"
             >
               GitHub issues page
+              <ExternalIcon />
             </a>
             .
           </p>
@@ -40,8 +45,10 @@ export default function About() {
               href="https://github.com/wolframowy"
               target="_blank"
               rel="noopener noreferrer"
+              className="inline-flex items-center gap-1"
             >
               Wolframowy
+              <ExternalIcon />
             </a>{" "}
             - developer by trade and Tabletop RPG Game master by heart. Trying
             to share with community what I find fun and helpful.
@@ -52,8 +59,10 @@ export default function About() {
               href="http://pokierejszowany.mooo.com/"
               target="_blank"
               rel="noopener noreferrer"
+              className="inline-flex items-center gap-1"
             >
               PF2E Loot Generator
+              <ExternalIcon />
             </a>
           </p>
           <p>
@@ -82,8 +91,10 @@ export default function About() {
               href="https://nookrium.itch.io/mappa-imperium"
               target="_blank"
               rel="noopener noreferrer"
+              className="inline-flex items-center gap-1"
             >
               Mappa Imperium
+              <ExternalIcon />
             </a>{" "}
             - tables and text by Nookrium. Used with permission.
           </p>
@@ -96,8 +107,10 @@ export default function About() {
             href="https://opensource.org/license/gpl-3-0-only"
             target="_blank"
             rel="noopener noreferrer"
+            className="inline-flex items-center gap-1"
           >
             GPL-3.0 License
+            <ExternalIcon />
           </a>
           .
         </p>
