@@ -82,6 +82,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
           name="google-site-verification"
           content="qSfqjmJH-5v0KpYWLeTO3qvA7EjkqFNzmmArXs0-F04"
         />
+        <meta
+          name="description"
+          content="Mappa Imperium Companion is a free companion app for the Mappa Imperium - a solo or cooperative print & play World Building game. You and any number of friends will take control of an entire fantasy world."
+        ></meta>
+        <meta
+          name="keywords"
+          content="Mappa Imperium, Companion, Free, Worldbuilding, game"
+        ></meta>
+        <meta name="author" content="Wolframowy"></meta>
         <Links />
       </head>
       <body className="overflow-x-hidden">
