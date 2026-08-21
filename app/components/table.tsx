@@ -187,7 +187,7 @@ export default function Table({
     setTableData(defaultTableData);
     setHasCustomData(false);
     setIsEditing(false);
-    toastMsg(`Reset table "${tableId}" to default`, "info");
+    toastMsg(`Reset table "${tableData.Title ?? tableId}" to default`, "info");
   };
 
   return (
