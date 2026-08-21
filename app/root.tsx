@@ -114,11 +114,7 @@ export default function App() {
 }
 
 export function HydrateFallback() {
-  return (
-    <Page>
-      <h1>Loading...</h1>
-    </Page>
-  );
+  return <h1 className="p-10">Loading...</h1>;
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
