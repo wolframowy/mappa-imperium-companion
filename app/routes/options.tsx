@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import ReactGA from "react-ga4";
 import Section from "~/components/section";
 import Tooltip from "~/components/tooltip";
 import { CONSTANTS } from "~/consts";
@@ -10,6 +11,14 @@ export default function Options() {
       ? JSON.stringify(JSON.parse(storedTableData || "{}"), undefined, 2)
       : "",
   );
+
+  useEffect(() => {
+    ReactGA.initialize("G-3S7MM56JKY");
+    ReactGA.send({
+      hitType: "pageview",
+      page: window.location.pathname,
+    });
+  }, []);
 
   const importTableData = (data: string) => {
     try {

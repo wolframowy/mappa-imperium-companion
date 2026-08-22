@@ -7,9 +7,18 @@ import Sidenote from "~/components/sidenote";
 import logoLight from "~/assets/logo/logo_light.svg";
 import logoDark from "~/assets/logo/logo_dark.svg";
 import ExternalIcon from "~/assets/icons/externalIcon";
+import { useEffect } from "react";
+import ReactGA from "react-ga4";
 
 export default function Home() {
   const navigate = useNavigate();
+  useEffect(() => {
+    ReactGA.initialize("G-3S7MM56JKY");
+    ReactGA.send({
+      hitType: "pageview",
+      page: window.location.pathname,
+    });
+  }, []);
   return (
     <>
       <div className="flex flex-col sm:flex-row items-center justify-center sm:gap-4 text-center mb-4 sm:max-h-48">

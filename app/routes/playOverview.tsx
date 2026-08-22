@@ -1,12 +1,21 @@
 import { Paragraph } from "~/components/paragraph";
-import json from "app/assets/text/2-PlayOverview.json";
+import json from "~/assets/text/2-PlayOverview.json";
 import Section from "~/components/section";
 import Table from "~/components/table";
 import { BottomScrollButton } from "~/components/bottomScrollButton";
 import { useNavigate } from "react-router";
+import { useEffect } from "react";
+import ReactGA from "react-ga4";
 
 export default function PlayOverview() {
   const navigate = useNavigate();
+  useEffect(() => {
+    ReactGA.initialize("G-3S7MM56JKY");
+    ReactGA.send({
+      hitType: "pageview",
+      page: window.location.pathname,
+    });
+  }, []);
   return (
     <>
       {/*Play Overview*/}
