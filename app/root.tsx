@@ -5,6 +5,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
+import ReactGA from "react-ga4";
 
 import type { Route } from "./+types/root";
 import "./app.css";
@@ -22,8 +23,8 @@ export const TableShelfContext = createContext<{
 export const links: Route.LinksFunction = () => [
   {
     rel: "icon",
-    type: "image/svg+xml",
-    href: "/mappa-imperium-companion/favicon.svg",
+    type: "image/png",
+    href: "/mappa-imperium-companion/favicon.png",
   },
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
@@ -110,6 +111,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
+  useEffect(() => {
+    ReactGA.initialize("G-3S7MM56JKY");
+    ReactGA.send({
+      hitType: "pageview",
+      page: window.location.pathname + window.location.search,
+    });
+  }, []);
+
   return <Outlet />;
 }
 
