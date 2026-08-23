@@ -14,6 +14,7 @@ import { NavBar } from "./components/navbar";
 import TableShelf from "./components/tableShelf";
 import Page from "./components/page";
 import { ToastContainer } from "react-toastify";
+import ConsentBanner from "./components/consentBanner";
 
 export const TableShelfContext = createContext<{
   lookupTables: Array<string>;
@@ -92,6 +93,21 @@ export function Layout({ children }: { children: React.ReactNode }) {
           content="Mappa Imperium, Companion, Free, Worldbuilding, game"
         ></meta>
         <meta name="author" content="Wolframowy"></meta>
+        {/* Google Analytics consent initialization */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+              analytics_storage: 'denied',
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+            });
+          `,
+          }}
+        />
         <Links />
       </head>
       <body className="overflow-x-hidden">
@@ -103,6 +119,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <TableShelf />
         </TableShelfContext>
         <ToastContainer position="bottom-center" theme="colored" />
+        <ConsentBanner />
         <ScrollRestoration />
         <Scripts />
       </body>
