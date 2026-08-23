@@ -132,7 +132,7 @@ export default function App() {
   const location = useLocation(); // ← React Router location
 
   useEffect(() => {
-    ReactGA.initialize("G-3S7MM56JKY");
+    ReactGA.initialize("G-8FJ446SQ2P");
   }, []);
 
   useEffect(() => {
