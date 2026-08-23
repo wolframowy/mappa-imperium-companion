@@ -4,6 +4,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLocation,
 } from "react-router";
 import ReactGA from "react-ga4";
 
@@ -128,6 +129,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
+  const location = useLocation(); // ← React Router location
+
   useEffect(() => {
     ReactGA.initialize("G-3S7MM56JKY");
   }, []);
