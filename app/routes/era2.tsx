@@ -1,23 +1,14 @@
 import json from "~/assets/text/4-Era2.json";
 import Section from "~/components/section";
 import { Paragraph } from "~/components/paragraph";
-import ReactGA from "react-ga4";
 import Examples from "~/components/examples";
 import Sidenote from "~/components/sidenote";
 import Table from "~/components/table";
 import { BottomScrollButton } from "~/components/bottomScrollButton";
 import { useNavigate } from "react-router";
-import { useEffect } from "react";
 
 export default function Era2() {
   const navigate = useNavigate();
-  useEffect(() => {
-    ReactGA.initialize("G-3S7MM56JKY");
-    ReactGA.send({
-      hitType: "pageview",
-      page: window.location.pathname,
-    });
-  }, []);
   return (
     <>
       {/*Era 2*/}
