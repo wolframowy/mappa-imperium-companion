@@ -96,16 +96,22 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="author" content="Wolframowy"></meta>
         {/* Google Analytics consent initialization */}
         <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-3S7MM56JKY"
+        ></script>
+        <script
           dangerouslySetInnerHTML={{
             __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
             gtag('consent', 'default', {
               analytics_storage: 'denied',
               ad_storage: 'denied',
               ad_user_data: 'denied',
               ad_personalization: 'denied',
             });
+            gtag('config', 'G-3S7MM56JKY');
           `,
           }}
         />
