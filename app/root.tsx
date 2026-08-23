@@ -130,11 +130,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
   useEffect(() => {
     ReactGA.initialize("G-3S7MM56JKY");
-    ReactGA.send({
-      hitType: "pageview",
-      page: window.location.pathname + window.location.search,
-    });
   }, []);
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
 
   return <Outlet />;
 }
