@@ -6,18 +6,9 @@ import Sidenote from "~/components/sidenote";
 import Table from "~/components/table";
 import { BottomScrollButton } from "~/components/bottomScrollButton";
 import { useNavigate } from "react-router";
-import { useEffect } from "react";
-import ReactGA from "react-ga4";
 
 export default function Era3() {
   const navigate = useNavigate();
-  useEffect(() => {
-    ReactGA.initialize("G-3S7MM56JKY");
-    ReactGA.send({
-      hitType: "pageview",
-      page: window.location.pathname,
-    });
-  }, []);
   return (
     <>
       {/*Era 3*/}

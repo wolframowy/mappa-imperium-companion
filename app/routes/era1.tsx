@@ -1,6 +1,4 @@
 import json from "~/assets/text/3-Era1.json";
-import { useEffect } from "react";
-import ReactGA from "react-ga4";
 import { useNavigate } from "react-router";
 import { BottomScrollButton } from "~/components/bottomScrollButton";
 import { Paragraph } from "~/components/paragraph";
@@ -9,13 +7,6 @@ import Table from "~/components/table";
 
 export default function Era1() {
   const navigate = useNavigate();
-  useEffect(() => {
-    ReactGA.initialize("G-3S7MM56JKY");
-    ReactGA.send({
-      hitType: "pageview",
-      page: window.location.pathname,
-    });
-  }, []);
   return (
     <>
       {/*Era 1*/}

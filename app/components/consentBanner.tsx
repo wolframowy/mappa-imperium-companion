@@ -31,7 +31,7 @@ export default function ConsentBanner() {
 
   return (
     <div
-      className="fixed bottom-0 left-0 sm:left-[var(--navbar-width-collapsed)] right-0 z-5 flex flex-col sm:flex-row
+      className="fixed bottom-0 left-0 sm:left-(--navbar-width-collapsed) right-0 z-5 flex flex-col sm:flex-row
                  items-start sm:items-center justify-center gap-3 p-4
                  bg-primary inset-shadow-xs inset-shadow-primary-highlight shadow-lg"
     >
