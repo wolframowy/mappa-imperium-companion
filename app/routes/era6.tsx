@@ -4,6 +4,7 @@ import { Paragraph } from "~/components/paragraph";
 import Table from "~/components/table";
 import { BottomScrollButton } from "~/components/bottomScrollButton";
 import { useNavigate } from "react-router";
+import GameLengthIndicator from "~/components/gameLengthIndicator";
 
 export default function Era6() {
   const navigate = useNavigate();
@@ -15,7 +16,11 @@ export default function Era6() {
       </Section>
       {/* Final Era */}
       <Section title={json["6.1"].Title} id="6.1">
-        <Paragraph textHtml={json["6.1"].Text} />
+        <p>
+          Take <GameLengthIndicator eraIdx={2} /> turns in this era using the
+          table below for 50 years of story. All results can be placed anywhere
+          on the map.
+        </p>
         <Table tableId="6.1" />
       </Section>
       {/* Iconic Landmarks */}

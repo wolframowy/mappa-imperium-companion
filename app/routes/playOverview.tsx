@@ -1,12 +1,27 @@
 import { Paragraph } from "~/components/paragraph";
 import json from "~/assets/text/2-PlayOverview.json";
+import { GameLengthEnum } from "~/root";
 import Section from "~/components/section";
 import Table from "~/components/table";
 import { BottomScrollButton } from "~/components/bottomScrollButton";
 import { useNavigate } from "react-router";
+import { AppContext } from "~/root";
+import { useContext } from "react";
 
 export default function PlayOverview() {
   const navigate = useNavigate();
+  const { gameLength, setGameLength } = useContext(AppContext) || {
+    gameLength: GameLengthEnum.Standard,
+    setGameLength: () => {},
+  };
+
+  const gameLengthOptions = [
+    GameLengthEnum.Short,
+    GameLengthEnum.Standard,
+    GameLengthEnum.Long,
+    GameLengthEnum.Epic,
+  ];
+
   return (
     <>
       {/*Play Overview*/}
@@ -42,6 +57,31 @@ export default function PlayOverview() {
       {/*Game Length*/}
       <Section title={json.GameLength.Title}>
         <Paragraph textHtml={json.GameLength.Text} />
+        <p>
+          Here you can select the game length and it will be reflected in future
+          eras.
+        </p>
+        <div className="flex items-center flex-wrap gap-8 px-3 py-2">
+          {gameLengthOptions.map((val) => (
+            <div className="flex items-center gap-1" key={val}>
+              <input
+                id={`gameLength-${val}`}
+                type="radio"
+                name="gameLengthGroup"
+                value={val}
+                checked={gameLength === val}
+                onChange={() => setGameLength(val)}
+                className="accent-accent-blue-highlight"
+              />
+              <label
+                htmlFor={`gameLength-${val}`}
+                className={`${gameLength === val && "text-text-primary-muted"}`}
+              >
+                {val}
+              </label>
+            </div>
+          ))}
+        </div>
         <Table tableId="0" />
       </Section>
       <BottomScrollButton

@@ -5,9 +5,11 @@ import Sidenote from "~/components/sidenote";
 import Table from "~/components/table";
 import { useNavigate } from "react-router";
 import { BottomScrollButton } from "~/components/bottomScrollButton";
+import GameLengthIndicator from "~/components/gameLengthIndicator";
 
 export default function Era4() {
   const navigate = useNavigate();
+
   return (
     <>
       {/* Era 4 */}
@@ -17,6 +19,10 @@ export default function Era4() {
       {/* Exploration Begins */}
       <Section title={json["4.1"].Title} id="4.1">
         <Paragraph textHtml={json["4.1"].Text} />
+        <p>
+          Roll <GameLengthIndicator eraIdx={0} /> times on this table using 3
+          six sided dice.
+        </p>
         <Table tableId="4.1" />
       </Section>
       {/* Colonization */}
