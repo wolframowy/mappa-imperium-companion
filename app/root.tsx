@@ -17,10 +17,21 @@ import Page from "./components/page";
 import { ToastContainer } from "react-toastify";
 import ConsentBanner from "./components/consentBanner";
 
-export const TableShelfContext = createContext<{
+export enum GameLengthEnum {
+  Short = "Short",
+  Standard = "Standard",
+  Long = "Long",
+  Epic = "Epic",
+}
+
+export interface AppContextModel {
   lookupTables: Array<string>;
   setLookupTables: (tables: Array<string>) => void;
-} | null>(null);
+  gameLength: GameLengthEnum;
+  setGameLength: (length: GameLengthEnum) => void;
+}
+
+export const AppContext = createContext<AppContextModel | null>(null);
 
 export const links: Route.LinksFunction = () => [
   {
@@ -53,6 +64,9 @@ export const links: Route.LinksFunction = () => [
 export function Layout({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [lookupTables, setLookupTables] = useState<Array<string>>([]);
+  const [gameLength, setGameLength] = useState<GameLengthEnum>(
+    GameLengthEnum.Standard,
+  );
 
   useEffect(() => {
     if (typeof window !== "undefined" && localStorage?.theme) {
@@ -118,13 +132,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="overflow-x-hidden">
-        <TableShelfContext value={{ lookupTables, setLookupTables }}>
+        <AppContext
+          value={{ lookupTables, setLookupTables, gameLength, setGameLength }}
+        >
           <div className="flex w-screen">
             <NavBar onThemeChange={toggleLightDark} />
             <Page>{children}</Page>
           </div>
           <TableShelf />
-        </TableShelfContext>
+        </AppContext>
         <ToastContainer position="bottom-center" theme="colored" />
         <ConsentBanner />
         <ScrollRestoration />

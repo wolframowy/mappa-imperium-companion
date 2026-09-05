@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState, useMemo } from "react";
-import { TableShelfContext } from "~/root";
+import { AppContext } from "~/root";
 import Tooltip from "./tooltip";
 import TextWithRefs from "~/components/textWithRefs";
 import allTablesData from "~/assets/text/Tables.json";
@@ -46,7 +46,7 @@ export default function Table({
   autoSplit = false,
   editable = true,
 }: TableProps) {
-  const { lookupTables, setLookupTables } = useContext(TableShelfContext) || {
+  const { lookupTables, setLookupTables } = useContext(AppContext) || {
     lookupTables: [],
     setLookupTables: () => {},
   };

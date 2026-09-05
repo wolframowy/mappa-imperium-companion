@@ -4,6 +4,7 @@ import { Paragraph } from "~/components/paragraph";
 import Table from "~/components/table";
 import { BottomScrollButton } from "~/components/bottomScrollButton";
 import { useNavigate } from "react-router";
+import GameLengthIndicator from "~/components/gameLengthIndicator";
 
 export default function Era5() {
   const navigate = useNavigate();
@@ -15,7 +16,12 @@ export default function Era5() {
       </Section>
       {/* Worldwide Expansion */}
       <Section title={json["5.1"].Title} id="5.1">
-        <Paragraph textHtml={json["5.1"].Text} />
+        <p>All results can now be placed in any region on the map.</p>
+        <p>
+          Roll <GameLengthIndicator eraIdx={1} /> times in this Era for 60 years
+          of advancement, using the Growing Empires Table below and recording
+          the results.
+        </p>
         <Table tableId="5.1" />
       </Section>
       <BottomScrollButton
