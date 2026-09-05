@@ -1,6 +1,6 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import Table, { loadCustomTableData } from "./table";
-import { TableShelfContext } from "~/root";
+import { AppContext } from "~/root";
 import Tooltip from "./tooltip";
 import allTablesData from "~/assets/text/Tables.json";
 import toastMsg from "~/util/toastMsg";
@@ -10,8 +10,8 @@ export default function TableShelf() {
   const tableShelfRef = useRef<HTMLDivElement>(null);
   const [isExpanded, setIsExpanded] = useState(false);
   const [tableUpdateTrigger, setTableUpdateTrigger] = useState(0);
-  const { lookupTables, setLookupTables } = useContext(TableShelfContext) || {
-    lookupTables: [],
+  const { lookupTables, setLookupTables } = useContext(AppContext) || {
+    lookupTables: [] as string[],
     setLookupTables: () => {},
   };
   const [closeInsideTablesTrigger, setCloseInsideTablesTrigger] = useState(0);
@@ -111,7 +111,10 @@ export default function TableShelf() {
                     <button
                       className="my-1 w-6 h-6 rounded-md font-square bg-accent-red hover:bg-accent-red-highlight text-neutral-100 transition-colors duration-200"
                       onClick={() =>
-                        removeTableFromLookup(tableId, tableData?.Title)
+                        removeTableFromLookup(
+                          tableId,
+                          tableData?.Title || tableId,
+                        )
                       }
                     >
                       -

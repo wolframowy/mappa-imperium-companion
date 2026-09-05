@@ -4,12 +4,14 @@ interface TooltipProps {
   children: React.ReactNode;
   tooltip: string;
   direction?: "up" | "down" | "left" | "right";
+  className?: string;
 }
 
 export default function Tooltip({
   children,
   tooltip,
   direction = "up",
+  className = "",
 }: TooltipProps) {
   const tooltipId = useId();
 
@@ -21,7 +23,10 @@ export default function Tooltip({
   }[direction];
 
   return (
-    <div className="group relative size-fit" aria-describedby={tooltipId}>
+    <div
+      className={`group relative size-fit ${className}`}
+      aria-describedby={tooltipId}
+    >
       {children}
       <span
         id={tooltipId}

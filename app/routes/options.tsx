@@ -3,6 +3,7 @@ import Popup from "reactjs-popup";
 import Section from "~/components/section";
 import Tooltip from "~/components/tooltip";
 import { CONSTANTS } from "~/consts";
+import toastMsg from "~/util/toastMsg";
 
 export default function Options() {
   const refPopup = useRef<typeof Popup>(null);
@@ -19,43 +20,50 @@ export default function Options() {
         JSON.stringify(JSON.parse(data)),
       );
       setCustomTableData(data);
+      refPopup.current?.close();
     } catch (error) {
-      alert("Invalid JSON format. Please correct it before saving.");
+      toastMsg(
+        "Invalid JSON format. Please correct it before saving.",
+        "error",
+      );
     }
   };
 
   const tableEditArea = (
-    <div className="w-full flex gap-1 p-2 bg-primary-dark rounded shadow-md inset-shadow-sm inset-shadow-primary-highlight border-l-8 border-l-accent-yellow">
+    <div className="w-full flex flex-col gap-3 p-3 bg-primary-dark rounded shadow-md inset-shadow-sm inset-shadow-primary-highlight border-l-8 border-l-accent-yellow">
       <textarea
         className="max-w-full w-full min-w-[60vw] h-100 min-h-[60vh] resize rounded-md bg-primary-light text-text-primary-muted p-1 focus:outline-none"
         placeholder="Enter JSON here"
         value={customTableData}
         onChange={(e) => setCustomTableData(e.target.value)}
       ></textarea>
-      <div>
-        <Tooltip tooltip={"Save"} direction="left">
+      <div className="flex flex-row-reverse gap-2">
+        <button
+          className="w-max px-3 py-2 text-neutral-100 bg-accent-green hover:bg-accent-green-highlight rounded-lg shadow-lg hover:shadow-xl transition-opacity z-10 duration-300"
+          onClick={() => {
+            importTableData(customTableData);
+          }}
+        >
+          ✓ Save
+        </button>
+        <button
+          className="w-max px-3 py-2 text-neutral-100 bg-accent-yellow hover:bg-accent-yellow-highlight rounded-lg shadow-lg hover:shadow-xl transition-opacity z-10 duration-300"
+          onClick={() => {
+            navigator.clipboard.writeText(customTableData);
+          }}
+        >
+          Copy to Clipboard
+        </button>
+        {customTableData !== "{}" && (
           <button
-            className={`w-6 h-6 rounded-md font-square transition-colors duration-200 text-neutral-100 bg-accent-red hover:bg-accent-red-highlight`}
+            className="w-max px-3 py-2 text-neutral-100 bg-accent-red hover:bg-accent-red-highlight rounded-lg shadow-lg hover:shadow-xl transition-opacity z-10 duration-300"
             onClick={() => {
-              importTableData(customTableData);
-              refPopup.current?.close();
+              localStorage.removeItem(CONSTANTS.STORAGE_KEY);
+              setCustomTableData("{}");
             }}
           >
-            {"✓"}
+            ↻ Reset
           </button>
-        </Tooltip>
-        {customTableData !== "{}" && (
-          <Tooltip tooltip="Reset to default" direction="left">
-            <button
-              className="w-6 h-6 rounded-md font-square bg-primary-highlight hover:bg-primary-light text-text-primary transition-colors duration-200 text-xs"
-              onClick={() => {
-                localStorage.removeItem(CONSTANTS.STORAGE_KEY);
-                setCustomTableData("{}");
-              }}
-            >
-              ↻
-            </button>
-          </Tooltip>
         )}
       </div>
     </div>
@@ -101,18 +109,9 @@ export default function Options() {
               keepTooltipInside="body"
               modal
               repositionOnResize
-              nested
             >
               {tableEditArea}
             </Popup>
-            <button
-              className="w-max px-3 py-2 text-neutral-100 bg-accent-yellow hover:bg-accent-yellow-highlight rounded-lg shadow-lg hover:shadow-xl transition-opacity z-10 duration-300"
-              onClick={() => {
-                navigator.clipboard.writeText(customTableData);
-              }}
-            >
-              Copy to Clipboard
-            </button>
           </div>
         </Section>
       </Section>
