@@ -1,7 +1,5 @@
-
 # Workflow for building and deploying a React Router app to GitHub Pages
 name: Deploy React Router App to GitHub Pages
-
 
 on:
   # Runs on pushes targeting the default branch
@@ -46,7 +44,7 @@ jobs:
 
       # Workaround for github pages wrongly handling SPA routes
       - name: Create 404.html for GitHub Pages SPA routing
-        run: cp ./build/client/index.html ./build/client/404.html
+        run: cp ./public/404.html ./build/client/404.html
 
       - name: Create .nojekyll file
         run: touch ./build/client/.nojekyll
