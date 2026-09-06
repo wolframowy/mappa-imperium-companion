@@ -16,11 +16,11 @@ export default function Era6() {
       </Section>
       {/* Final Era */}
       <Section title={json["6.1"].Title} id="6.1">
-        <p>
+        <div>
           Take <GameLengthIndicator eraIdx={2} /> turns in this era using the
           table below for 50 years of story. All results can be placed anywhere
           on the map.
-        </p>
+        </div>
         <Table tableId="6.1" />
       </Section>
       {/* Iconic Landmarks */}

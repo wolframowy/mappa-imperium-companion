@@ -42,7 +42,7 @@ export function NavBar({ onThemeChange }: NavBarProps) {
       key={route.to}
       onClick={() => navigate(route.to)}
       className={`relative px-4 py-2 grow-0 whitespace-nowrap no-underline
-              hover:bg-primary-light hover:inset-shadow-xs hover:inset-shadow-primary-highlight hover:shadow-sm
+              hover:bg-primary-light hover:inset-shadow-xs hover:inset-shadow-primary-highlight hover:shadow-sm hover:text-accent-red
               ${location.pathname === route.to ? "font-bold bg-primary-light inset-shadow-xs inset-shadow-primary-highlight shadow-sm" : ""}`}
     >
       {isExpanded ? (
