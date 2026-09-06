@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router";
+import { NavLink, useLocation, useNavigate } from "react-router";
 
 import sunIcon from "app/assets/icons/sun.svg";
 import moonIcon from "app/assets/icons/moon.svg";
@@ -15,6 +15,7 @@ export function NavBar({ onThemeChange }: NavBarProps) {
   const navBarRef = useRef<HTMLDivElement>(null);
   const [isExpanded, setIsExpanded] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const clickOutside = (event: MouseEvent) => {
@@ -37,13 +38,12 @@ export function NavBar({ onThemeChange }: NavBarProps) {
   };
 
   const renderRoute = (route: (typeof NavbarRoutes)[0]) => (
-    <NavLink
+    <button
       key={route.to}
-      to={route.to}
+      onClick={() => navigate(route.to)}
       className={`relative px-4 py-2 grow-0 whitespace-nowrap no-underline
               hover:bg-primary-light hover:inset-shadow-xs hover:inset-shadow-primary-highlight hover:shadow-sm
               ${location.pathname === route.to ? "font-bold bg-primary-light inset-shadow-xs inset-shadow-primary-highlight shadow-sm" : ""}`}
-      end
     >
       {isExpanded ? (
         <div className="flex gap-2 items-center">
@@ -89,7 +89,7 @@ export function NavBar({ onThemeChange }: NavBarProps) {
           )}
         </div>
       )}
-    </NavLink>
+    </button>
   );
 
   return (
@@ -158,15 +158,14 @@ export function NavBar({ onThemeChange }: NavBarProps) {
               className="hidden w-6 h-6 dark:block group-hover:brightness-125"
             />
           </button>
-          <NavLink
-            to="/options"
+          <button
+            onClick={() => navigate("/options")}
             aria-label="Options"
             className={`self-stretch text-center hover:bg-primary-light text-2xl no-underline py-2
                         ${location.pathname === "/options" ? "font-bold bg-primary-light inset-shadow-xs inset-shadow-primary-highlight shadow-sm" : ""}`}
-            end
           >
             ⚙
-          </NavLink>
+          </button>
           <a
             href="https://www.buymeacoffee.com/wolframowy"
             target="_blank"
