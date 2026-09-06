@@ -17,11 +17,11 @@ export default function Era5() {
       {/* Worldwide Expansion */}
       <Section title={json["5.1"].Title} id="5.1">
         <p>All results can now be placed in any region on the map.</p>
-        <p>
+        <div>
           Roll <GameLengthIndicator eraIdx={1} /> times in this Era for 60 years
           of advancement, using the Growing Empires Table below and recording
           the results.
-        </p>
+        </div>
         <Table tableId="5.1" />
       </Section>
       <BottomScrollButton
