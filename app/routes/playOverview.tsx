@@ -73,12 +73,7 @@ export default function PlayOverview() {
                 onChange={() => setGameLength(val)}
                 className="accent-accent-blue-highlight"
               />
-              <label
-                htmlFor={`gameLength-${val}`}
-                className={`${gameLength === val && "text-text-primary-muted"}`}
-              >
-                {val}
-              </label>
+              <label htmlFor={`gameLength-${val}`}>{val}</label>
             </div>
           ))}
         </div>
