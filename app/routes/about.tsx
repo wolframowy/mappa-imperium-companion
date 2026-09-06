@@ -1,11 +1,8 @@
-import { useNavigate } from "react-router";
-import { BottomScrollButton } from "~/components/bottomScrollButton";
 import Section from "~/components/section";
 import { version } from "~/../package.json";
 import ExternalIcon from "~/assets/icons/externalIcon";
 
 export default function About() {
-  const navigate = useNavigate();
   return (
     <>
       <Section title={"About"} main>
