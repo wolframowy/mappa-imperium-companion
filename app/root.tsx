@@ -129,6 +129,20 @@ export function Layout({ children }: { children: React.ReactNode }) {
           `,
           }}
         />
+        {/* Redirect from 404 page if necessary - Workaround for github pages SPA issue */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            (function () {
+              var redirect = sessionStorage.redirect;
+              delete sessionStorage.redirect;
+              if (redirect && redirect != location.href) {
+                history.replaceState(null, null, redirect);
+              }
+            })();
+          `,
+          }}
+        />
         <Links />
       </head>
       <body className="overflow-x-hidden">

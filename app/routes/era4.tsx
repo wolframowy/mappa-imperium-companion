@@ -19,10 +19,10 @@ export default function Era4() {
       {/* Exploration Begins */}
       <Section title={json["4.1"].Title} id="4.1">
         <Paragraph textHtml={json["4.1"].Text} />
-        <p>
+        <div>
           Roll <GameLengthIndicator eraIdx={0} /> times on this table using 3
           six sided dice.
-        </p>
+        </div>
         <Table tableId="4.1" />
       </Section>
       {/* Colonization */}
