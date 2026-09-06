@@ -66,10 +66,6 @@
     &:hover {
       @apply text-accent-red;
     }
-
-    &.active {
-      @apply font-bold bg-primary-light inset-shadow-xs inset-shadow-primary-highlight shadow-sm;
-    }
   }
 
   h1,

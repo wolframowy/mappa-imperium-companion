@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { NavLink, useLocation } from "react-router";
 
 import sunIcon from "app/assets/icons/sun.svg";
 import moonIcon from "app/assets/icons/moon.svg";
@@ -14,6 +14,7 @@ interface NavBarProps {
 export function NavBar({ onThemeChange }: NavBarProps) {
   const navBarRef = useRef<HTMLDivElement>(null);
   const [isExpanded, setIsExpanded] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const clickOutside = (event: MouseEvent) => {
@@ -39,8 +40,9 @@ export function NavBar({ onThemeChange }: NavBarProps) {
     <NavLink
       key={route.to}
       to={route.to}
-      className="relative px-4 py-2 grow-0 whitespace-nowrap no-underline
-              hover:bg-primary-light hover:inset-shadow-xs hover:inset-shadow-primary-highlight hover:shadow-sm"
+      className={`relative px-4 py-2 grow-0 whitespace-nowrap no-underline
+              hover:bg-primary-light hover:inset-shadow-xs hover:inset-shadow-primary-highlight hover:shadow-sm
+              ${location.pathname === route.to ? "font-bold bg-primary-light inset-shadow-xs inset-shadow-primary-highlight shadow-sm" : ""}`}
       end
     >
       {isExpanded ? (
@@ -159,7 +161,8 @@ export function NavBar({ onThemeChange }: NavBarProps) {
           <NavLink
             to="/options"
             aria-label="Options"
-            className="self-stretch text-center hover:bg-primary-light text-2xl no-underline py-2"
+            className={`self-stretch text-center hover:bg-primary-light text-2xl no-underline py-2
+                        ${location.pathname === "/options" ? "font-bold bg-primary-light inset-shadow-xs inset-shadow-primary-highlight shadow-sm" : ""}`}
             end
           >
             ⚙

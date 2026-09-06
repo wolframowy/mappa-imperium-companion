@@ -9,7 +9,9 @@ export default function Options() {
   const refPopup = useRef<typeof Popup>(null);
   const storedTableData = localStorage.getItem(CONSTANTS.STORAGE_KEY);
   const [customTableData, setCustomTableData] = useState(
-    JSON.stringify(JSON.parse(storedTableData || "{}"), undefined, 2),
+    storedTableData
+      ? JSON.stringify(JSON.parse(storedTableData), undefined, 2)
+      : "",
   );
 
   const importTableData = (data: string) => {
@@ -54,12 +56,12 @@ export default function Options() {
         >
           Copy to Clipboard
         </button>
-        {customTableData !== "{}" && (
+        {customTableData !== "" && (
           <button
             className="w-max px-3 py-2 text-neutral-100 bg-accent-red hover:bg-accent-red-highlight rounded-lg shadow-lg hover:shadow-xl transition-opacity z-10 duration-300"
             onClick={() => {
               localStorage.removeItem(CONSTANTS.STORAGE_KEY);
-              setCustomTableData("{}");
+              setCustomTableData("");
             }}
           >
             ↻ Reset
